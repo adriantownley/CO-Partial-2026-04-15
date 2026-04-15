@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_of_interest__c</fullName>
+    <description>The level of interest from the meeting.</description>
+    <label>Level of interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Immediate Interest</fullName>
+                <default>false</default>
+                <label>1 - Immediate Interest</label>
+            </value>
+            <value>
+                <fullName>2 - Moderate interest</fullName>
+                <default>false</default>
+                <label>2 - Moderate interest</label>
+            </value>
+            <value>
+                <fullName>3 - Not interested</fullName>
+                <default>false</default>
+                <label>3 - Not interested</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

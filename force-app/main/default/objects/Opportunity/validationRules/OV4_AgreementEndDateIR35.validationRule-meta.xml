@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV4_AgreementEndDateIR35</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ $Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+ RecordType.DeveloperName = &apos;Partner_Opportunity&apos;,
+ ISCHANGED(StageName),
+ ISPICKVAL(StageName, &apos;Closed Won&apos;),
+ ISNULL( Agreement_End_Date_IR35__c ),
+ INCLUDES( Product_Type__c, &apos;IR35 Tool&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Agreement_End_Date_IR35__c</errorDisplayField>
+    <errorMessage>OV4: Agreement End Date for IR35 Tool is required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LV3_ReengagementDateRequired</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+TEXT(Status) = &quot;Nurturing&quot;,
+ISCHANGED(Status),
+ISBLANK(Reengagement_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>Reengagement_Date__c</errorDisplayField>
+    <errorMessage>LV3: A Reengagement Date is Required</errorMessage>
+</ValidationRule>

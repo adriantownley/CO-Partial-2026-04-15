@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_Rule__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked, any VR will not be triggered</description>
+    <label>Validation Rule</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

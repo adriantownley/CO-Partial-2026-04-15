@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remove_from_Cadence__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to record if the Webhooks User marked an Opportunity as Closed to be updated by the Opportunity: Update Flow. Then called by the Opportunity: Scheduled - Remove Cadences Flow as entry criteria.</description>
+    <label>Remove from Cadence</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

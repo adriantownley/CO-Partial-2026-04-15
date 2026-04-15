@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_F__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.DeveloperName = &quot;Quote&quot;, 
+IMAGE( 
+CASE( StageName, 
+&quot;Policy - Live&quot;, &quot;/img/samples/flag_green.gif&quot;,
+&quot;Quote Provided&quot;, &quot;/img/samples/flag_green.gif&quot;,
+&quot;Quote Referred&quot;, &quot;/img/samples/flag_yellow.gif&quot;,
+&quot;Quote Declined&quot;, &quot;/img/samples/flag_red.gif&quot;, 
+&quot;Closed Lost&quot;, &quot;/img/samples/flag_red.gif&quot;, 
+&quot;/s.gif&quot;), 
+&quot;Stage Flag&quot;), 
+IF(RecordType.DeveloperName = &quot;Policy&quot;, 
+IMAGE( 
+CASE( StageName, 
+&quot;Policy - Live&quot;, &quot;/img/samples/flag_green.gif&quot;,
+&quot;Policy - Cancelled&quot;, &quot;/img/samples/flag_red.gif&quot;, 
+&quot;Closed Lost&quot;, &quot;/img/samples/flag_red.gif&quot;, 
+&quot;/s.gif&quot;), 
+&quot;Stage Flag&quot;),
+IMAGE( 
+CASE( StageName, 
+&quot;Quote Provided&quot;, &quot;/img/samples/flag_green.gif&quot;,
+&quot;Quote Required&quot;, &quot;/img/samples/flag_yellow.gif&quot;,
+&quot;/s.gif&quot;), 
+&quot;Stage Flag&quot;)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

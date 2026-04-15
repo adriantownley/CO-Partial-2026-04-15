@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Active_Assignment_Rules__c</fullName>
+    <defaultValue>true</defaultValue>
+    <inlineHelpText>If this checkbox is ticked the Case will be assigned to the corresponding Case Queue based on the Record Type and will not be assigned to the user creating the record.</inlineHelpText>
+    <label>Use Active Assignment Rules</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

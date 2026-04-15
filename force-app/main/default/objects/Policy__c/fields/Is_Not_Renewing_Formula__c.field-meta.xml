@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Not_Renewing_Formula__c</fullName>
+    <description>Shows ticked if a value is selected from Not Renewing Reason</description>
+    <formula>NOT( ISBLANK( TEXT( Not_Renewing_Reason_Picklist__c ) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Not Renewing</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

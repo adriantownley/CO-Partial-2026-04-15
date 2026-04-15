@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Total_Days__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( OR(ISBLANK( Referral_Date_Requested__c ) , 
+ISBLANK( Referral_Date_Concluded__c )),
+0,
+Referral_Date_Concluded__c - Referral_Date_Requested__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Referral Total Days</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>10</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

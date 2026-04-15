@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Channel_Marketing__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( IsPersonAccount = TRUE, 
+Text( Partner_pc__r.Channel__c ),
+Text (Account.Channel__c))</formula>
+    <label>Partner Channel Marketing</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

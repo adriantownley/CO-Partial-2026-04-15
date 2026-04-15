@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Lost__c</fullName>
+    <description>If the business was lost, this is the reason why.</description>
+    <label>Reason Lost</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kick Out</fullName>
+                <default>false</default>
+                <label>Kick Out</label>
+            </value>
+            <value>
+                <fullName>Not Renewing</fullName>
+                <default>false</default>
+                <label>Not Renewing</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Business Closure</fullName>
+                <default>false</default>
+                <label>Business Closure</label>
+            </value>
+            <value>
+                <fullName>Rewardsme</fullName>
+                <default>false</default>
+                <label>Rewardsme</label>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Quote Expired</fullName>
+                <default>false</default>
+                <label>Quote Expired</label>
+            </value>
+            <value>
+                <fullName>Too Expensive</fullName>
+                <default>false</default>
+                <label>Too Expensive</label>
+            </value>
+            <value>
+                <fullName>Using competitor</fullName>
+                <default>false</default>
+                <label>Using competitor</label>
+            </value>
+            <value>
+                <fullName>No UK contractors</fullName>
+                <default>false</default>
+                <label>No UK contractors</label>
+            </value>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>Commercial agreement not high enough</fullName>
+                <default>false</default>
+                <label>Commercial agreement not high enough</label>
+            </value>
+            <value>
+                <fullName>Product offering not wide enough</fullName>
+                <default>false</default>
+                <label>Product offering not wide enough</label>
+            </value>
+            <value>
+                <fullName>Chase Exhausted</fullName>
+                <default>false</default>
+                <label>Chase Exhausted</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Cannot insure</fullName>
+                <default>false</default>
+                <label>Cannot insure</label>
+            </value>
+            <value>
+                <fullName>Does not enforce insurance</fullName>
+                <default>false</default>
+                <label>Does not enforce insurance</label>
+            </value>
+            <value>
+                <fullName>Not a priority</fullName>
+                <default>false</default>
+                <label>Not a priority</label>
+            </value>
+            <value>
+                <fullName>All workers insured</fullName>
+                <default>false</default>
+                <label>All workers insured</label>
+            </value>
+            <value>
+                <fullName>CEST</fullName>
+                <default>false</default>
+                <label>CEST</label>
+            </value>
+            <value>
+                <fullName>Not enough Outside IR35</fullName>
+                <default>false</default>
+                <label>Not enough Outside IR35</label>
+            </value>
+            <value>
+                <fullName>Alternative provider</fullName>
+                <default>false</default>
+                <label>Alternative provider</label>
+            </value>
+            <value>
+                <fullName>Enforcing contractor</fullName>
+                <default>false</default>
+                <label>Enforcing contractor</label>
+            </value>
+            <value>
+                <fullName>Does not want to recommend</fullName>
+                <default>false</default>
+                <label>Does not want to recommend</label>
+            </value>
+            <value>
+                <fullName>No Outside IR35 workers</fullName>
+                <default>false</default>
+                <label>No Outside IR35 workers</label>
+            </value>
+            <value>
+                <fullName>Cannot insure members</fullName>
+                <default>false</default>
+                <label>Cannot insure members</label>
+            </value>
+            <value>
+                <fullName>InSync</fullName>
+                <default>false</default>
+                <label>InSync</label>
+            </value>
+            <value>
+                <fullName>Admiral</fullName>
+                <default>false</default>
+                <label>Admiral</label>
+            </value>
+            <value>
+                <fullName>Invalid Contact Details</fullName>
+                <default>false</default>
+                <label>Invalid Contact Details</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Referred to Insync</fullName>
+                <default>false</default>
+                <label>Referred to Insync</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Kick Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not Renewing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Business Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Rewardsme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Deceased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Quote Expired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Too Expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Using competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No UK contractors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>SME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Commercial agreement not high enough</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Product offering not wide enough</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Chase Exhausted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Cannot insure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Does not enforce insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not a priority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>All workers insured</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>CEST</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not enough Outside IR35</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Alternative provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Enforcing contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Does not want to recommend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Outside IR35 workers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Cannot insure members</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>InSync</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Admiral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Invalid Contact Details</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

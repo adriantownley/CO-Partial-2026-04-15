@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV001_Restrict_VEX_Approval</fullName>
+    <active>true</active>
+    <description>Only allow users with the permission set Approve VEX Vouchers to change the VEX Voucher status to an &apos;Approved&apos; value.</description>
+    <errorConditionFormula>AND(ISCHANGED(Vex_Voucher_Status__c)
+,
+
+OR(ISPICKVAL( Vex_Voucher_Status__c ,
+&apos;VEX RAF Higher Approved&apos;)
+,
+ISPICKVAL( Vex_Voucher_Status__c ,
+&apos;VEX RIS Higher Approved&apos;)
+,
+ISPICKVAL( Vex_Voucher_Status__c ,
+&apos;VEX RAF Lower Approved&apos;)
+,
+ISPICKVAL( Vex_Voucher_Status__c ,
+&apos;VEX RIS Lower Approved&apos;)
+)
+
+,
+NOT($Permission.VEX_Vouchers_Approve)
+
+)</errorConditionFormula>
+    <errorDisplayField>Vex_Voucher_Status__c</errorDisplayField>
+    <errorMessage>You do not have permission to approve vouchers!</errorMessage>
+</ValidationRule>

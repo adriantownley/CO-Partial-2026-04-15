@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Reason_Lost_2__c</fullName>
+    <label>Sub-Reason Lost 2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sub_Reason_Lost_1__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PI</fullName>
+                <default>false</default>
+                <label>PI</label>
+            </value>
+            <value>
+                <fullName>PL</fullName>
+                <default>false</default>
+                <label>PL</label>
+            </value>
+            <value>
+                <fullName>EL</fullName>
+                <default>false</default>
+                <label>EL</label>
+            </value>
+            <value>
+                <fullName>500k - 750k</fullName>
+                <default>false</default>
+                <label>500k - 750k</label>
+            </value>
+            <value>
+                <fullName>750k - 1m</fullName>
+                <default>false</default>
+                <label>750k - 1m</label>
+            </value>
+            <value>
+                <fullName>1m -2m</fullName>
+                <default>false</default>
+                <label>1m -2m</label>
+            </value>
+            <value>
+                <fullName>2m - 5m</fullName>
+                <default>false</default>
+                <label>2m - 5m</label>
+            </value>
+            <value>
+                <fullName>5m+</fullName>
+                <default>false</default>
+                <label>5m+</label>
+            </value>
+            <value>
+                <fullName>Hiscox</fullName>
+                <default>false</default>
+                <label>Hiscox</label>
+            </value>
+            <value>
+                <fullName>Simply Business (Chiswell, Finsbury)</fullName>
+                <default>false</default>
+                <label>Simply Business (Chiswell, Finsbury)</label>
+            </value>
+            <value>
+                <fullName>Markel</fullName>
+                <default>false</default>
+                <label>Markel</label>
+            </value>
+            <value>
+                <fullName>Policy Bee</fullName>
+                <default>false</default>
+                <label>Policy Bee</label>
+            </value>
+            <value>
+                <fullName>Superscript</fullName>
+                <default>false</default>
+                <label>Superscript</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PPC - Wasn&apos;t expecting a call</fullName>
+                <default>false</default>
+                <label>PPC - Wasn&apos;t expecting a call</label>
+            </value>
+            <value>
+                <fullName>Partnership - Wasn&apos;t expecting a call</fullName>
+                <default>false</default>
+                <label>Partnership - Wasn&apos;t expecting a call</label>
+            </value>
+            <value>
+                <fullName>Incorrect Details</fullName>
+                <default>false</default>
+                <label>Incorrect Details</label>
+            </value>
+            <value>
+                <fullName>Wants standalone PI</fullName>
+                <default>false</default>
+                <label>Wants standalone PI</label>
+            </value>
+            <value>
+                <fullName>Wants standalone PL</fullName>
+                <default>false</default>
+                <label>Wants standalone PL</label>
+            </value>
+            <value>
+                <fullName>Doesn&apos;t want EL</fullName>
+                <default>false</default>
+                <label>Doesn&apos;t want EL</label>
+            </value>
+            <value>
+                <fullName>Like for like cover</fullName>
+                <default>false</default>
+                <label>Like for like cover</label>
+            </value>
+            <value>
+                <fullName>Pre-quote</fullName>
+                <default>false</default>
+                <label>Pre-quote</label>
+            </value>
+            <value>
+                <fullName>Quoted</fullName>
+                <default>false</default>
+                <label>Quoted</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Too Much Cover</controllingFieldValue>
+            <controllingFieldValue>Not Enough Cover</controllingFieldValue>
+            <valueName>PI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Too Much Cover</controllingFieldValue>
+            <controllingFieldValue>Not Enough Cover</controllingFieldValue>
+            <valueName>PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Too Much Cover</controllingFieldValue>
+            <controllingFieldValue>Not Enough Cover</controllingFieldValue>
+            <valueName>EL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turnover</controllingFieldValue>
+            <valueName>500k - 750k</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turnover</controllingFieldValue>
+            <valueName>750k - 1m</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turnover</controllingFieldValue>
+            <valueName>1m -2m</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turnover</controllingFieldValue>
+            <valueName>2m - 5m</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turnover</controllingFieldValue>
+            <valueName>5m+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insured With Competitor</controllingFieldValue>
+            <valueName>Hiscox</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insured With Competitor</controllingFieldValue>
+            <valueName>Simply Business (Chiswell, Finsbury)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insured With Competitor</controllingFieldValue>
+            <valueName>Markel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insured With Competitor</controllingFieldValue>
+            <valueName>Policy Bee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insured With Competitor</controllingFieldValue>
+            <valueName>Superscript</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insured With Competitor</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified Lead</controllingFieldValue>
+            <valueName>PPC - Wasn&apos;t expecting a call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified Lead</controllingFieldValue>
+            <valueName>Partnership - Wasn&apos;t expecting a call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified Lead</controllingFieldValue>
+            <valueName>Incorrect Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Too Expensive</controllingFieldValue>
+            <valueName>Wants standalone PI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Too Expensive</controllingFieldValue>
+            <valueName>Wants standalone PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Too Expensive</controllingFieldValue>
+            <valueName>Doesn&apos;t want EL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Too Expensive</controllingFieldValue>
+            <valueName>Like for like cover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chase Exhausted</controllingFieldValue>
+            <valueName>Pre-quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chase Exhausted</controllingFieldValue>
+            <valueName>Quoted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chase Exhausted</controllingFieldValue>
+            <valueName>Renewal</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voucher_sent_date__c</fullName>
+    <description>This date is populated by the CSV extract process when the &quot;Vex Voucher Status&quot; field changes to &quot;VEX RAF Sent&quot;</description>
+    <label>Voucher sent date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

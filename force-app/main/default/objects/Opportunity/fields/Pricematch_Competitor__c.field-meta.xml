@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricematch_Competitor__c</fullName>
+    <label>Pricematch Competitor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hiscox</fullName>
+                <default>false</default>
+                <label>Hiscox</label>
+            </value>
+            <value>
+                <fullName>Caunce O&apos;Hara</fullName>
+                <default>false</default>
+                <label>Caunce O&apos;Hara</label>
+            </value>
+            <value>
+                <fullName>QDOS</fullName>
+                <default>false</default>
+                <label>QDOS</label>
+            </value>
+            <value>
+                <fullName>AXA</fullName>
+                <default>false</default>
+                <label>AXA</label>
+            </value>
+            <value>
+                <fullName>Direct Line</fullName>
+                <default>false</default>
+                <label>Direct Line</label>
+            </value>
+            <value>
+                <fullName>Markel</fullName>
+                <default>false</default>
+                <label>Markel</label>
+            </value>
+            <value>
+                <fullName>Digital Risks</fullName>
+                <default>false</default>
+                <label>Digital Risks</label>
+            </value>
+            <value>
+                <fullName>Paystream</fullName>
+                <default>false</default>
+                <label>Paystream</label>
+            </value>
+            <value>
+                <fullName>Larsen Howie</fullName>
+                <default>false</default>
+                <label>Larsen Howie</label>
+            </value>
+            <value>
+                <fullName>Watson Laurie</fullName>
+                <default>false</default>
+                <label>Watson Laurie</label>
+            </value>
+            <value>
+                <fullName>PolicyBee</fullName>
+                <default>false</default>
+                <label>PolicyBee</label>
+            </value>
+            <value>
+                <fullName>Insurance Octopus</fullName>
+                <default>false</default>
+                <label>Insurance Octopus</label>
+            </value>
+            <value>
+                <fullName>Aviva</fullName>
+                <default>false</default>
+                <label>Aviva</label>
+            </value>
+            <value>
+                <fullName>Randell Dorling</fullName>
+                <default>false</default>
+                <label>Randell Dorling</label>
+            </value>
+            <value>
+                <fullName>Champion Aberdeen</fullName>
+                <default>false</default>
+                <label>Champion Aberdeen</label>
+            </value>
+            <value>
+                <fullName>Maltings</fullName>
+                <default>false</default>
+                <label>Maltings</label>
+            </value>
+            <value>
+                <fullName>Finsbury</fullName>
+                <default>false</default>
+                <label>Finsbury</label>
+            </value>
+            <value>
+                <fullName>Elements</fullName>
+                <default>false</default>
+                <label>Elements</label>
+            </value>
+            <value>
+                <fullName>Chiswell</fullName>
+                <default>false</default>
+                <label>Chiswell</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

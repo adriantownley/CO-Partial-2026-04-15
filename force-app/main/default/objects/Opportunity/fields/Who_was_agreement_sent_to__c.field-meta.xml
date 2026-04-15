@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Who_was_agreement_sent_to__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Who was agreement sent to?</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Who was agreement sent to?)</relationshipLabel>
+    <relationshipName>OpportunitiesSnTf</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

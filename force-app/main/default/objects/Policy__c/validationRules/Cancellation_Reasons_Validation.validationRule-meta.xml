@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reasons_Validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+				 $Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = FALSE,
+				ISCHANGED(Status__c),
+				ISPICKVAL(Status__c, &quot;Cancelled&quot;),
+                                NOT(ISPICKVAL(PRIORVALUE(Status__c), &quot;Cancelled&quot;)), 
+
+				
+				OR(
+    ISBLANK( Cancellation_Date_Requested__c),
+				ISBLANK( Cancellation_Date_Effective__c), 
+				ISBLANK( Cancellation_Amount__c)
+)
+)</errorConditionFormula>
+    <errorMessage>Please populate fields:
+
+Cancellation Date Requested
+Cancellation Date Effective
+Cancellation Amount</errorMessage>
+</ValidationRule>

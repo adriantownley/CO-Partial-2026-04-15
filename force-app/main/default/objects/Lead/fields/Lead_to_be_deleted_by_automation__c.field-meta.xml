@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_to_be_deleted_by_automation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field will be used by automation to indicate that this is a duplicate Lead, which will be deleted shortly.</description>
+    <label>Lead to be deleted by automation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

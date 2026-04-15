@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_Out_of_Marketing_SMS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether user has opted out of being contacted by SMS for marketing purposes. Defaults to unchecked, to be used to unsubscribe users from marketing texts.</description>
+    <label>Opt Out of Marketing SMS</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

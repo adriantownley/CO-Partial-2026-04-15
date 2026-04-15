@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV15_PartnerSelectOneProductType</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+RecordType.DeveloperName = &apos;Partner_Opportunity&apos;, 
+PICKLISTCOUNT(Product_Type__c) &gt; 1 
+)</errorConditionFormula>
+    <errorMessage>OV 15:Please select only one Product Type per Opportunity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Insurance_Check__c</fullName>
+    <description>Field is used to determine whether Group Insurance is part of the product type field, used to display the Group Insurance section on the dynamic page layout</description>
+    <formula>IF( INCLUDES( Product_Type__c , &quot;Group Insurance&quot;) , True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Group Insurance Check</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

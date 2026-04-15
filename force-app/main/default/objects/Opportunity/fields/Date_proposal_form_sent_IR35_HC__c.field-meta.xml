@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_proposal_form_sent_IR35_HC__c</fullName>
+    <inlineHelpText>Date proposal form sent (IR35 Health Check)</inlineHelpText>
+    <label>Date proposal form sent (IR35 HC)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_OPP_Sale_Reminder__c</fullName>
+    <description>Use to determine when a Reminder should be sent out to Account Owner once the checkbox Post Implementing OPP has been ticked.</description>
+    <label>Next OPP Sale Reminder</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Reason_Lost_1__c</fullName>
+    <label>Sub-Reason Lost 1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reason_Lost__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Too Much Cover</fullName>
+                <default>false</default>
+                <label>Too Much Cover</label>
+            </value>
+            <value>
+                <fullName>Not Enough Cover</fullName>
+                <default>false</default>
+                <label>Not Enough Cover</label>
+            </value>
+            <value>
+                <fullName>Turnover</fullName>
+                <default>false</default>
+                <label>Turnover</label>
+            </value>
+            <value>
+                <fullName>Occupation Not Covered</fullName>
+                <default>false</default>
+                <label>Occupation Not Covered</label>
+            </value>
+            <value>
+                <fullName>Jurisdiction</fullName>
+                <default>false</default>
+                <label>Jurisdiction</label>
+            </value>
+            <value>
+                <fullName>Insured With Competitor</fullName>
+                <default>false</default>
+                <label>Insured With Competitor</label>
+            </value>
+            <value>
+                <fullName>Unqualified Lead</fullName>
+                <default>false</default>
+                <label>Unqualified Lead</label>
+            </value>
+            <value>
+                <fullName>Too Expensive</fullName>
+                <default>false</default>
+                <label>Too Expensive</label>
+            </value>
+            <value>
+                <fullName>Chase Exhausted</fullName>
+                <default>false</default>
+                <label>Chase Exhausted</label>
+            </value>
+            <value>
+                <fullName>IR35</fullName>
+                <default>false</default>
+                <label>IR35</label>
+            </value>
+            <value>
+                <fullName>No work</fullName>
+                <default>false</default>
+                <label>No work</label>
+            </value>
+            <value>
+                <fullName>Retirement</fullName>
+                <default>false</default>
+                <label>Retirement</label>
+            </value>
+            <value>
+                <fullName>Only needed PI</fullName>
+                <default>false</default>
+                <label>Only needed PI</label>
+            </value>
+            <value>
+                <fullName>Didn&apos;t want EL</fullName>
+                <default>false</default>
+                <label>Didn&apos;t want EL</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Doesn&apos;t want to be contacted</fullName>
+                <default>false</default>
+                <label>Doesn&apos;t want to be contacted</label>
+            </value>
+            <value>
+                <fullName>Higher PI/PL</fullName>
+                <default>false</default>
+                <label>Higher PI/PL</label>
+            </value>
+            <value>
+                <fullName>Higher Turnover</fullName>
+                <default>false</default>
+                <label>Higher Turnover</label>
+            </value>
+            <value>
+                <fullName>Malpractice Exclusion</fullName>
+                <default>false</default>
+                <label>Malpractice Exclusion</label>
+            </value>
+            <value>
+                <fullName>Manual Work</fullName>
+                <default>false</default>
+                <label>Manual Work</label>
+            </value>
+            <value>
+                <fullName>More Than 5 Employees</fullName>
+                <default>false</default>
+                <label>More Than 5 Employees</label>
+            </value>
+            <value>
+                <fullName>Non-UK Resident</fullName>
+                <default>false</default>
+                <label>Non-UK Resident</label>
+            </value>
+            <value>
+                <fullName>Recruitment Consultant</fullName>
+                <default>false</default>
+                <label>Recruitment Consultant</label>
+            </value>
+            <value>
+                <fullName>USA Involvement</fullName>
+                <default>false</default>
+                <label>USA Involvement</label>
+            </value>
+            <value>
+                <fullName>Changed business activity</fullName>
+                <default>false</default>
+                <label>Changed business activity</label>
+            </value>
+            <value>
+                <fullName>Company Closed</fullName>
+                <default>false</default>
+                <label>Company Closed</label>
+            </value>
+            <value>
+                <fullName>Company Dormant</fullName>
+                <default>false</default>
+                <label>Company Dormant</label>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Illness</fullName>
+                <default>false</default>
+                <label>Illness</label>
+            </value>
+            <value>
+                <fullName>Inside IR35</fullName>
+                <default>false</default>
+                <label>Inside IR35</label>
+            </value>
+            <value>
+                <fullName>PAYE/Umbrella</fullName>
+                <default>false</default>
+                <label>PAYE/Umbrella</label>
+            </value>
+            <value>
+                <fullName>Purchased Run-Off Cover</fullName>
+                <default>false</default>
+                <label>Purchased Run-Off Cover</label>
+            </value>
+            <value>
+                <fullName>Refuses to Give Reason</fullName>
+                <default>false</default>
+                <label>Refuses to Give Reason</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Unhappy with the service</fullName>
+                <default>false</default>
+                <label>Unhappy with the service</label>
+            </value>
+            <value>
+                <fullName>Incorrect Email</fullName>
+                <default>false</default>
+                <label>Incorrect Email</label>
+            </value>
+            <value>
+                <fullName>Incorrect Phone Number</fullName>
+                <default>false</default>
+                <label>Incorrect Phone Number</label>
+            </value>
+            <value>
+                <fullName>Non-UK Phone Number</fullName>
+                <default>false</default>
+                <label>Non-UK Phone Number</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <controllingFieldValue>Kick Out</controllingFieldValue>
+            <valueName>Occupation Not Covered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <controllingFieldValue>Kick Out</controllingFieldValue>
+            <valueName>Jurisdiction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>Higher PI/PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>Higher Turnover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>Malpractice Exclusion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>Manual Work</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>More Than 5 Employees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>Non-UK Resident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>Recruitment Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InSync</controllingFieldValue>
+            <controllingFieldValue>Admiral</controllingFieldValue>
+            <controllingFieldValue>Referred to Insync</controllingFieldValue>
+            <valueName>USA Involvement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Insured With Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Too Expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Chase Exhausted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <controllingFieldValue>Business Closure</controllingFieldValue>
+            <valueName>No work</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Doesn&apos;t want to be contacted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Changed business activity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Company Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Company Dormant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Deceased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Illness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Inside IR35</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>PAYE/Umbrella</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Purchased Run-Off Cover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Refuses to Give Reason</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Retired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Renewing</controllingFieldValue>
+            <valueName>Unhappy with the service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invalid Contact Details</controllingFieldValue>
+            <valueName>Incorrect Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invalid Contact Details</controllingFieldValue>
+            <valueName>Incorrect Phone Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invalid Contact Details</controllingFieldValue>
+            <valueName>Non-UK Phone Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kick Out</controllingFieldValue>
+            <valueName>Too Much Cover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kick Out</controllingFieldValue>
+            <valueName>Not Enough Cover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kick Out</controllingFieldValue>
+            <valueName>Turnover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Interested</controllingFieldValue>
+            <valueName>Unqualified Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Closure</controllingFieldValue>
+            <valueName>IR35</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Closure</controllingFieldValue>
+            <valueName>Retirement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rewardsme</controllingFieldValue>
+            <valueName>Only needed PI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rewardsme</controllingFieldValue>
+            <valueName>Didn&apos;t want EL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rewardsme</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

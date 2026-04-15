@@ -1,0 +1,1432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Auto_Renewal_Opportunity</fullName>
+    <active>true</active>
+    <businessProcess>Non-Auto Renewal Opportunity</businessProcess>
+    <compactLayoutAssignment>Opportunity_Compact_Layout</compactLayoutAssignment>
+    <label>Manual Renewal Opportunity</label>
+    <picklistValues>
+        <picklist>Agreed_Escalation_Process__c</picklist>
+        <values>
+            <fullName>Blocker to payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inform the client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No escalation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removed from site</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreed_Visit_Frequency__c</picklist>
+        <values>
+            <fullName>Fortnightly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreement_Type__c</picklist>
+        <values>
+            <fullName>Commision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Aircraft_Guidance__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Architect_Guidance__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Been_Bankrupt__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_or_Fee_Payer__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee Payer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_or_recruiter__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruiter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Commercials_Agreed__c</picklist>
+        <values>
+            <fullName>Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complete_Comply__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comply</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Completed_Ir35_Assessment__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DB_Competitor__c</picklist>
+        <values>
+            <fullName>Competitor A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Declined_Cover__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Early_Adopter__c</picklist>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conversation had</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Highlighted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Existing_Customer_Engagement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>F2F_or_Teams__c</picklist>
+        <values>
+            <fullName>F2F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teams</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Features_of_interest_Demo__c</picklist>
+        <values>
+            <fullName>AI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRM Int</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Checks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DBS Checks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment Refs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ltd Company Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Right to Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Features_of_interest_Meeting__c</picklist>
+        <values>
+            <fullName>AI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRM Int</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Checks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DBS Checks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment Refs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ltd Company Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Right to work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IAR_Needed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IR_35_Tool_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interest_After_Proposal__c</picklist>
+        <values>
+            <fullName>1 - High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Low</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interest_after_demo__c</picklist>
+        <values>
+            <fullName>1- wants to buy now</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2- wants to buy later</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - not interested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Introducer_agreement_signed_IR35_PI__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Landing_Pages_Required_PL_Trade_Body__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Landing_Pages_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk Upload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email %28Consultant%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35%2Eio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone %28Consultant%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>refer%40kingsbridge%2Eco%2Euk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level_of_interest__c</picklist>
+        <values>
+            <fullName>1 - Immediate Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Moderate interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Not interested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Lost to Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Budget %2F Lost Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Decision %2F Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Modules_of_interest_Demo__c</picklist>
+        <values>
+            <fullName>CIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Document Signing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35 Tool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Right to Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timesheets</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Modules_of_interest_Meeting__c</picklist>
+        <values>
+            <fullName>CIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Document Signing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35 Tool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Right to work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timesheets</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Nbr_of_Compliance_Onboarding_Staff__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11-20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6-10</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OPP_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupation_Height_Work__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupation_Offshore_Work__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ongoing_Approval_Process__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PI_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PI_Blocker__c</picklist>
+        <values>
+            <fullName>Blocker to payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blocker to placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do not enforce and do not recommend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enforce for certain clients</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommend but do not enforce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pricematch_Competitor__c</picklist>
+        <values>
+            <fullName>AXA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aviva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caunce O%27Hara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Champion Aberdeen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chiswell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Risks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finsbury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiscox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance Octopus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Larsen Howie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maltings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Markel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paystream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PolicyBee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QDOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Randell Dorling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Watson Laurie</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>Admiral Trades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Professions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUL Trades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35 Protect Standalone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Run Off%2FPolicy Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Buying Journey</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RICS_Member__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_Lost__c</picklist>
+        <values>
+            <fullName>Business Closure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kick Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Renewing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Insync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Referral_outcome__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Referral_reason__c</picklist>
+        <values>
+            <fullName>%C2%A310M PL %26 Heat Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%C2%A310M PL %26 Height over 5m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%C2%A310M PL %26 Light Manual %28Onshore%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%C2%A310M PL %26 Manual %28Offshore%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%C2%A310M PL %26 Offshore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bankruptcy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Equipment Cover %28Over %C2%A310%2C000%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claims Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company Name Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crane Role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Income %26 Rail Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Income %26 over %C2%A31m PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Income %26 over %C2%A35m PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher levels of PI%2FPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Income Too High %28Over %C2%A3300K%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job Role addition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More Than 3 Employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offshore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onshore Manual Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Over %C2%A31m PI %26 Offshore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Over %C2%A31m PI %26 Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practising Solictor %2F Accountant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RICS Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred Occupations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SME Direct Contract Work with Ultimate End Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SME Higher Levels of PI%2FPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA %2F Canada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_Primary_Contact_to_Pardot__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Set_up_Partner_URL__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RIS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Reason_Lost_1__c</picklist>
+        <values>
+            <fullName>Changed business activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chase Exhausted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company Dormant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Didn%27t want EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doesn%27t want to be contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher PI%2FPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher Turnover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside IR35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insured With Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jurisdiction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malpractice Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More Than 5 Employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-UK Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-UK Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Enough Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Occupation Not Covered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Only needed PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAYE%2FUmbrella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased Run-Off Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refuses to Give Reason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Expensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Much Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turnover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA Involvement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unhappy with the service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unqualified Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Reason_Lost_2__c</picklist>
+        <values>
+            <fullName>1m -2m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2m - 5m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500k - 750k</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5m%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>750k - 1m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doesn%27t want EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiscox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Like for like cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Markel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPC - Wasn%27t expecting a call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership - Wasn%27t expecting a call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy Bee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quoted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simply Business %28Chiswell%2C Finsbury%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Superscript</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants standalone PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants standalone PL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>Win-Back Opportunity</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Volumes_Reached__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Turnover__c</picklist>
+        <values>
+            <fullName>%C2%A30 - %C2%A349%2C999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%C2%A350%2C000 - %C2%A399%2C999</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DetailChange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NewBusiness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal Lapse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SelfRenewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>USA_Canada_Law__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>USA_Canada_Over_30_Days__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>USA_Canada_Physical_Work__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>USA_Canada_Work__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vex_Voucher_Status__c</picklist>
+        <values>
+            <fullName>VEX No Voucher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VEX RAF Higher Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VEX RAF Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VEX RAF Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Win_Back_Opportunity__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Would_Like_Call_From_Ir35_Review_Partner__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

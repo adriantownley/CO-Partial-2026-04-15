@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Referral_Friend_Name</fullName>
+    <active>true</active>
+    <description>When Source is RAF, Referral Friend Name is mandatory.</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Source__c, &quot;RAF&quot;),
+ ISBLANK( Referral_Friend_Name__c ),
+NOT($User.Alias = &quot;guest&quot;),
+NOT($Profile.Name = &quot;B2BMA Integration User&quot;
+)
+)</errorConditionFormula>
+    <errorMessage>Referral Friend Name must have a value.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Type_Additional_Information__c</fullName>
+    <label>Cancellation Type Additional Information</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cancellation_Type_Sub_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Two Instalments Remaining</fullName>
+                <default>false</default>
+                <label>Two Instalments Remaining</label>
+            </value>
+            <value>
+                <fullName>Loan Has Been Cancelled</fullName>
+                <default>false</default>
+                <label>Loan Has Been Cancelled</label>
+            </value>
+            <value>
+                <fullName>All Instalments Have Been Paid</fullName>
+                <default>false</default>
+                <label>All Instalments Have Been Paid</label>
+            </value>
+            <value>
+                <fullName>Referred to Insync</fullName>
+                <default>false</default>
+                <label>Referred to Insync</label>
+            </value>
+            <value>
+                <fullName>30 Days Notice Issued</fullName>
+                <default>false</default>
+                <label>30 Days Notice Issued</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Better Fit Elsewhere</controllingFieldValue>
+            <controllingFieldValue>Changes in Risk Profile</controllingFieldValue>
+            <controllingFieldValue>Claim Experience</controllingFieldValue>
+            <controllingFieldValue>Inadequate Coverage</controllingFieldValue>
+            <controllingFieldValue>Misunderstanding of Terms</controllingFieldValue>
+            <controllingFieldValue>Overlapping Policies</controllingFieldValue>
+            <valueName>Referred to Insync</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Better Fit Elsewhere</controllingFieldValue>
+            <controllingFieldValue>Changes in Risk Profile</controllingFieldValue>
+            <controllingFieldValue>Claim Experience</controllingFieldValue>
+            <controllingFieldValue>Inadequate Coverage</controllingFieldValue>
+            <controllingFieldValue>Misunderstanding of Terms</controllingFieldValue>
+            <controllingFieldValue>Overlapping Policies</controllingFieldValue>
+            <valueName>30 Days Notice Issued</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Better Fit Elsewhere</controllingFieldValue>
+            <controllingFieldValue>Changes in Risk Profile</controllingFieldValue>
+            <controllingFieldValue>Claim Experience</controllingFieldValue>
+            <controllingFieldValue>Inadequate Coverage</controllingFieldValue>
+            <controllingFieldValue>Misunderstanding of Terms</controllingFieldValue>
+            <controllingFieldValue>Overlapping Policies</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CBPF Error</controllingFieldValue>
+            <valueName>Two Instalments Remaining</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CBPF Error</controllingFieldValue>
+            <valueName>Loan Has Been Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CBPF Error</controllingFieldValue>
+            <valueName>All Instalments Have Been Paid</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

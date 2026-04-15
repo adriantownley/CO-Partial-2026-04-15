@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV12_Win_Back_Opportunity_Closed_Lost</fullName>
+    <active>true</active>
+    <description>Win-Back Opportunity field mandatory for Closed Lost Contractor &amp; Non-Auto Renewal Opportunity</description>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+OR(
+ RecordType.DeveloperName = &apos;Customer_Opportunity&apos;,
+ RecordType.DeveloperName= &apos;Non-Auto_Renewal_Opportunity&apos;),
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &apos;Closed Lost&apos;),
+ISPICKVAL(Win_Back_Opportunity__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Win_Back_Opportunity__c</errorDisplayField>
+    <errorMessage>OV12: Please confirm whether a Win-Back Opportunity will need to be created 45 days before the Policy End Date for this Lost Opportunity.</errorMessage>
+</ValidationRule>

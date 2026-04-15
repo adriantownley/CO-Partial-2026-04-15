@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_Lead_Record__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field used to determine that this is the Main Lead record, for any future Leads only an Attribution record will be created</description>
+    <label>Main Lead Record</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

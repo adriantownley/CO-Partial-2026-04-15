@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Type_Sub_Reason__c</fullName>
+    <label>Cancellation Type Sub Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cancellation_Type_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Better Offers from Competitors</fullName>
+                <default>false</default>
+                <label>Better Offers from Competitors</label>
+            </value>
+            <value>
+                <fullName>Lack of Customization</fullName>
+                <default>false</default>
+                <label>Lack of Customization</label>
+            </value>
+            <value>
+                <fullName>Perception of Value</fullName>
+                <default>false</default>
+                <label>Perception of Value</label>
+            </value>
+            <value>
+                <fullName>Premium Increases</fullName>
+                <default>false</default>
+                <label>Premium Increases</label>
+            </value>
+            <value>
+                <fullName>1 Year</fullName>
+                <default>false</default>
+                <label>1 Year</label>
+            </value>
+            <value>
+                <fullName>NTU</fullName>
+                <default>false</default>
+                <label>NTU</label>
+            </value>
+            <value>
+                <fullName>Financial Difficulty</fullName>
+                <default>false</default>
+                <label>Financial Difficulty</label>
+            </value>
+            <value>
+                <fullName>Non-Payment</fullName>
+                <default>false</default>
+                <label>Non-Payment</label>
+            </value>
+            <value>
+                <fullName>CDC - Loan Rejected</fullName>
+                <default>false</default>
+                <label>CDC - Loan Rejected</label>
+            </value>
+            <value>
+                <fullName>Payment Error</fullName>
+                <default>false</default>
+                <label>Payment Error</label>
+            </value>
+            <value>
+                <fullName>Better Fit Elsewhere</fullName>
+                <default>false</default>
+                <label>Better Fit Elsewhere</label>
+            </value>
+            <value>
+                <fullName>Changes in Risk Profile</fullName>
+                <default>false</default>
+                <label>Changes in Risk Profile</label>
+            </value>
+            <value>
+                <fullName>Claim Experience</fullName>
+                <default>false</default>
+                <label>Claim Experience</label>
+            </value>
+            <value>
+                <fullName>Inadequate Coverage</fullName>
+                <default>false</default>
+                <label>Inadequate Coverage</label>
+            </value>
+            <value>
+                <fullName>Misunderstanding of Terms</fullName>
+                <default>false</default>
+                <label>Misunderstanding of Terms</label>
+            </value>
+            <value>
+                <fullName>Overlapping Policies</fullName>
+                <default>false</default>
+                <label>Overlapping Policies</label>
+            </value>
+            <value>
+                <fullName>Referred to Insync</fullName>
+                <default>false</default>
+                <label>Referred to Insync</label>
+            </value>
+            <value>
+                <fullName>Inception Date Change</fullName>
+                <default>false</default>
+                <label>Inception Date Change</label>
+            </value>
+            <value>
+                <fullName>Policy Alignment</fullName>
+                <default>false</default>
+                <label>Policy Alignment</label>
+            </value>
+            <value>
+                <fullName>IR35 Cover Level Change</fullName>
+                <default>false</default>
+                <label>IR35 Cover Level Change</label>
+            </value>
+            <value>
+                <fullName>CBPF Error</fullName>
+                <default>false</default>
+                <label>CBPF Error</label>
+            </value>
+            <value>
+                <fullName>Payment Method Change</fullName>
+                <default>false</default>
+                <label>Payment Method Change</label>
+            </value>
+            <value>
+                <fullName>Request by Insurers</fullName>
+                <default>false</default>
+                <label>Request by Insurers</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Discounts and Incentives Elsewhere</fullName>
+                <default>false</default>
+                <label>Discounts and Incentives Elsewhere</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cancel Re-Setup</controllingFieldValue>
+            <valueName>Inception Date Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel Re-Setup</controllingFieldValue>
+            <valueName>Policy Alignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel Re-Setup</controllingFieldValue>
+            <valueName>IR35 Cover Level Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel Re-Setup</controllingFieldValue>
+            <valueName>CBPF Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel Re-Setup</controllingFieldValue>
+            <valueName>Payment Method Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel Re-Setup</controllingFieldValue>
+            <valueName>Request by Insurers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel Re-Setup</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>NTU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>Non-Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment</controllingFieldValue>
+            <valueName>CDC - Loan Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy unsuitable</controllingFieldValue>
+            <valueName>Better Fit Elsewhere</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy unsuitable</controllingFieldValue>
+            <valueName>Changes in Risk Profile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy unsuitable</controllingFieldValue>
+            <valueName>Claim Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy unsuitable</controllingFieldValue>
+            <valueName>Inadequate Coverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy unsuitable</controllingFieldValue>
+            <valueName>Misunderstanding of Terms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy unsuitable</controllingFieldValue>
+            <valueName>Overlapping Policies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Better Offers from Competitors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Lack of Customization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Perception of Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Premium Increases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Discounts and Incentives Elsewhere</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

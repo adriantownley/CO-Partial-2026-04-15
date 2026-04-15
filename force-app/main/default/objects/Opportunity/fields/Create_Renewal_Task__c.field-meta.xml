@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Renewal_Task__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to determine whether a task will need to be created by automation</description>
+    <label>Create Renewal Task</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

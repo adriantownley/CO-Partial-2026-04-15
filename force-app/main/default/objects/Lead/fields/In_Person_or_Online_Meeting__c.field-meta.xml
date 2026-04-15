@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Person_or_Online_Meeting__c</fullName>
+    <label>In Person or Online Meeting?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In person meeting</fullName>
+                <default>false</default>
+                <label>In person meeting</label>
+            </value>
+            <value>
+                <fullName>Online meeting</fullName>
+                <default>false</default>
+                <label>Online meeting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

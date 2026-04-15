@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subject__c</fullName>
+    <label>Subject</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Convictions/Declined Insurance</fullName>
+                <default>false</default>
+                <label>Convictions/Declined Insurance</label>
+            </value>
+            <value>
+                <fullName>Crane Roles</fullName>
+                <default>false</default>
+                <label>Crane Roles</label>
+            </value>
+            <value>
+                <fullName>Heat work and High Voltage</fullName>
+                <default>false</default>
+                <label>Heat work and High Voltage</label>
+            </value>
+            <value>
+                <fullName>Business Equipment</fullName>
+                <default>false</default>
+                <label>Business Equipment</label>
+            </value>
+            <value>
+                <fullName>Higher PI PL / Increased PI PL</fullName>
+                <default>false</default>
+                <label>Higher PI PL / Increased PI PL</label>
+            </value>
+            <value>
+                <fullName>Job role / Job Role Addition</fullName>
+                <default>false</default>
+                <label>Job role / Job Role Addition</label>
+            </value>
+            <value>
+                <fullName>Offshore</fullName>
+                <default>false</default>
+                <label>Offshore</label>
+            </value>
+            <value>
+                <fullName>Cyber</fullName>
+                <default>false</default>
+                <label>Cyber</label>
+            </value>
+            <value>
+                <fullName>Company name change</fullName>
+                <default>false</default>
+                <label>Company name change</label>
+            </value>
+            <value>
+                <fullName>Claims</fullName>
+                <default>false</default>
+                <label>Claims</label>
+            </value>
+            <value>
+                <fullName>Subcontractors</fullName>
+                <default>false</default>
+                <label>Subcontractors</label>
+            </value>
+            <value>
+                <fullName>Bankruptcy/Admin</fullName>
+                <default>false</default>
+                <label>Bankruptcy/Admin</label>
+            </value>
+            <value>
+                <fullName>Turnover / Increased Income</fullName>
+                <default>false</default>
+                <label>Turnover / Increased Income</label>
+            </value>
+            <value>
+                <fullName>Manual work/Height work</fullName>
+                <default>false</default>
+                <label>Manual work/Height work</label>
+            </value>
+            <value>
+                <fullName>USA Physical</fullName>
+                <default>false</default>
+                <label>USA Physical</label>
+            </value>
+            <value>
+                <fullName>USA Contract</fullName>
+                <default>false</default>
+                <label>USA Contract</label>
+            </value>
+            <value>
+                <fullName>RICS</fullName>
+                <default>false</default>
+                <label>RICS</label>
+            </value>
+            <value>
+                <fullName>SME End Client – Need changing in future</fullName>
+                <default>false</default>
+                <label>SME End Client – Need changing in future</label>
+            </value>
+            <value>
+                <fullName>Run Off</fullName>
+                <default>false</default>
+                <label>Run Off</label>
+            </value>
+            <value>
+                <fullName>Policy Extensions</fullName>
+                <default>false</default>
+                <label>Policy Extensions</label>
+            </value>
+            <value>
+                <fullName>Employee/Fee Earner Count</fullName>
+                <default>false</default>
+                <label>Employee/Fee Earner Count</label>
+            </value>
+            <value>
+                <fullName>Admiral Request</fullName>
+                <default>false</default>
+                <label>Admiral Request</label>
+            </value>
+            <value>
+                <fullName>Underwriting request - General</fullName>
+                <default>false</default>
+                <label>Underwriting request - General</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_OPP_Sale_Reminder_is_today__c</fullName>
+    <description>Used as a criteria of Opportunity: Scheduled - OPP Approval Reminder flow.</description>
+    <formula>Next_OPP_Sale_Reminder__c = Today()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Next OPP Sale Reminder is today</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

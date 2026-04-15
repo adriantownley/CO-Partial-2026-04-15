@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ipSCAPE_Customer_Phone_Number__c</fullName>
+    <description>This is the phone number for the contact.</description>
+    <label>Customer Phone Number</label>
+    <required>false</required>
+    <type>Phone</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LV7_SourceValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+AND(TEXT(Source__c) = &quot;Partner&quot;, 
+  ISBLANK(Partner__c),
+  ISBLANK(Referred_by_Partner_Contact__c)
+)
+)</errorConditionFormula>
+    <errorMessage>If Partner is selected make sure that Partner and Referred by partner contact have values.</errorMessage>
+</ValidationRule>

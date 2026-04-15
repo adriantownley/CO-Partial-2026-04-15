@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Features_of_interest_Meeting__c</fullName>
+    <description>What features are they interested in from the Meeting?</description>
+    <label>Features of interest - Meeting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Right to work</fullName>
+                <default>false</default>
+                <label>Right to work</label>
+            </value>
+            <value>
+                <fullName>Credit Checks</fullName>
+                <default>false</default>
+                <label>Credit Checks</label>
+            </value>
+            <value>
+                <fullName>DBS Checks</fullName>
+                <default>false</default>
+                <label>DBS Checks</label>
+            </value>
+            <value>
+                <fullName>Employment Refs</fullName>
+                <default>false</default>
+                <label>Employment Refs</label>
+            </value>
+            <value>
+                <fullName>Ltd Company Status</fullName>
+                <default>false</default>
+                <label>Ltd Company Status</label>
+            </value>
+            <value>
+                <fullName>AI</fullName>
+                <default>false</default>
+                <label>AI</label>
+            </value>
+            <value>
+                <fullName>CRM Int</fullName>
+                <default>false</default>
+                <label>CRM Int</label>
+            </value>
+            <value>
+                <fullName>API</fullName>
+                <default>false</default>
+                <label>API</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

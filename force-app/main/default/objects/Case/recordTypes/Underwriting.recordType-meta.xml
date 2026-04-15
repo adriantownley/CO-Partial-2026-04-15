@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Underwriting</fullName>
+    <active>true</active>
+    <businessProcess>Underwriting</businessProcess>
+    <compactLayoutAssignment>Case_Compact_Layout</compactLayoutAssignment>
+    <label>Underwriting</label>
+    <picklistValues>
+        <picklist>Cancellation_Reason__c</picklist>
+        <values>
+            <fullName>Cancel Re-Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company closed%2Fdormant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate%2Ftest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Difficulty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No%C2%A0work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAYE%2Fumbrella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy unsuitable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Run-off cover purchased</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Sub_Type__c</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Renewals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Close_Reason__c</picklist>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change of details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ir35%2FContract%2F status review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid term amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rubbish%2Fjunk%2Finternal comms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales processing error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saved Sale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Failure_Type__c</picklist>
+        <values>
+            <fullName>Midterm Missed Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NTU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shortfall</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Of Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Brothers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract%2FStatus Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LH%2FDinghy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-Term Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Sales Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refer A Friend Query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rubbish%2FJunk%2FInternal Comms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Run-off cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Processing Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saved Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vouchers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SLA_Timer__c</picklist>
+        <values>
+            <fullName>Green</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Red</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yellow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject__c</picklist>
+        <values>
+            <fullName>Admiral Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bankruptcy%2FAdmin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claims</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company name change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convictions%2FDeclined Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crane Roles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee%2FFee Earner Count</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heat work and High Voltage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher PI PL %2F Increased PI PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job role %2F Job Role Addition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual work%2FHeight work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offshore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy Extensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Run Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SME End Client %E2%80%93 Need changing in future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subcontractors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turnover %2F Increased Income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA Physical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underwriting request - General</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

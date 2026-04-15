@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Lead</fullName>
+    <active>true</active>
+    <businessProcess>Partner Lead</businessProcess>
+    <compactLayoutAssignment>Partner_Lead_Compact_Layout</compactLayoutAssignment>
+    <description>For any Partner Leads.</description>
+    <label>Partner Lead</label>
+    <picklistValues>
+        <picklist>Commission_or_Discount__c</picklist>
+        <values>
+            <fullName>Commision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GenderIdentity</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nonbinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_Person_or_Online_Meeting__c</picklist>
+        <values>
+            <fullName>In person meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online meeting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insurance_Mandate__c</picklist>
+        <values>
+            <fullName>Insurance Mandated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance not Mandated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open to insurance Mandate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk Upload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email %28Consultant%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35%2Eio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone %28Consultant%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>refer%40kingsbridge%2Eco%2Euk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marketing_Consent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unanswered</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sir</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Identified__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>Group Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35 Health Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35 Protect Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35 Tool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off Payroll Protect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Indemnity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Run Off%2FPolicy Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Buying Journey</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pronouns</picklist>
+        <values>
+            <fullName>He%2FHim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>He%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FHer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>They%2FThem</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_Lost__c</picklist>
+        <values>
+            <fullName>Business Closure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kickout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Renewing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred to Insync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_Products_Unsuitable__c</picklist>
+        <values>
+            <fullName>Accountant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asbestos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asset manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auctioning of fine art%2Cantiques and bloodstock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building surveyor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doctor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Adviser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance Broker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment Adviser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwife</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than one employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Naval Architect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-uk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nurse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offshore Diving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paramedic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmacist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plasterer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plater%2FWelder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plumber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property asset management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radiographer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SME occupation unsuitable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgeon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Umbrella employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valuator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will Writer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>dentist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_Lead_to_Pardot__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RIS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Reason_Lost_1__c</picklist>
+        <values>
+            <fullName>Changed business activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chase Exhausted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company Dormant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Didn%27t want EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doesn%27t want to be contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher PI%2FPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher Turnover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IR35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside IR35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insured With Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jurisdiction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malpractice Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More Than 5 Employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-UK Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-UK Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Enough Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Occupation Not Covered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Only needed PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAYE%2FUmbrella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased Run-Off Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refuses to Give Reason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Expensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Much Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turnover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA Involvement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unhappy with the service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unqualified Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Reason_Lost_2__c</picklist>
+        <values>
+            <fullName>1m -2m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2m - 5m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500k - 750k</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5m%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>750k - 1m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doesn%27t want EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiscox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Like for like cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Markel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPC - Wasn%27t expecting a call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership - Wasn%27t expecting a call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy Bee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quoted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simply Business %28Chiswell%2C Finsbury%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Superscript</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants standalone PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants standalone PL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Win__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

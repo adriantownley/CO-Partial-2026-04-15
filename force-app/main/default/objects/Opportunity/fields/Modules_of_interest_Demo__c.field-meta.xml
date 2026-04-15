@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modules_of_interest_Demo__c</fullName>
+    <description>What modules are they interested in from the Demo?</description>
+    <label>Modules of interest - Demo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IR35 Tool</fullName>
+                <default>false</default>
+                <label>IR35 Tool</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Right to Work</fullName>
+                <default>false</default>
+                <label>Right to Work</label>
+            </value>
+            <value>
+                <fullName>Timesheets</fullName>
+                <default>false</default>
+                <label>Timesheets</label>
+            </value>
+            <value>
+                <fullName>Document Signing</fullName>
+                <default>false</default>
+                <label>Document Signing</label>
+            </value>
+            <value>
+                <fullName>CIS</fullName>
+                <default>false</default>
+                <label>CIS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV000_Cannot_Change_VEX_Sent_Value</fullName>
+    <active>true</active>
+    <description>Once the VEX Voucher Status is set to a &apos;Sent&apos; value, it is &apos;locked&apos; and cannot be changed anymore!</description>
+    <errorConditionFormula>AND(ISCHANGED(Vex_Voucher_Status__c),
+
+ISPICKVAL(PRIORVALUE(Vex_Voucher_Status__c),
+&apos;VEX RAF Sent&apos; )
+
+)</errorConditionFormula>
+    <errorDisplayField>Vex_Voucher_Status__c</errorDisplayField>
+    <errorMessage>The VEX Voucher Status cannot be changed once it is set to a &apos;Sent&apos; Status!</errorMessage>
+</ValidationRule>

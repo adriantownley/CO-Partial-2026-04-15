@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV11_CustomerAccountAndOpportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+ $User.Alias   &lt;&gt;  &apos;IntUser&apos;,
+ $User.Alias   &lt;&gt;  &apos;guest&apos;,
+CASE($RecordType.Name,
+&apos;New Business Opportunity&apos;, 1,
+&apos;Auto-Renewal Opportunity&apos;, 1,
+&apos;Manual Renewal Opportunity&apos;, 1,0) =0,
+Account.RecordType.Name = &apos;Customer Accounts&apos;
+)</errorConditionFormula>
+    <errorMessage>OV11: A Customer Account can only have a Customer or Non-Auto Renewal Opportunity.</errorMessage>
+</ValidationRule>

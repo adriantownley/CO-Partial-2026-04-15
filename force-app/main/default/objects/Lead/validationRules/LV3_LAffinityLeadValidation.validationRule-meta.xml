@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LV3_LAffinityLeadValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+RecordType.Name = &quot;Partner Lead&quot;,
+Partner_Channel__c = &apos;Affinity&apos;,
+ISCHANGED( IsConverted ),
+IsConverted ,
+OR(
+ISBLANK( No_Monthly_Sign_Ups__c ),
+ISBLANK( Existing_Customer_Engagement__c) ,
+ISBLANK( How_Kingsbridge_fit_into_the_process__c ) ,
+ISBLANK( Integrated_Q_B_Journey_Requested__c ) ,
+ISBLANK( Kingsbridge_Proposal_Details__c ) 
+)
+)</errorConditionFormula>
+    <errorMessage>LV3: Please fill the following fields before converting the lead.
+
+No. Monthly Sign-Ups
+Existing Customer Engagement
+How will Kingsbridge fit into the process? 
+Integrated Q&amp;B Journey Requested?
+Kingsbridge Proposal Details</errorMessage>
+</ValidationRule>

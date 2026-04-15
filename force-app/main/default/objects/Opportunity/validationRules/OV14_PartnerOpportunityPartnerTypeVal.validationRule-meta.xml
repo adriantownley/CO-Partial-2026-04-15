@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV14_PartnerOpportunityPartnerTypeVal</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+$RecordType.Name = &apos;Partner Opportunity&apos;,
+Text(StageName) = &apos;Closed Lost&apos;,
+ISCHANGED(Reason_Lost__c),
+OR(
+ IF(INCLUDES(Product_Type__c,&apos;Group Insurance&apos;),
+  CASE(Reason_Lost__c,
+   &apos;Chase Exhausted&apos;,1,
+   &apos;Too Expensive&apos;,1,
+   &apos;International&apos;,1,
+   &apos;Cannot insure&apos;,1
+   ,0)
+ ,1) = 0,
+ IF(INCLUDES(Product_Type__c,&apos;Insurance Audit&apos;),
+  CASE(Reason_Lost__c,
+   &apos;Does not enforce insurance&apos;,1,
+   &apos;Not a priority&apos;,1,
+   &apos;All workers insured&apos;,1
+   ,0)
+ ,1) = 0,
+ IF(INCLUDES(Product_Type__c,&apos;IR35 Health Check&apos;),
+  CASE(Reason_Lost__c,
+   &apos;Chase exhausted&apos;,1,
+   &apos;Too expensive&apos;,1
+   ,0)
+ ,1) = 0,
+ IF(INCLUDES(Product_Type__c,&apos;IR35 Tool&apos;),
+  CASE(Reason_Lost__c,
+   &apos;Chase Exhausted&apos;,1,
+   &apos;Too Expensive&apos;,1,
+   &apos;CEST&apos;,1,
+   &apos;Alternative provider&apos;,1,
+   &apos;Not enough Outside IR35&apos;,1
+   ,0)
+ ,1) = 0,
+ IF(INCLUDES(Product_Type__c,&apos;OPP&apos;),
+  CASE(Reason_Lost__c,
+   &apos;Chase Exhausted&apos;,1,
+   &apos;Too Expensive&apos;,1,
+   &apos;Enforcing contractor&apos;,1,
+   &apos;Alternative provider&apos;,1,
+   &apos;Not enough Outside IR35&apos;,1
+   ,0)
+ ,1) = 0,
+ IF(INCLUDES(Product_Type__c,&apos;Professional Indemnity&apos;),
+  CASE(Reason_Lost__c,
+   &apos;Does not enforce insurance&apos;,1,
+   &apos;Does not want to recommend&apos;,1,
+   &apos;No Outside IR35 workers&apos;,1,
+   &apos;Alternative provider&apos;,1
+   ,0)
+ ,1) = 0,
+ IF(INCLUDES(Product_Type__c,&apos;Public Liability Affinity&apos;),
+  CASE(Reason_Lost__c,
+   &apos;Does not want to recommend&apos;,1,
+   &apos;Cannot insure members&apos;,1,
+   &apos;Alternative provider&apos;,1
+   ,0)
+ ,1) = 0
+)
+)</errorConditionFormula>
+    <errorDisplayField>Reason_Lost__c</errorDisplayField>
+    <errorMessage>OV14: Please select the correct Reason Lost for the Partner Type.</errorMessage>
+</ValidationRule>

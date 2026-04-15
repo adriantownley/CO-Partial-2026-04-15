@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Reason__c</fullName>
+    <label>Close Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Change of details</fullName>
+                <default>false</default>
+                <label>Change of details</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Payment query</fullName>
+                <default>false</default>
+                <label>Payment query</label>
+            </value>
+            <value>
+                <fullName>Mid term amendment</fullName>
+                <default>false</default>
+                <label>Mid term amendment</label>
+            </value>
+            <value>
+                <fullName>Sales enquiry</fullName>
+                <default>false</default>
+                <label>Sales enquiry</label>
+            </value>
+            <value>
+                <fullName>Promotional query</fullName>
+                <default>false</default>
+                <label>Promotional query</label>
+            </value>
+            <value>
+                <fullName>Renewal enquiry</fullName>
+                <default>false</default>
+                <label>Renewal enquiry</label>
+            </value>
+            <value>
+                <fullName>Rubbish/junk/internal comms</fullName>
+                <default>false</default>
+                <label>Rubbish/junk/internal comms</label>
+            </value>
+            <value>
+                <fullName>Claim</fullName>
+                <default>false</default>
+                <label>Claim</label>
+            </value>
+            <value>
+                <fullName>Ir35/Contract/ status review</fullName>
+                <default>false</default>
+                <label>Ir35/Contract/ status review</label>
+            </value>
+            <value>
+                <fullName>General enquiry</fullName>
+                <default>false</default>
+                <label>General enquiry</label>
+            </value>
+            <value>
+                <fullName>Saved Sale</fullName>
+                <default>false</default>
+                <label>Saved Sale</label>
+            </value>
+            <value>
+                <fullName>Sales processing error</fullName>
+                <default>false</default>
+                <label>Sales processing error</label>
+            </value>
+            <value>
+                <fullName>Offline Payment</fullName>
+                <default>false</default>
+                <label>Offline Payment</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Referral - Approved</fullName>
+                <default>false</default>
+                <label>Referral - Approved</label>
+            </value>
+            <value>
+                <fullName>Referral - Declined</fullName>
+                <default>false</default>
+                <label>Referral - Declined</label>
+            </value>
+            <value>
+                <fullName>Referral Approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Referral Approved</label>
+            </value>
+            <value>
+                <fullName>Referral Declined</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Referral Declined</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Change of details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Payment query</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Mid term amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Sales enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Promotional query</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Renewal enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Rubbish/junk/internal comms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Ir35/Contract/ status review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>General enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Saved Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Sales processing error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Offline Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Referral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Referral - Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Referral - Declined</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

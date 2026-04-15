@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Response_Not_Complaint_Due__c</fullName>
+    <formula>IF(
+    NOT(Record_Type_Name__c = &quot;Complaint&quot;),
+    DATETIMEVALUE(
+        TEXT(
+            CASE(
+                MOD(WEEKDAY(DATEVALUE(CreatedDate) + 1), 7),
+                7, DATEVALUE(CreatedDate) + 3,  /* Saturday → Monday */
+                1, DATEVALUE(CreatedDate) + 2,  /* Sunday → Monday */
+                DATEVALUE(CreatedDate) + 1      /* Weekday → next day */
+            )
+        ) &amp; &quot; 17:30:00&quot;
+    ),
+    NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>First Response Not Complaint Due</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

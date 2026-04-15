@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreement_Requested_by_Customer__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to determine whether weekly reminders will need to be send out to the Account.Owner via a scheduled Flow (Opportunity: Scheduled - Sending Agreement Approval Reminder). Will be set to True by Flow once button Request Agreement has been used</description>
+    <label>Agreement Requested by Customer</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

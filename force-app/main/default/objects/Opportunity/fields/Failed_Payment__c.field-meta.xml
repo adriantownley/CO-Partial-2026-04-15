@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Failed_Payment__c</fullName>
+    <formula>AND(
+!Tacit_Decline__c,
+RecordType.DeveloperName = &apos;Auto_Renewal_Opportunity&apos;,
+Account.Auto_Renew__c,
+!IsClosed,
+DATEVALUE(Policy_Inception_Date__c) - TODAY() &lt;= 6,
+DATEVALUE(Policy_Inception_Date__c) &gt; TODAY()
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indicates an Open Auto Renew Opportunities that hasn&apos;t been Closed 6 days before expiry and hasn&apos;t already been processed</inlineHelpText>
+    <label>Failed Payment</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

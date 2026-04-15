@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Earliest_Agreement_Date_45__c</fullName>
+    <formula>Earliest_Agreement_Date__c  - 45 = TODAY()</formula>
+    <label>Earliest Agreement Date - 45</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

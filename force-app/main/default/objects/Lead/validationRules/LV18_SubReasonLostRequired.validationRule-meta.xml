@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LV18_SubReasonLostRequired</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+ISBLANK(Sub_Reason_Lost_Free_Text__c ),
+OR(
+ISPICKVAL(Sub_Reason_Lost_1__c,&quot;Occupation Not Covered&quot;),
+ISPICKVAL(Sub_Reason_Lost_1__c,&quot;Jurisdiction&quot;),
+ISPICKVAL(Sub_Reason_Lost_2__c,&quot;Other&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Sub_Reason_Lost_Free_Text__c</errorDisplayField>
+    <errorMessage>A Sub-Reason Lost Free Text is required.</errorMessage>
+</ValidationRule>

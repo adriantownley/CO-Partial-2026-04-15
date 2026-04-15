@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Subjects__c</fullName>
+    <label>Task Subjects</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CST: NTU</fullName>
+                <default>false</default>
+                <label>CST: NTU</label>
+            </value>
+            <value>
+                <fullName>CST: Shortfall</fullName>
+                <default>false</default>
+                <label>CST: Shortfall</label>
+            </value>
+            <value>
+                <fullName>CST:MPR</fullName>
+                <default>false</default>
+                <label>CST:MPR</label>
+            </value>
+            <value>
+                <fullName>CST: CDC - Not Received</fullName>
+                <default>false</default>
+                <label>CST: CDC - Not Received</label>
+            </value>
+            <value>
+                <fullName>CST: CDC - Cancelled</fullName>
+                <default>false</default>
+                <label>CST: CDC - Cancelled</label>
+            </value>
+            <value>
+                <fullName>CST: Voucher</fullName>
+                <default>false</default>
+                <label>CST: Voucher</label>
+            </value>
+            <value>
+                <fullName>CST: Redemption</fullName>
+                <default>false</default>
+                <label>CST: Redemption</label>
+            </value>
+            <value>
+                <fullName>CST: Receipt</fullName>
+                <default>false</default>
+                <label>CST: Receipt</label>
+            </value>
+            <value>
+                <fullName>CST: TWIMC</fullName>
+                <default>false</default>
+                <label>CST: TWIMC</label>
+            </value>
+            <value>
+                <fullName>CST: Manual DD</fullName>
+                <default>false</default>
+                <label>CST: Manual DD</label>
+            </value>
+            <value>
+                <fullName>CST: Failed GC</fullName>
+                <default>false</default>
+                <label>CST: Failed GC</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>IT Ticket</fullName>
+                <default>false</default>
+                <label>IT Ticket</label>
+            </value>
+            <value>
+                <fullName>CST: Check CBPF</fullName>
+                <default>false</default>
+                <label>CST: Check CBPF</label>
+            </value>
+            <value>
+                <fullName>CST: Admin</fullName>
+                <default>false</default>
+                <label>CST: Admin</label>
+            </value>
+            <value>
+                <fullName>CST: Negative MTA Refund</fullName>
+                <default>false</default>
+                <label>CST: Negative MTA Refund</label>
+            </value>
+            <value>
+                <fullName>CST: Cancel Re-Set Up Check</fullName>
+                <default>false</default>
+                <label>CST: Cancel Re-Set Up Check</label>
+            </value>
+            <value>
+                <fullName>CST: Cash Allocation</fullName>
+                <default>false</default>
+                <label>CST: Cash Allocation</label>
+            </value>
+            <value>
+                <fullName>CST: Daily Transactions</fullName>
+                <default>false</default>
+                <label>CST: Daily Transactions</label>
+            </value>
+            <value>
+                <fullName>CST: Claim</fullName>
+                <default>false</default>
+                <label>CST: Claim</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>NB: Attempt to Contact 1</fullName>
+                <default>false</default>
+                <label>NB: Attempt to Contact 1</label>
+            </value>
+            <value>
+                <fullName>NB: Attempt to Contact 2</fullName>
+                <default>false</default>
+                <label>NB: Attempt to Contact 2</label>
+            </value>
+            <value>
+                <fullName>NB: Attempt to Contact 3</fullName>
+                <default>false</default>
+                <label>NB: Attempt to Contact 3</label>
+            </value>
+            <value>
+                <fullName>NB: Attempt to Contact 4</fullName>
+                <default>false</default>
+                <label>NB: Attempt to Contact 4</label>
+            </value>
+            <value>
+                <fullName>NB: Follow Up</fullName>
+                <default>false</default>
+                <label>NB: Follow Up</label>
+            </value>
+            <value>
+                <fullName>NB: Arranged Callback</fullName>
+                <default>false</default>
+                <label>NB: Arranged Callback</label>
+            </value>
+            <value>
+                <fullName>NB: Arranged Callback 2</fullName>
+                <default>false</default>
+                <label>NB: Arranged Callback 2</label>
+            </value>
+            <value>
+                <fullName>NB: Further Attempt</fullName>
+                <default>false</default>
+                <label>NB: Further Attempt</label>
+            </value>
+            <value>
+                <fullName>NB: Quote Referred</fullName>
+                <default>false</default>
+                <label>NB: Quote Referred</label>
+            </value>
+            <value>
+                <fullName>NB: Sale</fullName>
+                <default>false</default>
+                <label>NB: Sale</label>
+            </value>
+            <value>
+                <fullName>NB: Contact At Renewal</fullName>
+                <default>false</default>
+                <label>NB: Contact At Renewal</label>
+            </value>
+            <value>
+                <fullName>RN: Arranged Callback</fullName>
+                <default>false</default>
+                <label>RN: Arranged Callback</label>
+            </value>
+            <value>
+                <fullName>RN: Arranged Callback 2</fullName>
+                <default>false</default>
+                <label>RN: Arranged Callback 2</label>
+            </value>
+            <value>
+                <fullName>RN: Attempt to Contact 1</fullName>
+                <default>false</default>
+                <label>RN: Attempt to Contact 1</label>
+            </value>
+            <value>
+                <fullName>RN: Attempt to Contact 1 (Tacit)</fullName>
+                <default>false</default>
+                <label>RN: Attempt to Contact 1 (Tacit)</label>
+            </value>
+            <value>
+                <fullName>RN: Attempt to Contact 2</fullName>
+                <default>false</default>
+                <label>RN: Attempt to Contact 2</label>
+            </value>
+            <value>
+                <fullName>RN: Attempt to Contact 3</fullName>
+                <default>false</default>
+                <label>RN: Attempt to Contact 3</label>
+            </value>
+            <value>
+                <fullName>RN: Attempt to Contact 4</fullName>
+                <default>false</default>
+                <label>RN: Attempt to Contact 4</label>
+            </value>
+            <value>
+                <fullName>RN: Chase Exhausted</fullName>
+                <default>false</default>
+                <label>RN: Chase Exhausted</label>
+            </value>
+            <value>
+                <fullName>RN: Follow Up</fullName>
+                <default>false</default>
+                <label>RN: Follow Up</label>
+            </value>
+            <value>
+                <fullName>RN: Further Attempt</fullName>
+                <default>false</default>
+                <label>RN: Further Attempt</label>
+            </value>
+            <value>
+                <fullName>RN: Quote Referred</fullName>
+                <default>false</default>
+                <label>RN: Quote Referred</label>
+            </value>
+            <value>
+                <fullName>RN: Sale</fullName>
+                <default>false</default>
+                <label>RN: Sale</label>
+            </value>
+            <value>
+                <fullName>RN: Cancellation</fullName>
+                <default>false</default>
+                <label>RN: Cancellation</label>
+            </value>
+            <value>
+                <fullName>SDR: Live Transfer</fullName>
+                <default>false</default>
+                <label>SDR: Live Transfer</label>
+            </value>
+            <value>
+                <fullName>SDR: Renewal Date Captured</fullName>
+                <default>false</default>
+                <label>SDR: Renewal Date Captured</label>
+            </value>
+            <value>
+                <fullName>UW: Admin</fullName>
+                <default>false</default>
+                <label>UW: Admin</label>
+            </value>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>SMS</fullName>
+                <default>false</default>
+                <label>SMS</label>
+            </value>
+            <value>
+                <fullName>BDT: BD Call Consultant</fullName>
+                <default>false</default>
+                <label>BDT: BD Call Consultant</label>
+            </value>
+            <value>
+                <fullName>BDT: BD Call Manager</fullName>
+                <default>false</default>
+                <label>BDT: BD Call Manager</label>
+            </value>
+            <value>
+                <fullName>BDT: BD Call Director</fullName>
+                <default>false</default>
+                <label>BDT: BD Call Director</label>
+            </value>
+            <value>
+                <fullName>BDT: AM Call Consultant</fullName>
+                <default>false</default>
+                <label>BDT: AM Call Consultant</label>
+            </value>
+            <value>
+                <fullName>BDT: AM Call Manager</fullName>
+                <default>false</default>
+                <label>BDT: AM Call Manager</label>
+            </value>
+            <value>
+                <fullName>BDT: AM Call Director</fullName>
+                <default>false</default>
+                <label>BDT: AM Call Director</label>
+            </value>
+            <value>
+                <fullName>BDT: Meeting Teams</fullName>
+                <default>false</default>
+                <label>BDT: Meeting Teams</label>
+            </value>
+            <value>
+                <fullName>BDT: Meeting F2F</fullName>
+                <default>false</default>
+                <label>BDT: Meeting F2F</label>
+            </value>
+            <value>
+                <fullName>BDT: Meeting - IR35 Demo</fullName>
+                <default>false</default>
+                <label>BDT: Meeting - IR35 Demo</label>
+            </value>
+            <value>
+                <fullName>BDT: Meeting - IR35 Training</fullName>
+                <default>false</default>
+                <label>BDT: Meeting - IR35 Training</label>
+            </value>
+            <value>
+                <fullName>BDT: Meeting - P.I Training</fullName>
+                <default>false</default>
+                <label>BDT: Meeting - P.I Training</label>
+            </value>
+            <value>
+                <fullName>BDT: Meeting - Client Demo</fullName>
+                <default>false</default>
+                <label>BDT: Meeting - Client Demo</label>
+            </value>
+            <value>
+                <fullName>BDT: Linked in Message</fullName>
+                <default>false</default>
+                <label>BDT: Linked in Message</label>
+            </value>
+            <value>
+                <fullName>BDT:  Text Message</fullName>
+                <default>false</default>
+                <label>BDT:  Text Message</label>
+            </value>
+            <value>
+                <fullName>Admin</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Admin</label>
+            </value>
+            <value>
+                <fullName>CAT: AML</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: AML</label>
+            </value>
+            <value>
+                <fullName>CAT: Cancel Re-Set Up Check</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: Cancel Re-Set Up Check</label>
+            </value>
+            <value>
+                <fullName>CAT: Cancellation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: Cancellation</label>
+            </value>
+            <value>
+                <fullName>CAT: Cash Allocation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: Cash Allocation</label>
+            </value>
+            <value>
+                <fullName>CAT: Due Diligence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: Due Diligence</label>
+            </value>
+            <value>
+                <fullName>CAT: Failed GC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: Failed GC</label>
+            </value>
+            <value>
+                <fullName>CAT: MPR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: MPR</label>
+            </value>
+            <value>
+                <fullName>CAT: NTU</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: NTU</label>
+            </value>
+            <value>
+                <fullName>CAT: Shortfall</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CAT: Shortfall</label>
+            </value>
+            <value>
+                <fullName>CST: Arranged Callback</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Arranged Callback</label>
+            </value>
+            <value>
+                <fullName>CST: Arranged Callback 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Arranged Callback 2</label>
+            </value>
+            <value>
+                <fullName>CST: Attempt to Contact 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Attempt to Contact 1</label>
+            </value>
+            <value>
+                <fullName>CST: Attempt to Contact 1 (Tacit)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Attempt to Contact 1 (Tacit)</label>
+            </value>
+            <value>
+                <fullName>CST: Attempt to Contact 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Attempt to Contact 2</label>
+            </value>
+            <value>
+                <fullName>CST: Attempt to Contact 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Attempt to Contact 3</label>
+            </value>
+            <value>
+                <fullName>CST: Chase Exhausted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Chase Exhausted</label>
+            </value>
+            <value>
+                <fullName>CST: Contact at Renewal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Contact at Renewal</label>
+            </value>
+            <value>
+                <fullName>CST: Further attempt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Further attempt</label>
+            </value>
+            <value>
+                <fullName>CST: Post Sale Call</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Post Sale Call</label>
+            </value>
+            <value>
+                <fullName>CST: Quote referred</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Quote referred</label>
+            </value>
+            <value>
+                <fullName>CST: Sale</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Sale</label>
+            </value>
+            <value>
+                <fullName>CST: Tacit Renewal Decline</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CST: Tacit Renewal Decline</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

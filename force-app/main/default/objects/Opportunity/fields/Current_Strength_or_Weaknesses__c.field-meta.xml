@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Strength_or_Weaknesses__c</fullName>
+    <description>What are the strengths/weaknesses of their current onboarding and compliance process/system?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What are the strengths/weaknesses of their current onboarding and compliance process/system?</inlineHelpText>
+    <label>Current Strength or Weaknesses</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_days_with_Insurer__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Referral_being_reviewed_by_insurers__c=TRUE,
+IF(ISNULL(Referral_Date_Concluded__c),
+   NOW() - Referral_Date_to_insurers__c,
+   Referral_Date_Concluded__c - Referral_Date_to_insurers__c
+   ),
+0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Referral days with Insurer</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>10</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

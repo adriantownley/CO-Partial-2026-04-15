@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contractor_Decision_Maker_Insurance_Audi__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Contractor insurance decision maker?</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Contractor insurance decision maker?)</relationshipLabel>
+    <relationshipName>OpportunitiesUyVm</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

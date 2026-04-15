@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Primary_Campaign__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box if you would like the Opportunity to add the Ultimate Decision Maker as a member of the associated Primary Campaign.</description>
+    <label>Use Primary Campaign</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

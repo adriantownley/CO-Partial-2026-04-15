@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Renewing_Reason_Picklist__c</fullName>
+    <description>If this is filled, then this Policy is recognised as not renewing.</description>
+    <label>Not Renewing Reason Picklist</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Changed business activity</fullName>
+                <default>false</default>
+                <label>Changed business activity</label>
+            </value>
+            <value>
+                <fullName>Changed circumstances</fullName>
+                <default>false</default>
+                <label>Changed circumstances</label>
+            </value>
+            <value>
+                <fullName>Chased too late</fullName>
+                <default>false</default>
+                <label>Chased too late</label>
+            </value>
+            <value>
+                <fullName>Chase exhausted</fullName>
+                <default>false</default>
+                <label>Chase exhausted</label>
+            </value>
+            <value>
+                <fullName>Company closed</fullName>
+                <default>false</default>
+                <label>Company closed</label>
+            </value>
+            <value>
+                <fullName>Company dormant</fullName>
+                <default>false</default>
+                <label>Company dormant</label>
+            </value>
+            <value>
+                <fullName>Contact at renewal</fullName>
+                <default>false</default>
+                <label>Contact at renewal</label>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Declined by insurers</fullName>
+                <default>false</default>
+                <label>Declined by insurers</label>
+            </value>
+            <value>
+                <fullName>Does not require insurance</fullName>
+                <default>false</default>
+                <label>Does not require insurance</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Duplicate/Test</fullName>
+                <default>false</default>
+                <label>Duplicate/Test</label>
+            </value>
+            <value>
+                <fullName>Gone back to employment</fullName>
+                <default>false</default>
+                <label>Gone back to employment</label>
+            </value>
+            <value>
+                <fullName>Illness</fullName>
+                <default>false</default>
+                <label>Illness</label>
+            </value>
+            <value>
+                <fullName>Incorrect Contacts</fullName>
+                <default>false</default>
+                <label>Incorrect Contacts</label>
+            </value>
+            <value>
+                <fullName>Insured elsewhere (no proof)</fullName>
+                <default>false</default>
+                <label>Insured elsewhere (no proof)</label>
+            </value>
+            <value>
+                <fullName>Insured elsewhere (proof provided)</fullName>
+                <default>false</default>
+                <label>Insured elsewhere (proof provided)</label>
+            </value>
+            <value>
+                <fullName>Insured with Kingsbridge</fullName>
+                <default>false</default>
+                <label>Insured with Kingsbridge</label>
+            </value>
+            <value>
+                <fullName>Insuring with agency</fullName>
+                <default>false</default>
+                <label>Insuring with agency</label>
+            </value>
+            <value>
+                <fullName>Insuring with competitor</fullName>
+                <default>false</default>
+                <label>Insuring with competitor</label>
+            </value>
+            <value>
+                <fullName>Insuring with end client</fullName>
+                <default>false</default>
+                <label>Insuring with end client</label>
+            </value>
+            <value>
+                <fullName>Insuring with professional body</fullName>
+                <default>false</default>
+                <label>Insuring with professional body</label>
+            </value>
+            <value>
+                <fullName>Moving from UK</fullName>
+                <default>false</default>
+                <label>Moving from UK</label>
+            </value>
+            <value>
+                <fullName>No work</fullName>
+                <default>false</default>
+                <label>No work</label>
+            </value>
+            <value>
+                <fullName>Premium too expensive</fullName>
+                <default>false</default>
+                <label>Premium too expensive</label>
+            </value>
+            <value>
+                <fullName>Purchased run-off cover</fullName>
+                <default>false</default>
+                <label>Purchased run-off cover</label>
+            </value>
+            <value>
+                <fullName>Refuses to give reason</fullName>
+                <default>false</default>
+                <label>Refuses to give reason</label>
+            </value>
+            <value>
+                <fullName>Renewal cancelled</fullName>
+                <default>false</default>
+                <label>Renewal cancelled</label>
+            </value>
+            <value>
+                <fullName>Renewal midterm cancellation</fullName>
+                <default>false</default>
+                <label>Renewal midterm cancellation</label>
+            </value>
+            <value>
+                <fullName>Renewal too expensive</fullName>
+                <default>false</default>
+                <label>Renewal too expensive</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Short Term Contract</fullName>
+                <default>false</default>
+                <label>Short Term Contract</label>
+            </value>
+            <value>
+                <fullName>Suspend Renewal Emails</fullName>
+                <default>false</default>
+                <label>Suspend Renewal Emails</label>
+            </value>
+            <value>
+                <fullName>Too little cover</fullName>
+                <default>false</default>
+                <label>Too little cover</label>
+            </value>
+            <value>
+                <fullName>Too much cover</fullName>
+                <default>false</default>
+                <label>Too much cover</label>
+            </value>
+            <value>
+                <fullName>Unhappy with service</fullName>
+                <default>false</default>
+                <label>Unhappy with service</label>
+            </value>
+            <value>
+                <fullName>No longer working through the company</fullName>
+                <default>false</default>
+                <label>No longer working through the company</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

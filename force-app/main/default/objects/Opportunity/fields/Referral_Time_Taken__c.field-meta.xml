@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Time_Taken__c</fullName>
+    <description>This Is the difference between Referral date concluded and Referral date to insurers</description>
+    <externalId>false</externalId>
+    <formula>IF(
+(Referral_Date_Concluded__c - Referral_Date_to_insurers__c) &gt; 0 ,
+TEXT( FLOOR( Referral_Date_Concluded__c - Referral_Date_to_insurers__c ) ) &amp; &quot; days &quot;
+&amp; TEXT( FLOOR( MOD( (Referral_Date_Concluded__c - Referral_Date_to_insurers__c ) * 24, 24 ) ) ) &amp; &quot; hours &quot;
+&amp; TEXT( ROUND( MOD( (Referral_Date_Concluded__c - Referral_Date_to_insurers__c ) * 24 * 60, 60 ), 0 ) ) &amp; &quot; minutes&quot;,
+&quot;&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Referral Time Taken</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

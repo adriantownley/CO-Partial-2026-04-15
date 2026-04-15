@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uninsured_remaining_email2__c</fullName>
+    <description>Enter the number of uninsured contractors still remaining at the Email 2 Stage.</description>
+    <externalId>false</externalId>
+    <label>Uninsured remaining (email2)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

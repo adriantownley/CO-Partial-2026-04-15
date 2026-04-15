@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Failure_Type__c</fullName>
+    <label>Payment Failure Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Missed Payment</fullName>
+                <default>false</default>
+                <label>Missed Payment</label>
+            </value>
+            <value>
+                <fullName>Midterm Missed Payment</fullName>
+                <default>false</default>
+                <label>Midterm Missed Payment</label>
+            </value>
+            <value>
+                <fullName>NTU</fullName>
+                <default>false</default>
+                <label>NTU</label>
+            </value>
+            <value>
+                <fullName>Shortfall</fullName>
+                <default>false</default>
+                <label>Shortfall</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

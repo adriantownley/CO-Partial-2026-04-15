@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Name_from_Policy__c</fullName>
+    <description>Field created to pass the Product Name of a Policy record into an Opportunity upon creating a Non-Auto Renewal Opportunity for an expiring Policy (Done via flow &apos;Policy: Scheduled&apos;). Used by Marketing.</description>
+    <label>Product Name from Policy</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

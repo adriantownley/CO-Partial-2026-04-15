@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LV6_CompanyRequiredPartnerConversion</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+$RecordType.Name = &apos;Partner Lead&apos;,
+ISCHANGED( IsConverted ),
+IsConverted ,
+ISBLANK(Company)
+)</errorConditionFormula>
+    <errorDisplayField>Company</errorDisplayField>
+    <errorMessage>LV16: Company field is required.</errorMessage>
+</ValidationRule>

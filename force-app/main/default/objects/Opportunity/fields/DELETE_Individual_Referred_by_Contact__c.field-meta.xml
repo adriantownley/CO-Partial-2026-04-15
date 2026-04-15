@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DELETE_Individual_Referred_by_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Person Account which referred the Lead that led to the Opportunity</description>
+    <label>DELETE_Individual Referred by Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Individual Referred by Contact)</relationshipLabel>
+    <relationshipName>Opportunities3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

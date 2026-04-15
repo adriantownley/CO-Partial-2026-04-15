@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ultimate_Decision_Maker_PL_Trade_Body__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Ultimate Decision Maker (PL Trade Body)</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Ultimate Decision Maker (PL Trade Body))</relationshipLabel>
+    <relationshipName>OpportunitiesUyZT</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

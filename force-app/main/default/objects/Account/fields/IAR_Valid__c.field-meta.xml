@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IAR_Valid__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does this partner have a valid IAR agreement in place? Used for email and API lead quarantine rules.</description>
+    <label>Data Sharing Permission</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

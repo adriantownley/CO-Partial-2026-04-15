@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OV7_IR35_Tool_Point_Of_Contact</fullName>
+    <active>false</active>
+    <description>Point of Contact is mandatory for Closed Won Opportunities</description>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$User.Alias &lt;&gt; &apos;IntUser&apos;,
+$User.Alias &lt;&gt; &apos;guest&apos;,
+RecordType.DeveloperName = &apos;Partner_Opportunity&apos;,
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &apos;Closed Won&apos;),
+Number_of_IR_35_Tool_Products__c &gt; 0,
+ISBLANK( Point_of_Contact__c ) 
+)</errorConditionFormula>
+    <errorDisplayField>Point_of_Contact__c</errorDisplayField>
+    <errorMessage>OV7: The Point of Contact is needed for IR35 Tool Opportunities as the Brand Logo &amp; HEX Code is requested from this user.</errorMessage>
+</ValidationRule>

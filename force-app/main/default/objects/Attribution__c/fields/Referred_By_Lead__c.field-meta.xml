@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referred_By_Lead__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Referred By (Lead)</label>
+    <referenceTo>Lead</referenceTo>
+    <relationshipName>Introducer_for</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Win_Back_Opportunity__c</fullName>
+    <description>This field is used to indicate whether an Opportunity of the subtype &apos;Win-Back&apos; should be created (via Scheduled automation)</description>
+    <label>Win-Back Opportunity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Prospecting</controllingFieldValue>
+            <controllingFieldValue>Negotiation</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualification</controllingFieldValue>
+            <controllingFieldValue>Agreement</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>Yes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospecting</controllingFieldValue>
+            <controllingFieldValue>Negotiation</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualification</controllingFieldValue>
+            <controllingFieldValue>Agreement</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>No</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

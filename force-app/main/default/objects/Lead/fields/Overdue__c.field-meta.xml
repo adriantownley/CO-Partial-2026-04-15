@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overdue__c</fullName>
+    <formula>IF((TEXT(Status) == &apos;New&apos;) &amp;&amp; (CreatedDate+0.04167 &lt; Now()), TRUE, FALSE)</formula>
+    <label>Overdue</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

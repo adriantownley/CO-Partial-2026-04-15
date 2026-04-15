@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Getting_Agreement_Signed_Reminder_Today__c</fullName>
+    <description>Used as criteria of Opportunity: Scheduled - Getting Agreement Signed Reminder</description>
+    <formula>Next_Getting_Agreement_Signed_Reminder__c = today()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Getting Agreement Signed Reminder Today</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

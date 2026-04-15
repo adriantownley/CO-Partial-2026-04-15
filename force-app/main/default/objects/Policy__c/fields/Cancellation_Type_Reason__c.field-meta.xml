@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Type_Reason__c</fullName>
+    <label>Cancellation Type Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cancellation_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Company closed/dormant</fullName>
+                <default>false</default>
+                <label>Company closed/dormant</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Duplicate/test</fullName>
+                <default>false</default>
+                <label>Duplicate/test</label>
+            </value>
+            <value>
+                <fullName>No work</fullName>
+                <default>false</default>
+                <label>No work</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PAYE/umbrella</fullName>
+                <default>false</default>
+                <label>PAYE/umbrella</label>
+            </value>
+            <value>
+                <fullName>Payment</fullName>
+                <default>false</default>
+                <label>Payment</label>
+            </value>
+            <value>
+                <fullName>Policy unsuitable</fullName>
+                <default>false</default>
+                <label>Policy unsuitable</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Run-off cover purchased</fullName>
+                <default>false</default>
+                <label>Run-off cover purchased</label>
+            </value>
+            <value>
+                <fullName>Financial Difficulty</fullName>
+                <default>false</default>
+                <label>Financial Difficulty</label>
+            </value>
+            <value>
+                <fullName>Cancel Re-Setup</fullName>
+                <default>false</default>
+                <label>Cancel Re-Setup</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Company closed/dormant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Duplicate/test</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>No work</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>PAYE/umbrella</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Policy unsuitable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Retired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Run-off cover purchased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Financial Difficulty</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooling_Off_Period</controllingFieldValue>
+            <controllingFieldValue>Midterm_Cancellation</controllingFieldValue>
+            <valueName>Cancel Re-Setup</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

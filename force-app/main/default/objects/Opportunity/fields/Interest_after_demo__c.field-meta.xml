@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interest_after_demo__c</fullName>
+    <description>How interested are they in KB Elements?</description>
+    <label>Interest after demo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1- wants to buy now</fullName>
+                <default>false</default>
+                <label>1- wants to buy now</label>
+            </value>
+            <value>
+                <fullName>2- wants to buy later</fullName>
+                <default>false</default>
+                <label>2- wants to buy later</label>
+            </value>
+            <value>
+                <fullName>3 - not interested</fullName>
+                <default>false</default>
+                <label>3 - not interested</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Sub_Type__c</fullName>
+    <label>Case Sub-Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>true</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Renewals</fullName>
+                <default>false</default>
+                <label>Renewals</label>
+            </value>
+            <value>
+                <fullName>IR 35</fullName>
+                <default>false</default>
+                <label>IR35 Tool</label>
+            </value>
+            <value>
+                <fullName>Off-Payroll Protect</fullName>
+                <default>false</default>
+                <label>Off-Payroll Protect</label>
+            </value>
+            <value>
+                <fullName>IR35 Contract Review</fullName>
+                <default>false</default>
+                <label>IR35 Contract Review</label>
+            </value>
+            <value>
+                <fullName>Customer Accounts Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Accounts Team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

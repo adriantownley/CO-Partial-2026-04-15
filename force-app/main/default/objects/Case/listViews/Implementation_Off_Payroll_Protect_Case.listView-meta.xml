@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implementation_Off_Payroll_Protect_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Implementation - Off-Payroll Protect</label>
+    <queue>Implementation_Off_Payroll_Protect</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

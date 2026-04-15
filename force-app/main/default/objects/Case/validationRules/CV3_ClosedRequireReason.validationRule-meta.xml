@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CV3_ClosedRequireReason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Setup.Kingsbridge_General_Custom_Setting__c.Validation_Rule__c = False,
+$RecordType.Name = &apos;Customer Support&apos;,
+ISCHANGED(Status),
+ISBLANK(TEXT(Close_Reason__c)),
+TEXT(Status) = &apos;Closed&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Close_Reason__c</errorDisplayField>
+    <errorMessage>CV3: Please select a Close Reason.</errorMessage>
+</ValidationRule>

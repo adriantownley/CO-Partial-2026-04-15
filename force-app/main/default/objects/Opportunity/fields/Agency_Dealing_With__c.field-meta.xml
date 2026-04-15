@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_Dealing_With__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Opportunities that an agency is now dealing with</description>
+    <label>Agency Dealing With</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Products_Unsuitable__c</fullName>
+    <description>Reason products are unsuitable</description>
+    <label>Reason Products Unsuitable</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reason_Lost__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Reason_Products_Unsuitable</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Doctor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Nurse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Carer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Radiographer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Surgeon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>dentist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Midwife</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Registrar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Physio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Pharmacist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Paramedic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Plater/Welder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Plumber</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Electrician</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Driver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Plasterer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Asbestos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Offshore Diving</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Accountant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Solicitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Financial Adviser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Investment Adviser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Insurance Broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Umbrella employee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>More than one employee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Non-uk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>SME occupation unsuitable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Asset manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Auctioning of fine art,antiques and bloodstock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Building surveyor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Naval Architect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Property asset management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Valuator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Will Writer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product unsuitable</controllingFieldValue>
+            <valueName>Cardiologist</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

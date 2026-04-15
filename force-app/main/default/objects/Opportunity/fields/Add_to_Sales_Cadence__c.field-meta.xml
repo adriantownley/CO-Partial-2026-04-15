@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_to_Sales_Cadence__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate to an automation whether the record will need to be added to a Sales Engagement Cadence</description>
+    <label>Add to Sales Cadence</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

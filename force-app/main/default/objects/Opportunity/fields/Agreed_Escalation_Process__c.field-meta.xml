@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreed_Escalation_Process__c</fullName>
+    <description>What is the agreed escalation process?</description>
+    <label>Agreed Escalation Process</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No escalation</fullName>
+                <default>false</default>
+                <label>No escalation</label>
+            </value>
+            <value>
+                <fullName>Blocker to payment</fullName>
+                <default>false</default>
+                <label>Blocker to payment</label>
+            </value>
+            <value>
+                <fullName>Removed from site</fullName>
+                <default>false</default>
+                <label>Removed from site</label>
+            </value>
+            <value>
+                <fullName>Inform the client</fullName>
+                <default>false</default>
+                <label>Inform the client</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TV1_OutcomeCodeRule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISPICKVAL(Status, &apos;Completed&apos;),
+					 LabsActionPlans__TaskAPTask__r.LabsActionPlans__Action_Plan__r.LabsActionPlans__Opportunity__r.Record_Type_Name__c != &quot;Partner_Opportunity&quot;,  
+					ISPICKVAL(Outcome_Code__c, &apos;&apos; )
+)</errorConditionFormula>
+    <errorDisplayField>Outcome_Code__c</errorDisplayField>
+    <errorMessage>Outcome Code is required when completing a Task.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>lukasz.zawieja@kingsbridge.co.uk</contactEmail>
+    <label>LivePerson CRM Widget</label>
+    <oauthConfig>
+        <callbackUrl>https://localhost</callbackUrl>
+        <certificate>MIIFyTCCA7GgAwIBAgIUfYi9Cwxhjqik6DQX2Weapva2XC0wDQYJKoZIhvcNAQENBQAwdDELMAkGA1UEBhMCR0IxGDAWBgNVBAgMD0dsb3VjZXN0ZXJzaGlyZTETMBEGA1UEBwwKVGV3a2VzYnVyeTEUMBIGA1UECgwLS2luZ3NicmlkZ2UxCzAJBgNVBAsMAklUMRMwEQYDVQQDDApMaXZlUGVyc29uMB4XDTI1MDYxNzExMjEwNloXDTI2MDYxNzExMjEwNlowdDELMAkGA1UEBhMCR0IxGDAWBgNVBAgMD0dsb3VjZXN0ZXJzaGlyZTETMBEGA1UEBwwKVGV3a2VzYnVyeTEUMBIGA1UECgwLS2luZ3NicmlkZ2UxCzAJBgNVBAsMAklUMRMwEQYDVQQDDApMaXZlUGVyc29uMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA4OgorUWEgt9ZDYxzcmopxp+gsa48b/8N8CUuimWVw+H6Yg5EbEB0q8yCI0c04s8NBr0ZsJR732MQyjsqEaN/W9RWBjBz+TV86U0NQtxgQ+/ILbCugPIh7rEFgBqnaSXCnx6ZaxIcccLlo1+KRSEAXGvEasTDwibw68zzKLDbD/e/YcK01yo+rOSY/0OKo1m2LY499y2eg4MNUwWVOp8WkJAf8ipYsPLQWVWwymKa4/qKBpScDA58eSqDWVmlO6XGi0wYMNWbuirO75R0ZibyOU+uhmVui/2zY3p61rH6J9DEHFR2tPat/whiSxAN39ubC8dyQHG/qf4Jr8M0G4jpBwWX6PYMjPL1VLQjHrpBVFSfhakyWD1/Oy2ZoSGqO6qwODpdKCJswBhv7tDqtrv9d9hEn5MdhH03Ra0KaSPB7yIa9dRInF+oiFJYmvyntIHtzD7N6fg9HSRjg64w5iUQIBBfTtTLVs27ZZOGrk9WDxhbEHK+qEivlq5AWCURDlELwxZUts4m/Ra1PFfjQV2QkvlYUn5prunUhtLaKOrjBK3bAWg/wp+JrjXsHHKV7vZTJoS+BLxd5yrR6qM3+Cppe5gUU3okPDdSYO/uArTIY77SUX5cbVIgztIUC5CX4WHnwO/cCCaFl1eSodkPHr8H8aZn04cWWOF8817xlvNp9QECAwEAAaNTMFEwHQYDVR0OBBYEFJihrPZvZhhHgJP1suz2TEY8OTS3MB8GA1UdIwQYMBaAFJihrPZvZhhHgJP1suz2TEY8OTS3MA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQENBQADggIBAMtPk/N3Aw9JLa5Q8bBb9lW55GbpTbxFACqu6oycjX5T7p2k21h473wJhiDWJQ8s4MzxsAwTaR+UOKSh+IR2HJXMW3Ol2uIh1rp+DLAuKuuymhbCsLcSFheUCNt1AZwPSj+JD7m7lCOfUhWkunJVpqeXN8/cMiZPIRR5WWVU1FThDQ3Q3IHVG17SrtDmLoXYvO2vgalYJ56eVS3Mr8BweLtUL06uGVOlrMWlDB5l3Y85ftq0FFnR2pDqS38fhATAnFLFq5a0bNFbv305h/dOilP9Yxwi4UQoj9dIPJ+9t2cd0kgxgygHPUcS4jnjycaZ1qwfDMcYa/jUQ7aIQ7J9kBiOAfVa+pTUywJUm8Hqy6AqJdGS5LuGCdNVzBlizva8tN+b5BcmOH3Em89CsuAD8BdPfSWsHpL1PkQhrgPGvjvKw+5tj1iUFWcUI2vwmBM8vVtATqoVBZoAj3uXTpYo26bmWmSR5aeyRYHYkxQn5wuTf2dJzKWcvWjs17UDR1gZ1nQaLebkCHNFLCCyshMfqXc4dAi5b3HxF6QOgA6NhRKKZfq6P/JVPqZa1sZ422smjteopghd4apnnWFKTcNvWjyVaLUQOr+nZ++YCBpGNBG2ILGZ+vPsajNZb3ThpSFAucmEW6i8hFc3s8nlY7uH9FsPZUYVzPMTfUuEwLkiscE5</certificate>
+        <consumerKey>3MVG9xj60O9CjKHqYgme4hREl9dAvVIw01vGXlV_Zo0WhMznEbtk.6sMbLbcfrG6ZKmGKU.3ksSXVOlxVq6Xx</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>true</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>CDPQuery</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+    <profileName>Minimum Access - API Only Integrations</profileName>
+    <profileName>Kingsbridge Marketing</profileName>
+    <profileName>Kingsbridge Sales</profileName>
+    <profileName>Kingsbridge Renewals</profileName>
+</ConnectedApp>

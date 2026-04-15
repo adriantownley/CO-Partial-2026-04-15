@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Product_Type__c , &quot;IR35 Contractor Assessment&quot; ), &quot;IR35 Contractor Assessment; &quot;,null ) &amp;
+IF ( INCLUDES ( Product_Type__c , &quot;IR35 Health Check&quot; ), &quot;IR35 Health Check; &quot;,null ) &amp;
+IF ( INCLUDES ( Product_Type__c , &quot;IR35 Protect Essential&quot; ), &quot;IR35 Protect Essential; &quot;,null ) &amp;
+IF ( INCLUDES ( Product_Type__c , &quot;IR35 Protect Insurance&quot; ), &quot;IR35 Protect Insurance; &quot;,null ) &amp;
+IF ( INCLUDES ( Product_Type__c , &quot;IR35 Protect Premium&quot; ), &quot;IR35 Protect Premium; &quot;,null ) &amp;
+IF ( INCLUDES ( Product_Type__c , &quot;IR35 Protect Standalone&quot; ), &quot;IR35 Protect Standalone; &quot;,null ) &amp;
+IF ( INCLUDES ( Product_Type__c , &quot;IR35 Tool&quot; ), &quot;IR35 Tool; &quot;,null )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product Type Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

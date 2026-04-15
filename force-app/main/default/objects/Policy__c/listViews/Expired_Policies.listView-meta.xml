@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expired_Policies</fullName>
+    <columns>NAME</columns>
+    <columns>Inception_Date_Time__c</columns>
+    <columns>Expiry_Date_time__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Product__c</columns>
+    <columns>Product_Name__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Expired__c</columns>
+    <columns>Cancellation_Date_Effective__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Expiry_Date_time__c</field>
+        <operation>lessOrEqual</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Expired</value>
+    </filters>
+    <label>Expired Policies</label>
+</ListView>
