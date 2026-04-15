@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>New Business - BD</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>New_Business_BD_Team</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueRoutingConfig>Inbound_Lead</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

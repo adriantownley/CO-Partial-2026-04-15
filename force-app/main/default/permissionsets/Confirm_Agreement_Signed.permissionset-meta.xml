@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Confirm_Agreement_Signed</name>
+    </customPermissions>
+    <description>Permission Set that determines access to the button of the same name on a Partner PI/PL Opportunity.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Confirm Agreement Signed</label>
+</PermissionSet>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Policy Owner</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>AllInternalUsers</publicGroup>
+        </publicGroups>
+        <users>
+            <user>sf-development@cloudorca.kingsbridge.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Policy__c</sobjectType>
+    </queueSobject>
+</Queue>

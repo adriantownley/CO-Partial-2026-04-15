@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>New Business - Contractor</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>New_Business_Contractor_Sales</publicGroup>
+        </publicGroups>
+        <users>
+            <user>julian.short@kingsbridge.co.uk</user>
+            <user>morgan.todd@kingsbridge.co.uk</user>
+            <user>sam.madden@kingsbridge.co.uk</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Inbound_Lead</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Policy__c</sobjectType>
+    </queueSobject>
+</Queue>

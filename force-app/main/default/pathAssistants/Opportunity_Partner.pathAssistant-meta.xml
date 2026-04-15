@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Opportunity - Partner</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Reason_Lost__c</fieldNames>
+        <fieldNames>Sub_Reason_Lost_1__c</fieldNames>
+        <fieldNames>Sub_Reason_Lost_2__c</fieldNames>
+        <fieldNames>Sub_Reason_Lost_Free_Text__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Document your lost opportunities to increase future wins.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Identify and log lessons learned&lt;/li&gt;&lt;li&gt;Schedule follow-ups if needed&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Closed Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;strong&gt;Great work! You&amp;#39;ve closed a successful deal.&lt;/strong&gt;&lt;/p&gt;</info>
+        <picklistValueName>Closed Won</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;strong&gt;Deliver your solution to stakeholders.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Communicate the value of your solutions&lt;/li&gt;&lt;li&gt;Solidify the timeline and budget&lt;/li&gt;&lt;li&gt;Establish a plan with the customer for when and how you&amp;#39;ll close the deal&lt;/li&gt;&lt;li&gt;Get approval if needed&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Negotiation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;strong&gt;Qualify your opportunity.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Identify the business need you will solve for them&lt;/li&gt;&lt;li&gt;Confirm that they have budget and approval&lt;/li&gt;&lt;li&gt;Determine the timeline based on their needs&lt;/li&gt;&lt;li&gt;Confirm your key stakeholders&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Qualification</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Partner_Opportunity</recordTypeName>
+</PathAssistant>

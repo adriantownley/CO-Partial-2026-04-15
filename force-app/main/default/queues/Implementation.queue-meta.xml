@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Queue for Task/Case Assignments</description>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Implementation</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>IR35_Implementation_Case_Group</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>
