@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Referral_Friend_Email</name>
+        <label>Assign Referral Friend Email</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>var_Source.Referral_Friend_Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Related_Opportunity.Referred_By_Email__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Source_Referral_Friend_Name_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Referral_Friend_Name</name>
+        <label>Assign Referral Friend Name</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>var_Source.Referral_Friend_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Related_Opportunity.Referral_Friend_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Referral_Friend_Email_Opp_Referral_Friend_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Source_Id</name>
+        <label>Assign Source Id</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>var_Source.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Referral_Friend_Name_Opp_Referral_Friend_Name</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Found_related_Opp</name>
+        <label>Found related Opp?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Referral_Friend_Name_Email</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Related_Opportunity</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Source_Id</targetReference>
+            </connector>
+            <label>Check Referral Friend Name &amp; Email</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Referral_Friend_Email_Opp_Referral_Friend_Email</name>
+        <label>Referral Friend Email &lt;&gt; Opp Referral Friend Email</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Source_Referral_Friend_Name_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update_Referral_Friend_Email</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Referral_Friend_Email__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Related_Opportunity.Referred_By_Email__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Referral_Friend_Email</targetReference>
+            </connector>
+            <label>Update Referral Friend Email</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Referral_Friend_Name_Opp_Referral_Friend_Name</name>
+        <label>Referral Friend Name &lt;&gt; Opp Referral Friend Name</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Referral_Friend_Email_Opp_Referral_Friend_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update_Referral_Friend_Name</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Referral_Friend_Name__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Related_Opportunity.Referral_Friend_Name__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Referral_Friend_Name</targetReference>
+            </connector>
+            <label>Update Referral Friend Name</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Source: Update Referral Friend Name &amp; Email {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Source: Update Referral Friend Name &amp; Email</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Related_Opportunity</name>
+        <label>Get Related Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found_related_Opp</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Source_Referral_Friend_Name_Email</name>
+        <label>Update Source - Referral Friend Name &amp; Email</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>var_Source</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Related_Opportunity</targetReference>
+        </connector>
+        <filterFormula>AND(
+TEXT({!$Record.Lead_Source__c}) = &apos;API&apos;,
+TEXT({!$Record.Source__c}) = &apos;RAF&apos;,
+OR
+(
+ISBLANK({!$Record.Referral_Friend_Name__c}),
+ISBLANK({!$Record.Referral_Friend_Email__c})
+)
+)</filterFormula>
+        <object>Attribution__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>var_Source</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Attribution__c</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Chase exhausted</fullName>
+        <default>false</default>
+        <label>Chase exhausted</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact at renewal</fullName>
+        <default>false</default>
+        <label>Contact at renewal</label>
+    </customValue>
+    <customValue>
+        <fullName>Product unsuitable</fullName>
+        <default>false</default>
+        <label>Product unsuitable</label>
+    </customValue>
+    <customValue>
+        <fullName>Product unsuitable:ROI</fullName>
+        <default>false</default>
+        <label>Product unsuitable:ROI</label>
+    </customValue>
+    <customValue>
+        <fullName>Doesn&apos;t want to be contacted</fullName>
+        <default>false</default>
+        <label>Doesn&apos;t want to be contacted</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate/Test</fullName>
+        <default>false</default>
+        <label>Duplicate/Test</label>
+    </customValue>
+    <customValue>
+        <fullName>Incorrect contacts</fullName>
+        <default>false</default>
+        <label>Incorrect contacts</label>
+    </customValue>
+    <customValue>
+        <fullName>Insured with competitor</fullName>
+        <default>false</default>
+        <label>Insured with competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Insured with Kinsgbridge</fullName>
+        <default>false</default>
+        <label>Insured with Kinsgbridge</label>
+    </customValue>
+    <customValue>
+        <fullName>Lost lead</fullName>
+        <default>false</default>
+        <label>Lost lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Matchtech dealing with inhouse</fullName>
+        <default>false</default>
+        <label>Matchtech dealing with inhouse</label>
+    </customValue>
+    <customValue>
+        <fullName>PAYE employment/Umbrella</fullName>
+        <default>false</default>
+        <label>PAYE employment/Umbrella</label>
+    </customValue>
+    <customValue>
+        <fullName>No work</fullName>
+        <default>false</default>
+        <label>No work</label>
+    </customValue>
+    <customValue>
+        <fullName>Too little cover</fullName>
+        <default>false</default>
+        <label>Too little cover</label>
+    </customValue>
+    <customValue>
+        <fullName>Too much cover</fullName>
+        <default>false</default>
+        <label>Too much cover</label>
+    </customValue>
+    <customValue>
+        <fullName>Covid-19</fullName>
+        <default>false</default>
+        <label>Covid-19</label>
+    </customValue>
+    <customValue>
+        <fullName>Inside IR35</fullName>
+        <default>false</default>
+        <label>Inside IR35</label>
+    </customValue>
+    <customValue>
+        <fullName>Kickout</fullName>
+        <default>false</default>
+        <label>Kickout</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Renewing</fullName>
+        <default>false</default>
+        <label>Not Renewing</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <label>Not Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Closure</fullName>
+        <default>false</default>
+        <label>Business Closure</label>
+    </customValue>
+    <customValue>
+        <fullName>Test</fullName>
+        <default>false</default>
+        <label>Test</label>
+    </customValue>
+    <customValue>
+        <fullName>Declined</fullName>
+        <default>false</default>
+        <label>Declined</label>
+    </customValue>
+    <customValue>
+        <fullName>Referred to Insync</fullName>
+        <default>false</default>
+        <label>Referred to Insync</label>
+    </customValue>
+    <masterLabel>Reasons Lost</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

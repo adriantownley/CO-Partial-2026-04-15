@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Public Group to store Users to receive notifications from a Flow for IR35 Health Check notifications.</description>
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <name>IR35 Health Check</name>
+</Group>

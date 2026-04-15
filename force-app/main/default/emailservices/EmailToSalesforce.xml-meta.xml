@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailServicesFunction xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apexClass xsi:nil="true"/>
+    <attachmentOption>All</attachmentOption>
+    <authenticationFailureAction>Discard</authenticationFailureAction>
+    <authorizationFailureAction>Bounce</authorizationFailureAction>
+    <emailServicesAddresses>
+        <authorizedSenders>jane.cox@kingsbridge.co.uk</authorizedSenders>
+        <developerName>emailtosalesforce</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>jane.cox@kingsbridge.co.uk.partial</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>zoe.mabbott@kingsbridge.co.uk</authorizedSenders>
+        <developerName>emailtosalesforce1</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>zoe.mabbott@kingsbridge.co.uk.partial</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>sf-development@cloudorca.com</authorizedSenders>
+        <developerName>emailtosalesforce2</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>sf-development@cloudorca.kingsbridge.com.partial</runAsUser>
+    </emailServicesAddresses>
+    <functionInactiveAction>Bounce</functionInactiveAction>
+    <functionName>EmailToSalesforce</functionName>
+    <isActive>true</isActive>
+    <isAuthenticationRequired>false</isAuthenticationRequired>
+    <isErrorRoutingEnabled>false</isErrorRoutingEnabled>
+    <isTextAttachmentsAsBinary>false</isTextAttachmentsAsBinary>
+    <isTlsRequired>false</isTlsRequired>
+    <overLimitAction>Bounce</overLimitAction>
+</EmailServicesFunction>

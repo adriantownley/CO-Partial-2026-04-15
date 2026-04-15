@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Doctor</fullName>
+        <default>false</default>
+        <label>Doctor</label>
+    </customValue>
+    <customValue>
+        <fullName>Nurse</fullName>
+        <default>false</default>
+        <label>Nurse</label>
+    </customValue>
+    <customValue>
+        <fullName>Carer</fullName>
+        <default>false</default>
+        <label>Carer</label>
+    </customValue>
+    <customValue>
+        <fullName>Radiographer</fullName>
+        <default>false</default>
+        <label>Radiographer</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon</fullName>
+        <default>false</default>
+        <label>Surgeon</label>
+    </customValue>
+    <customValue>
+        <fullName>dentist</fullName>
+        <default>false</default>
+        <label>Dentist</label>
+    </customValue>
+    <customValue>
+        <fullName>Midwife</fullName>
+        <default>false</default>
+        <label>Midwife</label>
+    </customValue>
+    <customValue>
+        <fullName>Registrar</fullName>
+        <default>false</default>
+        <label>Registrar</label>
+    </customValue>
+    <customValue>
+        <fullName>Physio</fullName>
+        <default>false</default>
+        <label>Physio</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacist</fullName>
+        <default>false</default>
+        <label>Pharmacist</label>
+    </customValue>
+    <customValue>
+        <fullName>Paramedic</fullName>
+        <default>false</default>
+        <label>Paramedic</label>
+    </customValue>
+    <customValue>
+        <fullName>Plater/Welder</fullName>
+        <default>false</default>
+        <label>Plater/Welder</label>
+    </customValue>
+    <customValue>
+        <fullName>Plumber</fullName>
+        <default>false</default>
+        <label>Plumber</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrician</fullName>
+        <default>false</default>
+        <label>Electrician</label>
+    </customValue>
+    <customValue>
+        <fullName>Driver</fullName>
+        <default>false</default>
+        <label>Driver</label>
+    </customValue>
+    <customValue>
+        <fullName>Plasterer</fullName>
+        <default>false</default>
+        <label>Plasterer</label>
+    </customValue>
+    <customValue>
+        <fullName>Asbestos</fullName>
+        <default>false</default>
+        <label>Asbestos</label>
+    </customValue>
+    <customValue>
+        <fullName>Offshore Diving</fullName>
+        <default>false</default>
+        <label>Offshore Diving</label>
+    </customValue>
+    <customValue>
+        <fullName>Accountant</fullName>
+        <default>false</default>
+        <label>Accountant</label>
+    </customValue>
+    <customValue>
+        <fullName>Solicitor</fullName>
+        <default>false</default>
+        <label>Solicitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Architect</fullName>
+        <default>false</default>
+        <label>Architect</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Adviser</fullName>
+        <default>false</default>
+        <label>Financial Adviser</label>
+    </customValue>
+    <customValue>
+        <fullName>Investment Adviser</fullName>
+        <default>false</default>
+        <label>Investment Adviser</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance Broker</fullName>
+        <default>false</default>
+        <label>Insurance Broker</label>
+    </customValue>
+    <customValue>
+        <fullName>Umbrella employee</fullName>
+        <default>false</default>
+        <label>Umbrella employee</label>
+    </customValue>
+    <customValue>
+        <fullName>More than one employee</fullName>
+        <default>false</default>
+        <label>More than one employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-uk</fullName>
+        <default>false</default>
+        <label>Non-uk</label>
+    </customValue>
+    <customValue>
+        <fullName>other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>SME occupation unsuitable</fullName>
+        <default>false</default>
+        <label>SME occupation unsuitable</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset manager</fullName>
+        <default>false</default>
+        <label>Asset manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Auctioning of fine art,antiques and bloodstock</fullName>
+        <default>false</default>
+        <label>Auctioning of fine art,antiques and bloodstock</label>
+    </customValue>
+    <customValue>
+        <fullName>Building surveyor</fullName>
+        <default>false</default>
+        <label>Building surveyor</label>
+    </customValue>
+    <customValue>
+        <fullName>Naval Architect</fullName>
+        <default>false</default>
+        <label>Naval Architect</label>
+    </customValue>
+    <customValue>
+        <fullName>Property asset management</fullName>
+        <default>false</default>
+        <label>Property asset management</label>
+    </customValue>
+    <customValue>
+        <fullName>Valuator</fullName>
+        <default>false</default>
+        <label>Valuator</label>
+    </customValue>
+    <customValue>
+        <fullName>Will Writer</fullName>
+        <default>false</default>
+        <label>Will Writer</label>
+    </customValue>
+    <customValue>
+        <fullName>Cardiologist</fullName>
+        <default>false</default>
+        <label>Cardiologist</label>
+    </customValue>
+    <masterLabel>Reason Products Unsuitable</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Public Group to store Users to receive notifications from a Flow for IAR Data Sharing Permissions.</description>
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <name>IAR - Data Sharing Permissions</name>
+</Group>

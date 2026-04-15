@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>adrian.townley@kingsbridge.co.uk</contactEmail>
+    <distributionState>Local</distributionState>
+    <isProtected>false</isProtected>
+    <label>Adrian Postman Autotest</label>
+    <orgScopedExternalApp>00DPu000006Bsfx:Adrian_Postman_Autotest</orgScopedExternalApp>
+</ExternalClientApplication>

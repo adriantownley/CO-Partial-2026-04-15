@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Complete_Demo</name>
+        <label>Assign Complete Demo</label>
+        <locationX>1282</locationX>
+        <locationY>1163</locationY>
+        <assignmentItems>
+            <assignToReference>varOpportunity.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunity.AP_IR35_T_Complete_Demo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Task_is_Sending_Quote_Proposal</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Getting_Agreement_Signed</name>
+        <label>Assign Getting Agreement Signed</label>
+        <locationX>1282</locationX>
+        <locationY>2063</locationY>
+        <assignmentItems>
+            <assignToReference>varOpportunity.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunity.AP_IR35_T_Getting_Agreement_Signed__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Implementing_Off_Payroll</name>
+        <label>Assign Implementing Off Payroll</label>
+        <locationX>578</locationX>
+        <locationY>1163</locationY>
+        <assignmentItems>
+            <assignToReference>varOpportunity.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunity.AP_OPP_Implementing_Off_Payroll__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Sending_Agreement</name>
+        <label>Assign Sending Agreement</label>
+        <locationX>1282</locationX>
+        <locationY>1763</locationY>
+        <assignmentItems>
+            <assignToReference>varOpportunity.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunity.AP_IR35_T_Sending_Agreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Task_is_Getting_Agreement_Signed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Sending_Quote_Proposal</name>
+        <label>Assign Sending Quote/Proposal</label>
+        <locationX>1282</locationX>
+        <locationY>1463</locationY>
+        <assignmentItems>
+            <assignToReference>varOpportunity.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunity.AP_IR35_T_Sending_Quote_Proposal__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Task_is_Sending_Agreement</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Action_Plan_Template</name>
+        <label>Check Action Plan Template</label>
+        <locationX>1425</locationX>
+        <locationY>839</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Off_Payroll_Protect</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LabsActionPlans__TaskAPTask__r.LabsActionPlans__Action_Plan__r.LabsActionPlans__Action_Plan_Template__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BD Off Payroll Protect</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_if_Task_is_Completed</targetReference>
+            </connector>
+            <label>Off Payroll Protect</label>
+        </rules>
+        <rules>
+            <name>IR35_Tool</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LabsActionPlans__TaskAPTask__r.LabsActionPlans__Action_Plan__r.LabsActionPlans__Action_Plan_Template__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BD IR35 Tool</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_if_Task_is_Completed_2</targetReference>
+            </connector>
+            <label>IR35 Tool</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Custom_Settings</name>
+        <label>Check Custom Settings</label>
+        <locationX>1837</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Proceed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.Kingsbridge_General_Custom_Setting__c.Flow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Task_Subject</targetReference>
+            </connector>
+            <label>Proceed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Task_is_Completed</name>
+        <label>Check if Task is Completed</label>
+        <locationX>864</locationX>
+        <locationY>947</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Task_is_Completed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Task_is_Implementing_Off_Payroll</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Task is Completed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Task_is_Completed_2</name>
+        <label>Check if Task is Completed</label>
+        <locationX>1568</locationX>
+        <locationY>947</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Task_is_Completed_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Task_is_Demo_Attended</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Task is Completed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Task_Subject</name>
+        <label>Check Task Subject</label>
+        <locationX>1425</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Check_Action_Plan_Template</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Task_Picklist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Task_Subjects__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Task_Subject</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Task Picklist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Create_or_Update</name>
+        <label>Create or Update</label>
+        <locationX>1009</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Check_Custom_Settings</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Update</defaultConnectorLabel>
+        <rules>
+            <name>Create</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ISNEW</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Check_Task_Subject</targetReference>
+            </connector>
+            <label>Create</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_Check_Task_Subject</name>
+        <label>Check Task Subject</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New_Task_Picklist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Task_Subjects__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Update_Task_Subject</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Task Picklist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Task_is_Demo_Attended</name>
+        <label>Task is Demo Attended</label>
+        <locationX>1414</locationX>
+        <locationY>1055</locationY>
+        <defaultConnector>
+            <targetReference>Task_is_Sending_Quote_Proposal</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_2_of_Is_Implementing_OffPayroll</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Demo Attended</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Complete_Demo</targetReference>
+            </connector>
+            <label>Is Complete Demo</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Task_is_Getting_Agreement_Signed</name>
+        <label>Task is Getting Agreement Signed</label>
+        <locationX>1414</locationX>
+        <locationY>1955</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Getting_Agreement_Signed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Getting Agreement Signed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Getting_Agreement_Signed</targetReference>
+            </connector>
+            <label>Is Getting Agreement Signed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Task_is_Implementing_Off_Payroll</name>
+        <label>Task is Implementing Off Payroll</label>
+        <locationX>710</locationX>
+        <locationY>1055</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Implementing_Off_Payroll</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Implementing OPP</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Implementing_Off_Payroll</targetReference>
+            </connector>
+            <label>Is Implementing Off Payroll</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Task_is_Sending_Agreement</name>
+        <label>Task is Sending Agreement</label>
+        <locationX>1414</locationX>
+        <locationY>1655</locationY>
+        <defaultConnector>
+            <targetReference>Task_is_Getting_Agreement_Signed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Sending_Agreement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sending agreement</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Sending_Agreement</targetReference>
+            </connector>
+            <label>Is Sending Agreement</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Task_is_Sending_Quote_Proposal</name>
+        <label>Task is Sending Quote/Proposal</label>
+        <locationX>1414</locationX>
+        <locationY>1355</locationY>
+        <defaultConnector>
+            <targetReference>Task_is_Sending_Agreement</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Sending_Quote_Proposal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Send Quote/Proposal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Sending_Quote_Proposal</targetReference>
+            </connector>
+            <label>Is Sending Quote/Proposal</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>ISNEW</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Task: Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task: Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>New_Update_Task_Subject</name>
+        <label>Update Task Subject</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>$Record.Task_Subjects__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>1425</locationX>
+        <locationY>2423</locationY>
+        <inputReference>varOpportunity</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Task_Subject</name>
+        <label>Update Task Subject</label>
+        <locationX>1293</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Check_Action_Plan_Template</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>$Record.Task_Subjects__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>883</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_or_Update</targetReference>
+        </connector>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varOpportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>varOpportunityImplementingOPPCheck</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

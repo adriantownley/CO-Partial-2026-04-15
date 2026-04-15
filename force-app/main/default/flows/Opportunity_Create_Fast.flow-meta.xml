@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Policy_Variables</name>
+        <label>Assign Policy Variables</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>var_policyName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Policy.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Policy_Have_Existing_Renewal_Oppty</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>Can_t_Create_Renewal_Oppty</name>
+        <label>Can&apos;t Create Renewal Oppty</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <customErrorMessages>
+            <errorMessage>Policy {!var_policyName} already has a renewal Opportunity. You can’t create another renewal Opportunity for this Policy.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Is_Oppty_Renewal_and_With_Policy</name>
+        <label>Is Oppty Renewal and With Policy?</label>
+        <locationX>336</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Get_Standard_Price_Book</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>True</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Auto_Renewal_Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Non_Auto_Renewal_Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Policy</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Policy_Have_Existing_Renewal_Oppty</name>
+        <label>Is Policy Have Existing Renewal Oppty?</label>
+        <locationX>182</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>True1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Policy.Renewal_Opp_Generated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Can_t_Create_Renewal_Oppty</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <description>Fast flow that runs before save and assigns the Standard Price Book to the Pricebook2Id field. Needed by API to add products to Opportunity/Quote</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity: Create Fast {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity: Create Fast</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Policy</name>
+        <label>Get Policy</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Policy_Variables</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Policy__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Policy__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Standard_Price_Book</name>
+        <label>Get Standard Price Book</label>
+        <locationX>490</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Standard Price Book</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Pricebook2</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>490</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Pricebook2Id</field>
+            <value>
+                <elementReference>Get_Standard_Price_Book.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>210</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Oppty_Renewal_and_With_Policy</targetReference>
+        </connector>
+        <filterFormula>{!$Setup.Kingsbridge_General_Custom_Setting__c.Flow__c} = false</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>var_policyName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

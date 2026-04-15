@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Assign the Subject, Body and required Email address and Send the email.</description>
+        <name>Send_The_Email</name>
+        <label>Send The Email</label>
+        <locationX>1749</locationX>
+        <locationY>1658</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Create_Task</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+            <value>
+                <elementReference>EmailAddressCollection</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <inputConfiguratorMode>Custom</inputConfiguratorMode>
+                <stringValue>sales@kingsbridge.co.uk</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>SMSMessageLabel</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>SMSMessageBody</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign the Mobile Number to the ToNumber variable.</description>
+        <name>Account_ToNumber_is_Mobile</name>
+        <label>Account ToNumber is Mobile</label>
+        <locationX>314</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>ToNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account_Record.PersonMobilePhone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Account_SMS_Template_Options</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign the Phone Number to the ToNumber variable.</description>
+        <name>Account_ToNumber_Is_Phone</name>
+        <label>Account ToNumber Is Phone</label>
+        <locationX>578</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>ToNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account_Record.Phone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Account_SMS_Template_Options</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign the required fields to the task record variable and attach to the Account.</description>
+        <name>Assign_Account_Task_Fields</name>
+        <label>Assign Account Task Fields</label>
+        <locationX>512</locationX>
+        <locationY>1274</locationY>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SMS sent to {!ToNumber} - {!SMSMessageLabel}</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SMSMessageBody</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.WhatId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Outcome_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>N/A</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Task_Subjects__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Call</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email</name>
+        <label>Assign Email</label>
+        <locationX>1749</locationX>
+        <locationY>1550</locationY>
+        <assignmentItems>
+            <assignToReference>EmailAddressCollection</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>EmailAddressSingle</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_The_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Lead_Task_Fields</name>
+        <label>Assign Lead Task Fields</label>
+        <locationX>2624</locationX>
+        <locationY>1274</locationY>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SMS sent to {!ToNumber} - {!SMSMessageLabel}</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SMSMessageBody</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.WhoId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Lead_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Outcome_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>N/A</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Task_Subjects__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Call</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign the required fields to the task record variable and attach to the Opportunity.</description>
+        <name>Assign_Opportunity_Task_Fields</name>
+        <label>Assign Opportunity Task Fields</label>
+        <locationX>1568</locationX>
+        <locationY>1274</locationY>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SMS sent to {!ToNumber} - {!SMSMessageLabel}</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SMSMessageBody</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.WhatId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Opportunity_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Outcome_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>N/A</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SMSSentTask.Task_Subjects__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Call</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Lead_ToNumber_is_Mobile</name>
+        <label>Lead ToNumber is Mobile</label>
+        <locationX>2426</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>ToNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Lead_Record.MobilePhone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Lead_SMS_Template_Options</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Lead_ToNumber_is_Phone</name>
+        <label>Lead ToNumber is Phone</label>
+        <locationX>2690</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>ToNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Lead_Record.Phone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Lead_SMS_Template_Options</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign the Mobile Number to the ToNumber variable.</description>
+        <name>Opportunity_ToNumber_is_Mobile</name>
+        <label>Opportunity ToNumber is Mobile</label>
+        <locationX>1370</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>ToNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Opportunity_Record.Account.PersonMobilePhone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunity_SMS_Template_Options</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign the Phone Number to the ToNumber variable.</description>
+        <name>Opportunity_ToNumber_Is_Phone</name>
+        <label>Opportunity ToNumber Is Phone</label>
+        <locationX>1634</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>ToNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Opportunity_Record.Account.Phone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunity_SMS_Template_Options</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check if the Account has a valid Mobile number in the Mobile Phone Field.</description>
+        <name>Account_Mobile_Exists</name>
+        <label>Account Mobile Exists</label>
+        <locationX>512</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Account_Phone_Exists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Mobile</defaultConnectorLabel>
+        <rules>
+            <name>Mobile_Exists_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistsAccountMobile</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_ToNumber_is_Mobile</targetReference>
+            </connector>
+            <label>Mobile Exists Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check whether the Account has Opted out of Marketing SMS.</description>
+        <name>Account_Opt_Out_SMS</name>
+        <label>Account Opt Out SMS</label>
+        <locationX>281</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Account_Mobile_Exists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>SMS Not Opted Out</defaultConnectorLabel>
+        <rules>
+            <name>SMS_Opted_Out_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Record.Opt_Out_of_Marketing_SMS__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_SMS_Opt_out_Notification</targetReference>
+            </connector>
+            <label>SMS Opted Out Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if the Account has a valid Mobile number in the Account Phone Field.</description>
+        <name>Account_Phone_Exists</name>
+        <label>Account Phone Exists</label>
+        <locationX>710</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>No_Account_Mobile_Number</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Phone</defaultConnectorLabel>
+        <rules>
+            <name>Phone_Exists_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistsAccountPhone</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_ToNumber_Is_Phone</targetReference>
+            </connector>
+            <label>Phone Exists Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if the calling Object is an Account or an Opportunity, otherwise will display an error screen with information about the calling Object from the returned Entity Definition.</description>
+        <name>Determine_Calling_Object</name>
+        <label>Determine Calling Object</label>
+        <locationX>1749</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Invalid_Object</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Entity_Definition.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Account_Record</targetReference>
+            </connector>
+            <label>Is Account</label>
+        </rules>
+        <rules>
+            <name>Is_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Entity_Definition.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Opportunity_Record</targetReference>
+            </connector>
+            <label>Is Opportunity</label>
+        </rules>
+        <rules>
+            <name>Is_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Entity_Definition.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Lead_Record</targetReference>
+            </connector>
+            <label>Is Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Lead_Mobile_Exists</name>
+        <label>Lead Mobile Exists</label>
+        <locationX>2624</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Phone_Exists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Mobile</defaultConnectorLabel>
+        <rules>
+            <name>Exists_Mobile_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistsLeadMobile</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_ToNumber_is_Mobile</targetReference>
+            </connector>
+            <label>Exists Mobile Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Lead_Opt_Out_SMS</name>
+        <label>Lead Opt Out SMS</label>
+        <locationX>2393</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Mobile_Exists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Opted Out</defaultConnectorLabel>
+        <rules>
+            <name>SMS_Opted_Out_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Lead_Record.Opt_Out_of_Marketing_SMS__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_SMS_Opt_Out_Notification</targetReference>
+            </connector>
+            <label>SMS Opted Out Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Lead_Phone_Exists</name>
+        <label>Lead Phone Exists</label>
+        <locationX>2822</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>No_Lead_Mobile_Number</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Phone</defaultConnectorLabel>
+        <rules>
+            <name>Phone_Exists_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistsLeadPhone</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_ToNumber_is_Phone</targetReference>
+            </connector>
+            <label>Phone Exists Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if the Account associated with this Opportunity has a valid Mobile number in the Mobile Phone Field.</description>
+        <name>Opportunity_Mobile_Exists</name>
+        <label>Opportunity Mobile Exists</label>
+        <locationX>1568</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Opportunity_Phone_Exists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Mobile</defaultConnectorLabel>
+        <rules>
+            <name>Mobile_Exists_Opp</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistsOpportunityMobile</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Opportunity_ToNumber_is_Mobile</targetReference>
+            </connector>
+            <label>Mobile Exists Opp</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check whether the Account associated with the Opportunity has opted out of Marketing SMS.</description>
+        <name>Opportunity_Opt_Out_SMS</name>
+        <label>Opportunity Opt Out SMS</label>
+        <locationX>1337</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Opportunity_Mobile_Exists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Opted Out</defaultConnectorLabel>
+        <rules>
+            <name>SMS_Opted_Out_Opp</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Opportunity_Record.Account.Opt_Out_of_Marketing_SMS__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Opportunity_SMS_Opt_Out_Notification</targetReference>
+            </connector>
+            <label>SMS Opted Out Opp</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if the Account associated with the Opportunity has a valid Mobile number in the Account Phone Field.</description>
+        <name>Opportunity_Phone_Exists</name>
+        <label>Opportunity Phone Exists</label>
+        <locationX>1766</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>No_Opportunity_Mobile_Number</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Phone</defaultConnectorLabel>
+        <rules>
+            <name>Phone_Exists_Opp</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistsOpportunityPhone</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Opportunity_ToNumber_Is_Phone</targetReference>
+            </connector>
+            <label>Phone Exists Opp</label>
+        </rules>
+    </decisions>
+    <description>Remove Spaces from Phone numbers in email addresses.</description>
+    <dynamicChoiceSets>
+        <name>SmsTemplate</name>
+        <dataType>String</dataType>
+        <displayField>SMS_Text_Label__c</displayField>
+        <object>SMS_Template__c</object>
+        <outputAssignments>
+            <assignToReference>SMSMessageLabel</assignToReference>
+            <field>SMS_Text_Label__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>SMSMessageBody</assignToReference>
+            <field>SMS_Text_Message__c</field>
+        </outputAssignments>
+        <sortField>SMS_Text_Label__c</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>SMS_Text_Label__c</valueField>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>ExistsAccountMobile</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+    LEFT( {!Get_Account_Record.PersonMobilePhone} , 2) = &quot;07&quot;      ||
+    LEFT( {!Get_Account_Record.PersonMobilePhone} , 3) = &quot;447&quot;     ||
+    LEFT( {!Get_Account_Record.PersonMobilePhone} , 4) = &quot;+447&quot;   ||
+    LEFT( {!Get_Account_Record.PersonMobilePhone} , 5) = &quot;00447&quot;
+   , TRUE
+   , FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>ExistsAccountPhone</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+    LEFT( {!Get_Account_Record.Phone} , 2) = &quot;07&quot;   ||
+    LEFT( {!Get_Account_Record.Phone} , 3) = &quot;447&quot;   ||
+    LEFT( {!Get_Account_Record.Phone} , 4) = &quot;+447&quot;   ||
+    LEFT( {!Get_Account_Record.Phone} , 5) = &quot;00447&quot; 
+   , TRUE
+   , FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>ExistsLeadMobile</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+     LEFT( {!Get_Lead_Record.MobilePhone} , 2) = &quot;07&quot; ||
+     LEFT( {!Get_Lead_Record.MobilePhone} , 3) = &quot;447&quot; ||
+     LEFT( {!Get_Lead_Record.MobilePhone} , 4) = &quot;+447&quot; ||
+     LEFT( {!Get_Lead_Record.MobilePhone} , 5) = &quot;00447&quot;
+, TRUE
+, FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <name>ExistsLeadPhone</name>
+        <dataType>Boolean</dataType>
+        <expression>IF (
+     LEFT( {!Get_Lead_Record.Phone} , 2) = &quot;07&quot; ||
+     LEFT( {!Get_Lead_Record.Phone} , 3) = &quot;447&quot; ||
+     LEFT( {!Get_Lead_Record.Phone} , 4) = &quot;+447&quot; ||
+     LEFT( {!Get_Lead_Record.Phone} , 5) = &quot;00447&quot; 
+, TRUE
+, FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <name>ExistsOpportunityMobile</name>
+        <dataType>Boolean</dataType>
+        <expression>IF (
+     LEFT( {!Get_Opportunity_Record.Account.PersonMobilePhone} , 2) = &quot;07&quot; ||
+     LEFT( {!Get_Opportunity_Record.Account.PersonMobilePhone} , 3) = &quot;447&quot; ||
+     LEFT( {!Get_Opportunity_Record.Account.PersonMobilePhone} , 4) = &quot;+447&quot; ||
+     LEFT( {!Get_Opportunity_Record.Account.PersonMobilePhone} , 5) = &quot;00447&quot; 
+, TRUE
+, FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <name>ExistsOpportunityPhone</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+     LEFT( {!Get_Opportunity_Record.Account.Phone} , 2) = &quot;07&quot; ||
+     LEFT( {!Get_Opportunity_Record.Account.Phone} , 3) = &quot;447&quot; ||
+     LEFT( {!Get_Opportunity_Record.Account.Phone} , 4) = &quot;+447&quot; ||
+     LEFT( {!Get_Opportunity_Record.Account.Phone} , 5) = &quot;00447&quot;
+, TRUE
+, FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <name>SpaceReplace</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!ToNumber}, &quot; &quot;, &quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>TrimmedRecordID</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!recordId},3)</expression>
+    </formulas>
+    <interviewLabel>SMS TxtLocal All Email to SMS {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SMS TxtLocal All Email to SMS</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Task</name>
+        <label>Create Task</label>
+        <locationX>1749</locationX>
+        <locationY>1766</locationY>
+        <connector>
+            <targetReference>SMS_Success_Screen</targetReference>
+        </connector>
+        <inputReference>SMSSentTask</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>If the calling Object is an Account, retrieve the calling Account Record.</description>
+        <name>Get_Account_Record</name>
+        <label>Get Account Record</label>
+        <locationX>281</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_Opt_Out_SMS</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieves information about the calling Object from the Entity Definition Object.
+The Key Prefix field contains the first 3 characters of the Record ID that uniquely identifies an Object.
+TrimmedRecordID is a formula that returns the first 3 characters of the calling Object.</description>
+        <name>Get_Entity_Definition</name>
+        <label>Get Entity Definition</label>
+        <locationX>1749</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Determine_Calling_Object</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>KeyPrefix</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>TrimmedRecordID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EntityDefinition</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Lead_Record</name>
+        <label>Get Lead Record</label>
+        <locationX>2393</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Lead_Opt_Out_SMS</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>If the calling Object is an Opportunity retrieve the calling Opportunity Record.</description>
+        <name>Get_Opportunity_Record</name>
+        <label>Get Opportunity Record</label>
+        <locationX>1337</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Opportunity_Opt_Out_SMS</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <description>Display a screen to indicate this Account has opted out of Marketing SMS&apos;s.</description>
+        <name>Account_SMS_Opt_out_Notification</name>
+        <label>Account SMS Opt-out Notification</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>AccountOptOutSMSNotification</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;This Account has opted out of marketing SMS&apos;s.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display a dropdown box with the SMS Template Options.</description>
+        <name>Account_SMS_Template_Options</name>
+        <label>Account SMS Template Options</label>
+        <locationX>512</locationX>
+        <locationY>1166</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Account_Task_Fields</targetReference>
+        </connector>
+        <fields>
+            <name>Account_SMS_Template</name>
+            <choiceReferences>SmsTemplate</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Account SMS Template</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays information about the calling Object from the Entity Definition in the event it is not an Account or Opportunity.</description>
+        <name>Invalid_Object</name>
+        <label>Invalid Object</label>
+        <locationX>3218</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NotAccountText</name>
+            <fieldText>&lt;p&gt;Not an Account, Opportunity or Lead&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Record ID&lt;/p&gt;&lt;p&gt;{!recordId}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Developer Name: {!Get_Entity_Definition.DeveloperName}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Key Prefix:&lt;/p&gt;&lt;p&gt;{!Get_Entity_Definition.KeyPrefix}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Label&lt;/p&gt;&lt;p&gt;{!Get_Entity_Definition.Label}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Lead_SMS_Opt_Out_Notification</name>
+        <label>Lead SMS Opt Out Notification</label>
+        <locationX>2162</locationX>
+        <locationY>566</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Lead_Opt_Out_SMS_Notification</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;This Lead Has Opted Out Of Marketing SMS&apos;s&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Lead_SMS_Template_Options</name>
+        <label>Lead SMS Template Options</label>
+        <locationX>2624</locationX>
+        <locationY>1166</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Lead_Task_Fields</targetReference>
+        </connector>
+        <fields>
+            <name>Lead_SMS_Template</name>
+            <choiceReferences>SmsTemplate</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Lead SMS Template</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display a screen to inform that the Account does not have a valid Mobile number in either the Mobile or Account Phone Field.</description>
+        <name>No_Account_Mobile_Number</name>
+        <label>No Account Mobile Number</label>
+        <locationX>842</locationX>
+        <locationY>782</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NoAccountMobileNumber</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;The Account does not contain a Mobile Number in the Phone or Mobile fields.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>No_Lead_Mobile_Number</name>
+        <label>No Lead Mobile Number</label>
+        <locationX>2954</locationX>
+        <locationY>782</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NoLeadMobileNumber</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;This lead does not have a valid Mobile Number.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display a screen to inform that the Account associated with this Opportunity does not have a valid Mobile number in either the Mobile or Account Phone Field.</description>
+        <name>No_Opportunity_Mobile_Number</name>
+        <label>No Opportunity Mobile Number</label>
+        <locationX>1898</locationX>
+        <locationY>782</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NoOpportunityMobileNumber</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;The Account Associated With This Opportunity Does Not Have A Mobile Number.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display a screen to indicate the Account associated with this Opportunity has opted out of Marketing SMS&apos;s.</description>
+        <name>Opportunity_SMS_Opt_Out_Notification</name>
+        <label>Opportunity SMS Opt Out Notification</label>
+        <locationX>1106</locationX>
+        <locationY>566</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Opportunity_Opt_Out_SMS_Notification</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;The Account Associated With This Opportunity Has Opted Out Of Marketing SMS&apos;s.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display a dropdown box with the SMS Template Options.</description>
+        <name>Opportunity_SMS_Template_Options</name>
+        <label>Opportunity SMS Template Options</label>
+        <locationX>1568</locationX>
+        <locationY>1166</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Opportunity_Task_Fields</targetReference>
+        </connector>
+        <fields>
+            <name>Opportunity_SMS_Template</name>
+            <choiceReferences>SmsTemplate</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Opportunity SMS Template</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>SMS_Success_Screen</name>
+        <label>SMS Success Screen</label>
+        <locationX>1749</locationX>
+        <locationY>1874</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>SuccessText</name>
+            <fieldText>&lt;p&gt;An SMS Has Been Successfully Initiated to: {!ToNumber} With The Following Message Content:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!SMSMessageBody}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>1623</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Entity_Definition</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>EmailAddressCollection</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>EmailAddressSingle</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>{!SpaceReplace}@sms.clicksend.com</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>SMSMessageBody</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>SMSMessageLabel</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>SMSSentTask</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+    <variables>
+        <name>ToNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

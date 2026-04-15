@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Route Lead to Contractor</description>
+        <name>Route_to_New_Business_Contractor1</name>
+        <label>Route to New Business - Contractor</label>
+        <locationX>710</locationX>
+        <locationY>542</locationY>
+        <actionName>routeWork</actionName>
+        <actionType>routeWork</actionType>
+        <connector>
+            <targetReference>Set_Initial_Contact_Cadence_Completed_to_True</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>serviceChannelId</name>
+            <value>
+                <stringValue>0N9Pu0000002uUMKAY</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>serviceChannelLabel</name>
+            <value>
+                <stringValue>Inbound Leads</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>serviceChannelDevName</name>
+            <value>
+                <stringValue>Inbound_Leads</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>routingType</name>
+            <value>
+                <stringValue>QueueBased</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>routingConfigId</name>
+        </inputParameters>
+        <inputParameters>
+            <name>routingConfigLabel</name>
+        </inputParameters>
+        <inputParameters>
+            <name>queueId</name>
+            <value>
+                <stringValue>00GPu000004t9N9MAI</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>agentId</name>
+        </inputParameters>
+        <inputParameters>
+            <name>agentLabel</name>
+        </inputParameters>
+        <inputParameters>
+            <name>queueLabel</name>
+            <value>
+                <stringValue>New Business - Contractor</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>skillOption</name>
+        </inputParameters>
+        <inputParameters>
+            <name>skillRequirementsResourceItem</name>
+        </inputParameters>
+        <inputParameters>
+            <name>botId</name>
+        </inputParameters>
+        <inputParameters>
+            <name>botLabel</name>
+        </inputParameters>
+        <inputParameters>
+            <name>copilotId</name>
+        </inputParameters>
+        <inputParameters>
+            <name>copilotLabel</name>
+        </inputParameters>
+        <nameSegment>routeWork</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Lead_Record_Type</name>
+        <label>Check Lead Record Type</label>
+        <locationX>1128</locationX>
+        <locationY>134</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Customer_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer_Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_to_be_deleted</targetReference>
+            </connector>
+            <label>Customer Lead</label>
+        </rules>
+        <rules>
+            <name>Partner_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner_Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Partner Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check Lead Product Type</description>
+        <name>Lead_Product</name>
+        <label>Lead Product</label>
+        <locationX>710</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Route_to_New_Business_Contractor1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Cyber_Liability</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Cyber Liability</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Cyber Liability</label>
+        </rules>
+        <rules>
+            <name>Legal_Expenses</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Legal Expenses</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Legal Expenses</label>
+        </rules>
+        <rules>
+            <name>Professional_Indemnity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Professional Indemnity</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Professional Indemnity</label>
+        </rules>
+        <rules>
+            <name>Public_Liability</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Public Liability</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Public Liability</label>
+        </rules>
+        <rules>
+            <name>Rewardsme</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Rewardsme</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Rewardsme</label>
+        </rules>
+        <rules>
+            <name>R35_Protect_Essential</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>IR35 Protect Essential</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>R35 Protect Essential</label>
+        </rules>
+        <rules>
+            <name>IR35_Protect_Premium</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>IR35 Protect Premium</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>IR35 Protect Premium</label>
+        </rules>
+        <rules>
+            <name>IR35_Protect_Standalone</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>IR35 Protect Standalone</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>IR35 Protect Standalone</label>
+        </rules>
+        <rules>
+            <name>Business_Equipment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Business Equipment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Business Equipment</label>
+        </rules>
+        <rules>
+            <name>Admiral_Trades</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Admiral Trades</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Admiral Trades</label>
+        </rules>
+        <rules>
+            <name>FUL_Trades</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>FUL Trades</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>FUL Trades</label>
+        </rules>
+        <rules>
+            <name>Direct_Professions</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Direct Professions</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Route_to_New_Business_Contractor1</targetReference>
+            </connector>
+            <label>Direct Professions</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Lead_to_be_deleted</name>
+        <label>Lead to be deleted?</label>
+        <locationX>50</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Product</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Lead_is_going_to_be_deleted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Lead_to_be_deleted_by_automation__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>record.Marked_for_Deletion__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Yes Lead is going to be deleted</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Lead: Omni-Channel Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead: Omni-Channel Subflow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>RoutingFlow</processType>
+    <recordUpdates>
+        <name>Set_Initial_Contact_Cadence_Completed_to_True</name>
+        <label>Set Initial Contact Cadence Completed to True</label>
+        <locationX>710</locationX>
+        <locationY>650</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Initial_Contact_Cadence_completed__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <start>
+        <locationX>1002</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Lead_Record_Type</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

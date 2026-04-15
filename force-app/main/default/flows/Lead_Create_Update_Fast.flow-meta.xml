@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Custom_Settings</name>
+        <label>Check Custom Settings</label>
+        <locationX>809</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Proceed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.Kingsbridge_General_Custom_Setting__c.Flow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Record_Type</targetReference>
+            </connector>
+            <label>Proceed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Partner</name>
+        <label>Check Partner</label>
+        <locationX>182</locationX>
+        <locationY>803</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Partner_is_changed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Partner__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Partner__c</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Partner_info</targetReference>
+            </connector>
+            <label>Is Partner is changed?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Record_Type</name>
+        <label>Check Record Type</label>
+        <locationX>512</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contractor_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer_Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Referred_By_Partner_Contact</targetReference>
+            </connector>
+            <label>Customer Lead</label>
+        </rules>
+        <rules>
+            <name>Partner_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner_Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Partner Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Referred_By_Partner_Contact</name>
+        <label>Check Referred By Partner Contact</label>
+        <locationX>182</locationX>
+        <locationY>503</locationY>
+        <defaultConnector>
+            <targetReference>Check_Partner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Referred_By_Partner_Contact_NOT_Blank</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Referred_by_Partner_Contact__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Referred_By</targetReference>
+            </connector>
+            <label>Referred By Partner Contact NOT Blank</label>
+        </rules>
+    </decisions>
+    <description>Record triggered Fast flow that runs on create and update</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>IsPartnerChanged</name>
+        <dataType>Boolean</dataType>
+        <expression>ISCHANGED({!$Record.Partner__c})</expression>
+    </formulas>
+    <formulas>
+        <name>PartnerChannelText</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Partner__r.Channel__c})</expression>
+    </formulas>
+    <formulas>
+        <name>PartnerName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Partner__r.Name}</expression>
+    </formulas>
+    <formulas>
+        <name>ReferredByText</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Referred_by_Partner_Contact__r.FirstName} + &apos; &apos; + {!$Record.Referred_by_Partner_Contact__r.LastName}</expression>
+    </formulas>
+    <interviewLabel>Lead: Create &amp; Update Fast {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead: Create &amp; Update Fast</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Partner_info</name>
+        <label>Update Partner info</label>
+        <locationX>50</locationX>
+        <locationY>911</locationY>
+        <inputAssignments>
+            <field>Partner_Channel_Marketing__c</field>
+            <value>
+                <elementReference>PartnerChannelText</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Partner_Name__c</field>
+            <value>
+                <elementReference>PartnerName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Referred_By</name>
+        <label>Update Referred By</label>
+        <locationX>50</locationX>
+        <locationY>611</locationY>
+        <connector>
+            <targetReference>Check_Partner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Referred_By__c</field>
+            <value>
+                <elementReference>ReferredByText</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>683</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Custom_Settings</targetReference>
+        </connector>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>varLead</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+</Flow>

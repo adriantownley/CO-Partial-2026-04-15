@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign Product Type Values to Collection Text variable</description>
+        <name>Assign_Product_Type_Values</name>
+        <label>Assign Product Type Values</label>
+        <locationX>1172</locationX>
+        <locationY>1284</locationY>
+        <assignmentItems>
+            <assignToReference>varProductTypeValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Product_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Product_Type_Selected</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Running_User</name>
+        <label>Check Running User</label>
+        <locationX>380</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NOT_Integration_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Alias</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>IntUser</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Trigger_Round_Robin</targetReference>
+            </connector>
+            <label>NOT Integration User</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Create_Contact_Role</name>
+        <label>Create Contact Role</label>
+        <locationX>1403</locationX>
+        <locationY>576</locationY>
+        <defaultConnector>
+            <targetReference>Current_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Create_Contact_Role</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer_Accounts</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Existing_OCR</targetReference>
+            </connector>
+            <label>Yes - Create Contact Role</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Created_from_Lead</name>
+        <label>Created from Lead?</label>
+        <locationX>1227</locationX>
+        <locationY>792</locationY>
+        <defaultConnector>
+            <targetReference>Create_Opportunity_Contact_Role</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Found_Existing_OCR</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Existing_OCR</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Current_Record_Type</targetReference>
+            </connector>
+            <label>Found Existing OCR</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Current_Record_Type</name>
+        <label>Current Record Type</label>
+        <locationX>1403</locationX>
+        <locationY>1176</locationY>
+        <defaultConnectorLabel>Anything Else</defaultConnectorLabel>
+        <rules>
+            <name>Partner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner_Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Product_Type_Values</targetReference>
+            </connector>
+            <label>Partner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Has_Product_Type</name>
+        <label>Has Product Type</label>
+        <locationX>1403</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Create_Contact_Role</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_has_Product_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Duplicate_Logic</targetReference>
+            </connector>
+            <label>Yes - has Product Type</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Matching_Product_Found</name>
+        <label>Matching Product Found?</label>
+        <locationX>974</locationX>
+        <locationY>1608</locationY>
+        <defaultConnectorLabel>No Matching Product Found</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Matching_Product_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Matching_Product</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_Opportunity_Product</targetReference>
+            </connector>
+            <label>Yes: Matching Product Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Product_Type_Selected</name>
+        <label>Product Type Selected?</label>
+        <locationX>1172</locationX>
+        <locationY>1392</locationY>
+        <defaultConnectorLabel>No Product Type Selected</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Product_Type_Selected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Matching_Product</targetReference>
+            </connector>
+            <label>Yes: Product Type Selected</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Trigger_Round_Robin</name>
+        <label>Trigger Round Robin?</label>
+        <locationX>182</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Trigger_Round_Robin</name>
+            <conditionLogic>(1 AND 2) OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity_created_from_Lead__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Non-Auto Renewal Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Round_Robin</targetReference>
+            </connector>
+            <label>Yes Trigger Round Robin</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula to calculate today plus one year to be used as the Opportunities Close Date for Partner Opportunity Record Types.</description>
+        <name>fxCalculateCloseDate</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+YEAR(TODAY()) + 1,
+MONTH(TODAY()),
+DAY(TODAY())
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Formula to create Opportunity Name for Partner Opportunity Record Type to be Account Name plus first Product Type and limit to 120 characters.</description>
+        <name>fxOpportunityName</name>
+        <dataType>String</dataType>
+        <expression>LEFT(
+{!$Record.Account.Name} &amp; &quot; - &quot; &amp;
+SUBSTITUTE(
+SUBSTITUTE(
+IF(
+FIND(&quot;;&quot;, {!varProductTypeValues}) &gt; 0,
+LEFT({!varProductTypeValues}, FIND(&quot;;&quot;, {!varProductTypeValues}) - 1),
+{!varProductTypeValues}
+),
+&quot;[&quot;, &quot;&quot;),
+&quot;]&quot;, &quot;&quot;),
+120
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fxProductTypeName</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(
+SUBSTITUTE(
+IF(
+FIND(&quot;;&quot;, {!varProductTypeValues}) &gt; 0,
+LEFT({!varProductTypeValues}, FIND(&quot;;&quot;, {!varProductTypeValues}) - 1),
+{!varProductTypeValues}
+),
+&quot;[&quot;, &quot;&quot;),
+&quot;]&quot;, &quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Adrian BD Migration Opportunity: Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Adrian BD Migration Opportunity: Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Add_Opportunity_Product</name>
+        <label>Add Opportunity Product</label>
+        <locationX>842</locationX>
+        <locationY>1716</locationY>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PricebookEntryId</field>
+            <value>
+                <elementReference>Get_Matching_Product.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Product2Id</field>
+            <value>
+                <elementReference>Get_Matching_Product.Product2Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Quantity</field>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TotalPrice</field>
+            <value>
+                <elementReference>Get_Matching_Product.UnitPrice</elementReference>
+            </value>
+        </inputAssignments>
+        <object>OpportunityLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Opportunity_Contact_Role</name>
+        <label>Create Opportunity Contact Role</label>
+        <locationX>1315</locationX>
+        <locationY>900</locationY>
+        <connector>
+            <targetReference>Current_Record_Type</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>$Record.Account.ContactId__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPrimary</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Role</field>
+            <value>
+                <stringValue>Customer</stringValue>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Existing_OCR</name>
+        <label>Get Existing OCR</label>
+        <locationX>1227</locationX>
+        <locationY>684</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Created_from_Lead</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Matching_Product</name>
+        <label>Get Matching Product</label>
+        <locationX>974</locationX>
+        <locationY>1500</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Matching_Product_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fxProductTypeName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Pricebook2Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Pricebook2Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PricebookEntry</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>765</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Running_User</targetReference>
+        </connector>
+        <filterFormula>{!$Setup.Kingsbridge_General_Custom_Setting__c.Flow__c} = false</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Has_Product_Type</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <subflows>
+        <name>Duplicate_Logic</name>
+        <label>Duplicate Logic</label>
+        <locationX>1271</locationX>
+        <locationY>384</locationY>
+        <connector>
+            <targetReference>Create_Contact_Role</targetReference>
+        </connector>
+        <flowName>Opportunity_Duplicate_Logic_On_Create</flowName>
+        <inputAssignments>
+            <name>record</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Round_Robin</name>
+        <label>Round Robin</label>
+        <locationX>50</locationX>
+        <locationY>492</locationY>
+        <flowName>Opportunity_Round_Robin</flowName>
+        <inputAssignments>
+            <name>record</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <description>Collection Text variable to store Product Type values</description>
+        <name>varProductTypeValues</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varSource</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Attribution__c</objectType>
+    </variables>
+</Flow>

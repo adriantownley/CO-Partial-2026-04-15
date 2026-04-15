@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assigns the Partner value to the Account Type Field</description>
+        <name>Assign_Account_Type_Partner</name>
+        <label>Assign Account Type - Partner</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <assignmentItems>
+            <assignToReference>var_Contact.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_Contact.Account_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Partner</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Contact</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Contact_Owner</name>
+        <label>Assign Contact Owner</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>var_Contact.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Account_Record_Type</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Checks the AccountId.RecordType</description>
+        <name>Check_Account_Record_Type</name>
+        <label>Check Account Record Type</label>
+        <locationX>182</locationX>
+        <locationY>731</locationY>
+        <defaultConnectorLabel>Not Partner</defaultConnectorLabel>
+        <rules>
+            <name>Partner_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner_Accounts</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Account_Type_Partner</targetReference>
+            </connector>
+            <label>Partner Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Contact_Owner</name>
+        <label>Check Contact Owner</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Check_Account_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NOT_Account_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Contact_Owner</targetReference>
+            </connector>
+            <label>NOT Account Owner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Custom_Settings</name>
+        <label>Check Custom Settings</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>End</defaultConnectorLabel>
+        <rules>
+            <name>Proceed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.Kingsbridge_General_Custom_Setting__c.Flow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Contact_Owner</targetReference>
+            </connector>
+            <label>Proceed</label>
+        </rules>
+    </decisions>
+    <description>Record triggered flow when a Contact is created</description>
+    <environments>Default</environments>
+    <interviewLabel>Contact: Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact: Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Updates var_Contact</description>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>50</locationX>
+        <locationY>947</locationY>
+        <inputReference>var_Contact</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Custom_Settings</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>var_Contact</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+</Flow>

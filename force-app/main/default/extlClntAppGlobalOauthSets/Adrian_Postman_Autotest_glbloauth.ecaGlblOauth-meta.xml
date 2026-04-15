@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppGlobalOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <callbackUrl>https://dream-app-9336--partial.sandbox.my.salesforce.com/services/oauth2/success</callbackUrl>
+    <certificate>MIIESTCCAzGgAwIBAgIUbhBI0c0fnTjYEkVPBvkY/NQ8amYwDQYJKoZIhvcNAQEL
+BQAwgbMxCzAJBgNVBAYTAkdCMRgwFgYDVQQIDA9HbG91Y2VzdGVyc2hpcmUxEzAR
+BgNVBAcMClRld2tlc2J1cnkxFDASBgNVBAoMC0tpbmdzYnJpZGdlMR0wGwYDVQQL
+DBRQb3N0bWFuIEF1dG9UZXN0IEFQSTEPMA0GA1UEAwwGQWRyaWFuMS8wLQYJKoZI
+hvcNAQkBFiBhZHJpYW4udG93bmxleUBraW5nc2JyaWRnZS5jby51azAeFw0yNTA5
+MTUxMjAxNTBaFw0yNjA5MTUxMjAxNTBaMIGzMQswCQYDVQQGEwJHQjEYMBYGA1UE
+CAwPR2xvdWNlc3RlcnNoaXJlMRMwEQYDVQQHDApUZXdrZXNidXJ5MRQwEgYDVQQK
+DAtLaW5nc2JyaWRnZTEdMBsGA1UECwwUUG9zdG1hbiBBdXRvVGVzdCBBUEkxDzAN
+BgNVBAMMBkFkcmlhbjEvMC0GCSqGSIb3DQEJARYgYWRyaWFuLnRvd25sZXlAa2lu
+Z3NicmlkZ2UuY28udWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCu
+GC2ri/NaPq9iK8+v8BTEYH+pRy03CWbNqHf+XhhW7HIkfVp8ycqyzV9SEOuKSJpj
+XOnxVjfzHj8aHBgJmE6GIDmKFrpIGnvbeeuQLoOdjPLOyscgVP06nHJmEJo+C9x7
+10zcfsmoVXQfyQ9hfzYWPFXjFvNhzsAaaosxQB9Z8t/rlDbsVIXAAWjlNAsT18l0
+HVR/ri5YnJt6uyQ/e8iY1OHBFzIv4PLGp6AnjiAGvXUlH3FjbQ5tmVWxz0uHbODq
+xUFpxL+5ChJPbJhMBTgwMX4Tpv+DCFd1SbPHDBUFFYO6FZht4Q910VWjzyEAeJ8R
+CUSWIN1G7Aa+LMGVH/BbAgMBAAGjUzBRMB0GA1UdDgQWBBTp0ANr5NGJgtAyM8IS
+qJjulYTX2DAfBgNVHSMEGDAWgBTp0ANr5NGJgtAyM8ISqJjulYTX2DAPBgNVHRMB
+Af8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCmNA8zPhdeVmrIHZhSID5fz0em
+FBJDP0IXHTrZacPDSIbJWmopQFuTmXZ/P4kZSCH12iuHYvY4o2bdTamRx1xs8x/y
+QnHMkvnYrz2pPBJeuYSPXKoRNNaHdVkHdwZeJLq/rY88y7ERWxwpFokBMLAGD9pI
+5paJwUMK6KT8v5/vkSG/gD6O5eflrpo16q2KF5fqytC3gmGxNjKk9skOMFqXNEut
+XUQfGWyjJb9bgvGTrFuC1HoQXpbBwoDhHKOk2Y6QAlXjqsWuzNbkRcM/Jm3/gKI+
+g5+hwIInTOnIgt1WJrilgfAeOAJDQciXLcK3fay9ytlXOpM6W5/gZ0OBlsEw</certificate>
+    <consumerKey>3MVG9xj60O9CjKHqYgme4hREl9eTXP_BkWAEM6aG4XDRp1Nl0GkYoXBFPSTMQGtkBBAKuzc9yPdDgb.XT2z9S</consumerKey>
+    <externalClientApplication>Adrian_Postman_Autotest</externalClientApplication>
+    <isClientCredentialsFlowEnabled>false</isClientCredentialsFlowEnabled>
+    <isCodeCredFlowEnabled>false</isCodeCredFlowEnabled>
+    <isCodeCredPostOnly>false</isCodeCredPostOnly>
+    <isConsumerSecretOptional>true</isConsumerSecretOptional>
+    <isDeviceFlowEnabled>false</isDeviceFlowEnabled>
+    <isIntrospectAllTokens>false</isIntrospectAllTokens>
+    <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+    <isPkceRequired>false</isPkceRequired>
+    <isRefreshTokenRotationEnabled>true</isRefreshTokenRotationEnabled>
+    <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+    <isSecretRequiredForTokenExchange>true</isSecretRequiredForTokenExchange>
+    <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+    <label>Adrian_Postman_Autotest_glbloauth</label>
+    <shouldRotateConsumerKey>false</shouldRotateConsumerKey>
+    <shouldRotateConsumerSecret>false</shouldRotateConsumerSecret>
+</ExtlClntAppGlobalOauthSettings>

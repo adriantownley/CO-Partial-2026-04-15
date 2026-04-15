@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Do not enforce and do not recommend</fullName>
+        <default>false</default>
+        <label>Do not enforce and do not recommend</label>
+    </customValue>
+    <customValue>
+        <fullName>Recommend but do not enforce</fullName>
+        <default>false</default>
+        <label>Recommend but do not enforce</label>
+    </customValue>
+    <customValue>
+        <fullName>Enforce for certain clients</fullName>
+        <default>false</default>
+        <label>Enforce for certain clients</label>
+    </customValue>
+    <customValue>
+        <fullName>Blocker to payment</fullName>
+        <default>false</default>
+        <label>Blocker to payment</label>
+    </customValue>
+    <customValue>
+        <fullName>Blocker to placement</fullName>
+        <default>false</default>
+        <label>Blocker to placement</label>
+    </customValue>
+    <customValue>
+        <fullName>tbd</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>tbd</label>
+    </customValue>
+    <masterLabel>PI Blocker</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

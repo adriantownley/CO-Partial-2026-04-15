@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <commaSeparatedOauthScopes>Api, Web, Full, RefreshToken, SFApiPlatform</commaSeparatedOauthScopes>
+    <externalClientApplication>Adrian_Postman_Autotest</externalClientApplication>
+    <isFirstPartyAppEnabled>false</isFirstPartyAppEnabled>
+    <label>Adrian_Postman_Autotest_oauth</label>
+    <oauthLink>00DPu000006Bsfx:888Pu000000Cg8L</oauthLink>
+</ExtlClntAppOauthSettings>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Opportunity_Pardot_Product_value</name>
+        <label>Assign Opportunity Pardot Product value</label>
+        <locationX>138</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>opportunityProductsPardot</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_through_all_QLIs.Product2.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>opportunityProductsPardot</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>, </stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_all_QLIs</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Found_QLIs</name>
+        <label>Found QLIs?</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Found_QLIs</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_QLIs</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_through_all_QLIs</targetReference>
+            </connector>
+            <label>Yes - Found QLIs</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Syncing</name>
+        <label>Is Syncing?</label>
+        <locationX>336</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Quote_is_Syncing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsSyncing</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_QLIs</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Quote is Syncing</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>trim_opportunityProductsPardot</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!opportunityProductsPardot}, LEN({!opportunityProductsPardot}) - 2)</expression>
+    </formulas>
+    <interviewLabel>Quote: Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote: Create &amp; Update</label>
+    <loops>
+        <name>Loop_through_all_QLIs</name>
+        <label>Loop through all QLIs</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <collectionReference>Get_QLIs</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Opportunity_Pardot_Product_value</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Set_Opportunity_Products_Pardot_value</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_QLIs</name>
+        <label>Get QLIs</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found_QLIs</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>QuoteId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>QuoteLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Set_Opportunity_Products_Pardot_value</name>
+        <label>Set Opportunity Products Pardot value</label>
+        <locationX>50</locationX>
+        <locationY>947</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OpportunityId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Opportunity_Products_Pardot__c</field>
+            <value>
+                <elementReference>trim_opportunityProductsPardot</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>210</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Syncing</targetReference>
+        </connector>
+        <filterFormula>{!$Setup.Kingsbridge_General_Custom_Setting__c.Flow__c} = false</filterFormula>
+        <object>Quote</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>opportunityProductsPardot</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Admiral Trades</fullName>
+        <default>false</default>
+        <label>Admiral Trades</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Equipment</fullName>
+        <default>false</default>
+        <label>Business Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract Reviews</fullName>
+        <default>false</default>
+        <label>Contract Reviews</label>
+    </customValue>
+    <customValue>
+        <fullName>Cyber Liability</fullName>
+        <default>false</default>
+        <label>Cyber Liability</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Professions</fullName>
+        <default>false</default>
+        <label>Direct Professions</label>
+    </customValue>
+    <customValue>
+        <fullName>FUL Trades</fullName>
+        <default>false</default>
+        <label>FUL Trades</label>
+    </customValue>
+    <customValue>
+        <fullName>Group Insurance</fullName>
+        <default>false</default>
+        <label>Group Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance Audit</fullName>
+        <default>false</default>
+        <label>Insurance Audit</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Contractor Assessment</fullName>
+        <default>false</default>
+        <label>IR35 Contractor Assessment</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Health Check</fullName>
+        <default>false</default>
+        <label>IR35 Health Check</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Protect Essential</fullName>
+        <default>false</default>
+        <label>IR35 Protect Essential</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Protect Insurance</fullName>
+        <default>false</default>
+        <label>IR35 Protect Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Protect Premium</fullName>
+        <default>false</default>
+        <label>IR35 Protect Premium</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Protect Standalone</fullName>
+        <default>false</default>
+        <label>IR35 Protect Standalone</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Tool</fullName>
+        <default>false</default>
+        <label>IR35 Tool</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Expenses</fullName>
+        <default>false</default>
+        <label>Legal Expenses</label>
+    </customValue>
+    <customValue>
+        <fullName>Off Payroll Protect</fullName>
+        <default>false</default>
+        <label>Off Payroll Protect</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional Indemnity</fullName>
+        <default>false</default>
+        <label>Professional Indemnity</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Liability Affinity</fullName>
+        <default>false</default>
+        <label>Public Liability Affinity</label>
+    </customValue>
+    <customValue>
+        <fullName>Rewardsme</fullName>
+        <default>false</default>
+        <label>Rewardsme</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Buying Journey</fullName>
+        <default>false</default>
+        <label>Single Buying Journey</label>
+    </customValue>
+    <customValue>
+        <fullName>Wholesale Professions</fullName>
+        <default>false</default>
+        <label>Wholesale Professions</label>
+    </customValue>
+    <customValue>
+        <fullName>Run Off/Policy Extension</fullName>
+        <default>false</default>
+        <label>Run Off/Policy Extension</label>
+    </customValue>
+    <customValue>
+        <fullName>OPP</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>OPP</label>
+    </customValue>
+    <customValue>
+        <fullName>PL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PL</label>
+    </customValue>
+    <customValue>
+        <fullName>KIB</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>KIB</label>
+    </customValue>
+    <customValue>
+        <fullName>ATS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ATS</label>
+    </customValue>
+    <customValue>
+        <fullName>IAR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>IAR</label>
+    </customValue>
+    <customValue>
+        <fullName>PI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Liability Trade Body</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Public Liability Trade Body</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Liability Affiliate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Public Liability Affiliate</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Liability</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Public Liability</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional Indemnity Insurance Audit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Professional Indemnity Insurance Audit</label>
+    </customValue>
+    <customValue>
+        <fullName>IR35 Standalone</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>IR35 Standalone</label>
+    </customValue>
+    <customValue>
+        <fullName>Admiral Trades scheme</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Admiral Trades scheme</label>
+    </customValue>
+    <masterLabel>Product Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

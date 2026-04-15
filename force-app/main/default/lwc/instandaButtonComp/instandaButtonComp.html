@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <!-- <lightning-spinner style="height:100%; width:100%;" alternative-text="Loading" size="medium" if:true={isSpinner}></lightning-spinner> -->
+
+        <div class="slds-card__header slds-grid slds-border_bottom slds-p-bottom_small" style="padding-top:0px;">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__body">
+                <h2 class="slds-align_absolute-center slds-text-heading_medium">
+                    <span>{headerLabel}</span>
+                </h2>
+              </div>
+            </header>
+        </div>
+
+        <div class="slds-theme_default">
+            <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+                <div class="slds-card__body slds-is-relative">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <lightning-spinner alternative-text="Loading" size="medium" if:true={isSpinner}></lightning-spinner>
+                        <div class="slds-align_absolute-center" style="height:5rem">
+                            Loading....
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </lightning-card>
+</template>

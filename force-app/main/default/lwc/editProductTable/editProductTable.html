@@ -1,0 +1,94 @@
+<template>
+    <div>
+        <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid" aria-label="Example advanced table of Opportunities in actionable mode with row selected">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th aria-sort="none" class="slds-is-resizable slds-is-sortable slds-cell_action-mode standard-header" scope="col">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate slds-m-left_x-small">
+                            <span class="slds-truncate" title="Product Name">Product Name</span>
+                        </div>
+                    </th>
+                    <th aria-sort="none" class="slds-is-resizable slds-is-sortable slds-cell_action-mode standard-header" scope="col">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate slds-m-left_x-small">
+                            <span class="slds-truncate" title="Quantity">Quantity</span>
+                        </div>
+                    </th>
+                    <th aria-sort="none" class="slds-is-resizable slds-is-sortable slds-cell_action-mode standard-header" scope="col">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate slds-m-left_x-small">
+                            <span class="slds-truncate" title="List Price">List Price</span>
+                        </div>
+                    </th>
+                    <th aria-sort="none" class="slds-is-resizable slds-is-sortable slds-cell_action-mode standard-header" scope="col">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate slds-m-left_x-small">
+                            <span class="slds-truncate" title="Unit Price">Unit Price</span>
+                        </div>
+                    </th>
+                    <th aria-sort="none" class="slds-is-resizable slds-is-sortable slds-cell_action-mode standard-header" style="width: 5%" scope="col">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate slds-m-left_x-small">
+                            <!-- <span class="slds-truncate" title="Unit Price">Unit Price</span> -->
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={data} for:item="row">
+                    <tr key={row.Id} aria-selected="false" class="slds-hint-parent">
+                        <td class="slds-cell_action-mode" role="gridcell">
+                            <div class="slds-truncate" title={row.ProductName}>{row.ProductName}</div>
+                        </td>
+                        <td class="slds-cell_action-mode" role="gridcell" style="cursor: text;" data-rowid={row.Id} data-field="quantity" onclick={handleCellClick}>
+                            <div class="slds-truncate slds-p-horizontal_xx-small" style="border: 1px solid #e4e4e4; border-radius: 2px;"><lightning-formatted-number value={row.Quantity}></lightning-formatted-number></div>
+                            <template lwc:if={row.showQuantityInput}>
+                                <section aria-describedby="dialog-body-id-16" class="slds-popover slds-popover slds-popover_edit" role="dialog" style="position:absolute;top:0;left:0.0625rem">
+                                    <div class="slds-popover__body" id="dialog-body-id-16">
+                                    <div class="slds-media">
+                                        <div class="slds-media__body">
+                                        <div class="slds-form-element slds-grid slds-wrap">
+                                            <label class="slds-form-element__label slds-form-element__label_edit slds-no-flex" for="company-01">
+                                            <span class="slds-assistive-text">Quantity</span>
+                                            </label>
+                                            <div class="slds-form-element__control slds-grow">
+                                                <lightning-input type="number" value={row.Quantity} data-rowid={row.Id} data-field="quantity" step="1" onblur={hideEditInput} onchange={handleChange}></lightning-input>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </section>
+                            </template>
+                        </td>
+                        <td class="slds-cell_action-mode" role="gridcell">
+                            <div class="slds-truncate"><lightning-formatted-number format-style="currency" value={row.ListPrice}></lightning-formatted-number></div>
+                        </td>
+                        <td class="slds-cell_action-mode" role="gridcell" style="cursor: text;" data-rowid={row.Id} data-field="unitprice" onclick={handleCellClick}>
+                            <div class="slds-truncate slds-p-horizontal_xx-small" style="border: 1px solid #e4e4e4; border-radius: 2px;"><lightning-formatted-number format-style="currency" value={row.UnitPrice}></lightning-formatted-number></div>
+                            <template lwc:if={row.showUnitpriceInput}>
+                                <section aria-describedby="dialog-body-id-16" class="slds-popover slds-popover slds-popover_edit" role="dialog" style="position:absolute;top:0;left:0.0625rem">
+                                    <div class="slds-popover__body" id="dialog-body-id-17">
+                                    <div class="slds-media">
+                                        <div class="slds-media__body">
+                                        <div class="slds-form-element slds-grid slds-wrap">
+                                            <label class="slds-form-element__label slds-form-element__label_edit slds-no-flex" for="company-01">
+                                            <span class="slds-assistive-text">Unit Price</span>
+                                            </label>
+                                            <div class="slds-form-element__control slds-grow">
+                                                <lightning-input type="number" formatter="currency" step="0.01" value={row.UnitPrice} data-rowid={row.Id} data-field="unitprice" onblur={hideEditInput} onchange={handleChange}></lightning-input>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </section>
+                            </template>
+                        </td>
+                        <td class="slds-cell_action-mode" role="gridcell" style="width: 5%">
+                            <div>
+                                <lightning-button-icon icon-name="utility:delete" variant="container" size="small" data-rowid={row.Id} onclick={handleRemove} onfocus={handleRemoveFocus}></lightning-button-icon>
+                            </div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>
