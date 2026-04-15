@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Approval_Notification_IR35_Tool</fullName>
+        <description>Approval Notification IR35 Tool</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adrian.kingsbridge@kingsbridge.co.uk</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sf-development@cloudorca.kingsbridge.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Templates/Approval_needed_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Approval_Request_Notification_OPP</fullName>
+        <description>Approval Request Notification OPP</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sf-development@cloudorca.kingsbridge.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Templates/Approval_needed_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Approval_Request_Notification_PI_Insurance</fullName>
+        <description>Approval Request Notification PI Insurance</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sf-development@cloudorca.kingsbridge.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Templates/Approval_needed_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Approved_Notification_to_Opportunity_Owner</fullName>
+        <description>Opportunity Approved Notification to Opportunity Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Templates/Opportunity_Approved_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Rejected_Notification_to_Opportunity_Owner</fullName>
+        <description>Opportunity Rejected Notification to Opportunity Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Templates/Opportunity_Rejected_Notification</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>IR_35_Tool_Approval_to_Not_Submitted</fullName>
+        <field>IR_35_Tool_Approval_Status__c</field>
+        <literalValue>Not Submitted</literalValue>
+        <name>IR 35 Tool Approval to Not Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IR_35_Tool_Approval_to_Submitted</fullName>
+        <field>IR_35_Tool_Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>IR 35 Tool Approval to Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IR_35_Tool_to_Approved</fullName>
+        <field>IR_35_Tool_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>IR 35 Tool to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IR_35_Tool_to_Rejected</fullName>
+        <field>IR_35_Tool_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>IR 35 Tool to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OPP_Approval_Status_to_Approved</fullName>
+        <field>OPP_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>OPP Approval Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OPP_Approval_Status_to_Not_Submitted</fullName>
+        <field>OPP_Approval_Status__c</field>
+        <literalValue>Not Submitted</literalValue>
+        <name>OPP Approval Status to Not Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OPP_Approval_Status_to_Rejected</fullName>
+        <field>OPP_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>OPP Approval Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OPP_Approval_Status_to_Submitted_for_App</fullName>
+        <field>OPP_Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>OPP Approval Status to Submitted for App</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Ongoing_Approval_Process_to_No</fullName>
+        <field>Ongoing_Approval_Process__c</field>
+        <literalValue>No</literalValue>
+        <name>Ongoing Approval Process to No</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Ongoing_Approval_Process_to_Yes</fullName>
+        <field>Ongoing_Approval_Process__c</field>
+        <literalValue>Yes</literalValue>
+        <name>Ongoing Approval Process to Yes</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PI_Approval_Status_to_Approved</fullName>
+        <field>PI_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>PI Approval Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PI_Approval_Status_to_Not_Submitted</fullName>
+        <field>PI_Approval_Status__c</field>
+        <literalValue>Not Submitted</literalValue>
+        <name>PI Approval Status to Not Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PI_Approval_Status_to_Rejected</fullName>
+        <field>PI_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>PI Approval Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PI_Approval_Status_to_Submitted</fullName>
+        <field>PI_Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>PI Approval Status to Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <tasks>
+        <fullName>IAR_has_been_approved_further_steps_needed</fullName>
+        <assignedTo>sf-development@cloudorca.kingsbridge.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Please complete further due-diligence checks of partner before sending out the IAR for signature.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>IAR has been approved – further steps needed</subject>
+    </tasks>
+</Workflow>

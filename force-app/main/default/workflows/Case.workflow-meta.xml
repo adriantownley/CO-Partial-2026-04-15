@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Claims_Auto_Response_Template</fullName>
+        <description>Case - Claims Auto Response Template</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>claims@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Claims_Auto_Response_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Customer_Support_Case_Closed_ContactEmail</fullName>
+        <description>Case - Customer Support: Case Closed (ContactEmail)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Customer_Service/Case_Closed_External</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Customer_Support_Case_Closed_WebEmail</fullName>
+        <description>Case - Customer Support: Case Closed (WebEmail)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Customer_Service/Case_Closed_External</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Customer_Support_Case_Created_ContactEmail</fullName>
+        <description>Case - Customer Support: Case Created (ContactEmail)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Customer_Service/Customer_Support_Case_created</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Customer_Support_Case_Created_WebEmail</fullName>
+        <description>Case - Customer Support: Case Created (WebEmail)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Customer_Service/Customer_Support_Case_created</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_Approaching_2_hours_left_First_Response</fullName>
+        <description>Milestone Approaching – 2 hours left – First Response</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Milestone_Approaching_2_hours_left_First_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_Approaching_5_hours_left_Case_Resolution</fullName>
+        <description>Milestone Approaching – 5 hours left – Case Resolution</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Milestone_Approaching_5_hours_left_Case_Resolution</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_Violated_Case_Resolution</fullName>
+        <description>Milestone Violated – Case Resolution</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CS_Team_Leaders</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Milestone_Violated_Case_Resolution</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_Violated_First_Response</fullName>
+        <description>Milestone Violated – First Response</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CS_Team_Leaders</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>sales@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Milestone_Violated_First_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Cancellation_Case_Alert</fullName>
+        <description>New Cancellation Case Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>customersupport@kingsbridge.co.uk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Customer_Service/New_Cancellation_Case_Template</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_Timer_to_Green</fullName>
+        <field>SLA_Timer__c</field>
+        <literalValue>Green</literalValue>
+        <name>SLA Timer to Green</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_Timer_to_Green_2</fullName>
+        <field>SLA_Timer__c</field>
+        <literalValue>Green</literalValue>
+        <name>SLA Timer to Green</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_Timer_to_Green_3</fullName>
+        <field>SLA_Timer__c</field>
+        <literalValue>Green</literalValue>
+        <name>SLA Timer to Green</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_Timer_to_Green_4</fullName>
+        <field>SLA_Timer__c</field>
+        <literalValue>Green</literalValue>
+        <name>SLA Timer to Green</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_Timer_to_Red</fullName>
+        <field>SLA_Timer__c</field>
+        <literalValue>Red</literalValue>
+        <name>SLA Timer to Red</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_Timer_to_Yellow</fullName>
+        <field>SLA_Timer__c</field>
+        <literalValue>Yellow</literalValue>
+        <name>SLA Timer to Yellow</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>
