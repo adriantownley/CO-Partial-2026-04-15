@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Next_Offset__c</fullName>
+    <defaultValue>0</defaultValue>
+    <deprecated>false</deprecated>
+    <description>The next offset that would be needed to process a specific run. Used to continue processing from a specific point</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The next offset that would be needed to process a specific run. Used to continue processing from a specific point</inlineHelpText>
+    <label>Next Offset</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

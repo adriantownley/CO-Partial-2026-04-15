@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for leads at the sixth attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Opportunity – 6th Attempt</name>
+    <style>freeForm</style>
+    <subject>We’re closing down your quote</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+As I’ve not heard back from any of my previous attempts to move forward with your business insurance, I will now be closing your quote on our system.
+
+However, if you are interested in proceeding with a policy at any time in the future, please reply to let me know the best date and time for me to call you to set up a new quote.
+
+Alternatively, you can always give me a ring on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

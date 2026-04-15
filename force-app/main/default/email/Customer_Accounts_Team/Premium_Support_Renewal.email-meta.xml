@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of premium support options.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Premium Support - Renewal</name>
+    <style>freeForm</style>
+    <subject>Options for Renewal</subject>
+    <textOnly>Hi {Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+If you are unable to work and/or having payment issues for your policy, we have negotiated a premium support option for renewing our customers that means you can keep your cover in place.
+
+We can still renew your cover but will delay your first instalment or lump sum payment by 60 days.
+
+Please contact us on 01242 808 740 to discuss these options.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

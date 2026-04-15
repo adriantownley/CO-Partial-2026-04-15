@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Enabled_Objects__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Comma separated list of Salesforce Object API Names (managed by interface so user doesn&apos;t have to manually enter them)</description>
+    <label>Enabled Objects</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

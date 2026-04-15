@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team have been unable to speak with a FUL scheme customer at the second attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Unable to reach - Best time to call? FUL</name>
+    <style>freeForm</style>
+    <subject>Don’t miss out on your renewal benefits</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I’ve not yet been able to reach you to discuss your renewal quote over the phone.
+
+I don’t want you to lose out on these key benefits:
+
+- Unlimited retroactive cover - protects you against claims arising from work you completed before your current insurance policy began.
+- Worldwide Jurisdiction cover - ensures that you&apos;re protected almost anywhere that your work may take you.
+- Nil excess - guarantees no unexpected out-of-pocket expenses in the event of a claim.
+- Sub-Contractors - includes cover for up to 3 business-facing sub-contractors (BFSCs), provided they hold the same levels of cover as you.
+
+It would be good to discuss your requirements to make sure your renewal quote is right for your business. Is there a good time for me to give you a call?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you soon. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

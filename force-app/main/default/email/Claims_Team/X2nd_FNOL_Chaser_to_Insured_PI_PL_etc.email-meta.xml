@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Chaser email to claim for PI, PL, etc...</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>2nd FNOL Chaser to Insured – PI, PL etc...</name>
+    <style>freeForm</style>
+    <subject>Information still required to support claims process</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I hope you are well.
+
+Further to my email of the (insert date) and email sent on (insert date).
+
+Please could you let me know if you still wish to make a claim and please do not hesitate to ask if you require any assistance in collecting the information so that we may present a claim.
+
+(For PI do not reference to still wishing to make a claim as all PI claims need referring to insurers.)
+If you no longer wish to make a claim, please could you also reply by return to let me know.
+
+I would like to draw your attention to the condition in your policy below:
+
+I look forward to hearing from you.
+
+Kind regards,
+
+{!User.FirstName}
+Claims Team
+
+E: claims@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

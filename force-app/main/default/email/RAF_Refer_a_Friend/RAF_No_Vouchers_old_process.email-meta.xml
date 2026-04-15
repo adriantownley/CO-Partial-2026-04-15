@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation that we cannot confirm the details of the contractor that was referred.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - No Vouchers (old process)</name>
+    <style>freeForm</style>
+    <subject>Your RAF Referral</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+As mentioned, due to the Data Protection Act, I am unable to supply any details relating to another customer.
+
+We have investigated this and unfortunately we will not be able to send you any referral vouchers on this occasion. You may be able to get more information by speaking to your friend. We are happy to speak with them directly to explain the circumstances.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

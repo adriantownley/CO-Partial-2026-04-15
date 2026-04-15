@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when a customer&apos;s midterm DD payment has failed and they have not attempted to make a payment.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Shortfall Cancellation 2 Email</name>
+    <style>freeForm</style>
+    <subject>Your business insurance has been cancelled</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You elected to pay for your Kingsbridge business insurance policy [policy number] through direct debit payments. 
+
+As recent payments have not been made, we cancelled your insurance policy on [cancellation date] and it is no longer active.
+
+Our Direct Debits payment schedule covers 10 months for a 12-month policy. So, it is possible you will have paid a premium that goes past your cancellation date. In this scenario our finance team will refund this amount to you within 90 days. 
+
+Although your policy (active between DD MMM YYYY to DD MMM YYYY) has been cancelled, you may still be able to make a claim on this policy. 
+
+Making a claim
+
+(Use if for FUL package) Any claims submitted for the Professional Indemnity and Directors’ and Officers’ elements of the policy will not be met as these operate on a ‘claims made’ basis and therefore the policy must be live in order to respond. 
+
+Any claims for the Personal Accident, Public Liability and Employers’ Liability elements for the time your policy was active (DD MMM YYYY to DD MMM YYYY) can still be notified to insurers. Please refer to your policy wording for full information.
+
+(Use if for IR35 Add On) IR35 Protect operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. For sections 10-12 on your policy schedule, however, you have a 4-year extended reporting period to notify us of a claim for an investigation during the period your policy was active (DDMMYYYY to DDMMYYYY).
+
+(Use for Legal Expenses) Legal Expenses cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. For section 10 on your policy schedule, however, you have a 4-year extended reporting period to notify us of a claim for an investigation during the period your policy was active (DDMMYYYY to DDMMYYYY).
+
+(Use for Cyber Liability) Cyber Liability cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. For some sections of the cover however, you can notify us of a claim up to 30 days following your policy expiry date (DDMMYYYY). Please see your policy wording for full details.
+
+If you are unsure whether you can make a claim on a cancelled policy, please contact our customer service team and we will be happy to help. 
+
+It is possible to open a new business insurance policy with the sales team at Kingsbridge, however please be aware this cover cannot be back-dated, which may leave you with a gap in cover. 
+
+Please call us on 01242 808740 if you would like to discuss this matter further.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

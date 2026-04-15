@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for Partner leads for an FUL policy at the first attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Partner Lead (FUL)_1st Attempt</name>
+    <style>freeForm</style>
+    <subject>Requested insurance quote</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Your details have been passed to me by {!Lead.Partner_External_Name__c} so that I can provide a quote for your required business insurance.
+
+I haven’t yet been able to speak with you to provide your business insurance quote over the phone. Is there a good time for me to try you again?
+
+Here at Kingsbridge we offer a complete package of cover that is designed specifically for UK businesses. Our comprehensive package includes Professional Indemnity, Public Liability, Employers’ Liability, Personal Accident, and Directors’ and Officers’ Liability. 
+
+We can also include optional benefits such as:
+- Cyber Liability - Covers your business from risks related to your technology and IT infrastructure.
+- IR35 Protect - Protects limited company contractors from the potentially crippling costs that can follow an IR35 enquiry.
+- Legal Expenses - Protects your business in the event of legal action.
+
+As a client of {!Lead.Partner_External_Name__c} you are entitled to a discount on our standard business insurance package. 
+
+So, I can discuss with you which parts of the policy would be relevant for your business, it would be great to speak over the phone. When would be a good time for me to reach you?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+You can also get a quote online via our website www.kingsbridge.co.uk.
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

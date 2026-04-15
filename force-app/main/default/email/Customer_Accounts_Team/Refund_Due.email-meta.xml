@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of an overcharge and subsequent refund.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Refund Due</name>
+    <style>freeForm</style>
+    <subject>Contractor Insurance Refund</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Our internal processes have identified that you  were overcharged for your insurance policy.
+
+A refund of £XXXX will be returned to your account within 3-5 working days.
+
+Apologies for any inconvenience caused and, if you have any questions, please do not hesitate to get in contact on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

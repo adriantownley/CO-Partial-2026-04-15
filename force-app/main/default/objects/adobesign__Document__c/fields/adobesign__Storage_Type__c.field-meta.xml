@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>adobesign__Storage_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It&apos;s set via Storage_Type value in document template automatically.</description>
+    <inlineHelpText>It&apos;s set via Storage_Type value in document template automatically.</inlineHelpText>
+    <label>Storage Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>adobesign__Storage_Type</valueSetName>
+    </valueSet>
+</CustomField>

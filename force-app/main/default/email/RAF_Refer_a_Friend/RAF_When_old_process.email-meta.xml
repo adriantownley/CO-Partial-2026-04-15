@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to RAF referee to confirm when vouchers will be sent.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - When (old process)</name>
+    <style>freeForm</style>
+    <subject>Your RAF Enquiry</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+Due to data protection, I am not able to confirm any details about another customer. 
+
+However, I can confirm that vouchers for a successful referral will be sent 28 days after your friends policy start date.
+
+You may be able to get more detailed information by speaking directly to your friend.
+
+If you have any further questions, please do not hesitate to get in touch.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

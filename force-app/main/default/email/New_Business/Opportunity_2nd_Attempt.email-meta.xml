@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for leads at the second attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Opportunity – 2nd Attempt</name>
+    <style>freeForm</style>
+    <subject>Reviewing your quote</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting an insurance quote from Kingsbridge.  
+
+By now you’ll have had a chance to review the information in your quotation documents.
+
+If you have any questions or concerns about your potential policy, need to amend any of the information or want to proceed with your purchase reply to this email or give me a ring on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

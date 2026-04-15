@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to enquiry on the principle joint assured clause.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Indemnity to Principle Clause</name>
+    <style>freeForm</style>
+    <subject>Insurance Enquiry</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+With regards to your enquiry in respect of the indemnity to principal/principals as joint assured clause:
+
+We automatically note interest on the Public Liability, Products Liability and Employers’ Liability sections (Sections 1,2 and 3 of the policy wording). Although we note the interest, we would not physically name the end client as this means we are extending cover for all of their activities and not just those of a client’s limited company as the policy is intended.
+
+Further to this, as our policy is fully transferable, it allows a client’s business to work for a number of end clients throughout a working year. By naming the end client, we are restricting this insurance policy to just those activities associated with one end client.
+
+We would not look to note interest of a client/agency under Professional Indemnity or Directors’ &amp; Officers’ as it would normally be their client/agency that would be bringing about the action/claim and, therefore, we would not want to have a circumstance where the insured and the claimant would be the same. Under the Personal Accident section, the end client has no interest in that cover of the main insured.
+
+I hope this helps to answer your queries. If you need anything further please don&apos;t hesitate to contact us.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

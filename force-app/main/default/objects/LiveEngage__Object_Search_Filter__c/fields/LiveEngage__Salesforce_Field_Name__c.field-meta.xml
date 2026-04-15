@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Salesforce_Field_Name__c</fullName>
+    <deprecated>false</deprecated>
+    <description>API Name of field on the object which will be used as a filter criteria</description>
+    <externalId>false</externalId>
+    <label>Salesforce Field Name</label>
+    <length>55</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

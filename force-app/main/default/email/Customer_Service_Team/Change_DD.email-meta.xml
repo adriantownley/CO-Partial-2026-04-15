@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Request for payment details for direct debit setup.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Change DD</name>
+    <style>freeForm</style>
+    <subject>Change of Details</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+In order for us to change your payment details, please reply with the information below so we can update your payment schedule:
+
+Name of Bank
+Name of Account Holder
+Sort Code
+Account Number
+
+If you would prefer to provide these details over the phone, please call us directly on 01242 808 740 (option 4) or let me know the best time to get in touch.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

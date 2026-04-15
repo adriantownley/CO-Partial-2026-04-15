@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Last_Run_Status_Message__c</fullName>
+    <deprecated>false</deprecated>
+    <description>status of message of last invocation of this job</description>
+    <inlineHelpText>status of message of last invocation of this job</inlineHelpText>
+    <label>Last Run Status Message</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

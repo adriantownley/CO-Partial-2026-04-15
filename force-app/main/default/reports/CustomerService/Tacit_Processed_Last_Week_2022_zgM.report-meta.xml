@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Opportunity.Sale_Completed_By__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FK_$Opportunity.Sale_Completed_By__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Auto RN,bot,Zoe Mabbott,Daniel Charman,Tom Calverley,Hannah Cargill,Hannah Corlett,Georgia Milne,Katie Hughes,Anna Cullimore,Benjamin Thomas Higgs,Georgie Griffin,n/a,Lisa Whelan,Sophie Kirkham,Nathaniel Catlow-Hawkins</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>Policy__c.Issue_Date_Time__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Tacit Processed Last Week (2022)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Policy__c@Policy__c.From_Opportunity__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Policy__c.Issue_Date_Time__c</dateColumn>
+        <interval>INTERVAL_LASTWEEK</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Attempt to contact customer regarding lack of payment has failed and the policy is at risk of being cancelled before inception.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Live Policy – No Payment (Cancel from Inception) (1)</name>
+    <style>freeForm</style>
+    <subject>Outstanding Payment Update</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We have attempting to contact you in relation to an outstanding balance for your insurance policy. As we have not heard from you, your policy is at risk of being cancelled, leaving your business at risk of possible claims.
+
+It’s not too late to bring your payments up to date and keep your business protected. Please call us on 01242 808740 as soon as possible to discuss your options.
+
+Regrettably, if we do not hear from you in the next 7 days, your policy will be cancelled from the date of inception, and any documents you have received in relation to this policy will be null and void.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

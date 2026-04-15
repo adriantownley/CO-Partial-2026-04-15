@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Follow up email to Employers Liability claim.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>FNOL to Insured – Employers Liability</name>
+    <style>freeForm</style>
+    <subject>Information required to support claims process</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+(Use for those who notified us)
+Thank you for the time on the phone earlier, I am sorry to learn of the claim being made against you.
+
+(Use for those where we received notification)
+We have received notification of a potential claim being made against you for (insert allegations and claimant here).
+
+As discussed, in order that I can register the claim with insurers, please could you forward me the following:
+
+- Overview of events to date leading up to the claim
+- The date of when the incident occurred and when the claim was made against you
+- Description of the injury sustained by your employee
+- Copy of any contract/emails with your employee
+- Confirmation of the job your employee was to undertake
+- Invoice/charge sheet for the work undertaken by your employee
+- Confirmation of your VAT status
+
+I attach your policy schedule and wording to assist.
+
+Upon receipt of the above, I will send to our insurers for review. Depending on how quickly you return the information will determine the timeframe for this.
+
+I look forward to hearing from you.
+
+Kind regards,
+
+{!User.FirstName}
+Claims Team
+
+E: claims@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

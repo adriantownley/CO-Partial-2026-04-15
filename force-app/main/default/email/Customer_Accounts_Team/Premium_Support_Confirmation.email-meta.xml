@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of discounted underwriter premium applied.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Premium Support - Confirmation</name>
+    <style>freeForm</style>
+    <subject>Premium Support Confirmation</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+Please accept this email as confirmation that we have applied the discounted premium to your account.
+
+(Delete as required) To confirm, our underwriters have agreed to credit your credit card /debit card account with a payment of £0.00 which you can expect to receive in the next 3 to 5 working days. This is the equivalent of 60 days’ worth of your base premium (excluding any add-ons).
+
+(Delete as required) To confirm, our underwriters have agreed to credit your bank account with a payment of £0.00 to your bank account which you can expect to receive in the next 3 to 5 working days. This is the equivalent of 60 days’ worth of your base premium (excluding any legal expenses and/or cyber liability add-ons). Please note that your payment schedule with Close Brothers will continue as planned, this credit is intended to help cover instalments for the next two months.
+
+If you require further support, Close Brothers have a one-month payment holiday scheme in place. If you wish to apply for a one month payment holiday, you will need to contact Close Brothers on 0333 321 8566 (Option 1) or via this link: https://d2cjxhvv9uqb7.cloudfront.net/. Close Brothers will advise what the next steps are, but if you do have any problems in the meantime, please do not hesitate to contact us on 01242 808 740.
+
+Please contact us if you have any further queries.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

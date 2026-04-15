@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Default_Screen__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>People Search (Account, Contacts, Leads), Accounts Search, Contacts Search, Leads Search, Cases Search, Opportunities Search, Custom Objects Search, All Records Search</inlineHelpText>
+    <label>Default Screen</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

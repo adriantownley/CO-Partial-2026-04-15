@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used for cancellations for the main Admiral product where there are no further payments to be made.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancellation – No Further Payments Email (Admiral)</name>
+    <style>freeForm</style>
+    <subject>Cancellation Options</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting in touch with Kingsbridge.
+
+Because we operate the Direct Debits payment schedule over 10 months for your 12-month policy duration, we’re happy to confirm that all the payments for your policy have been made. 
+
+To honour your cancellation request, please rest assured that your policy has now been removed from auto-renewal and no further payments will be taken. Your policy will remain in place until DDMMYYYY.
+
+If you still wish to proceed with your cancellation, please carefully review the information below and confirm by replying to this email within 7 calendar days.
+
+Important information regarding your insurance cover
+
+(Use if holding PI) Your package of insurance includes Professional Indemnity cover. This element of the policy works on a ‘claims made’ basis, meaning you must have cover in place at the time of the claim and not at the time of the incident for your policy to provide cover.
+
+(Use if holding PI) If you choose to cancel your Kingsbridge insurance policy and do not hold alternative cover elsewhere your business will not be covered against claims of negligence.
+
+Any claims for the (delete as appropriate) Public Liability, Employers’ Liability, Contract Works, Own Plant and Hired in Plant elements for the time your policy was active (DD MMM YYYY to DD MMM YYYY) can be notified to insurers. Please refer to your policy wording  for full information.
+
+Whether you’re currently insured with Kingsbridge or not, our customer service team is always here to help. Please don’t hesitate to reply to this email if you need any further information on any of the above.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

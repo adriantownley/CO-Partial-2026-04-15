@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when a customer is removed from automatic renewal.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>AR Removal Email</name>
+    <style>freeForm</style>
+    <subject>Automatic Renewal</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting in touch with Kingsbridge.
+
+Please accept this email as confirmation that we have removed your policy from our automatic renewal system. Your current policy is due to expire on {!Opportunity.Renewal_Date__c}.
+
+We’ll send automated emails to make sure you’re aware of your policy expiry date so that you can either renew your policy with us manually or find cover elsewhere to keep your business protected against claims.
+
+Our renewals team may still get in touch to check whether your circumstances have changed, and to see if you would like to renew your policy manually. 
+
+If you have any questions, please do not hesitate to get in touch.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

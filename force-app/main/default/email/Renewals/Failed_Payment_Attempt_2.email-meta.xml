@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Recent payment was unsuccessful and we were unable to contact the customer, so this is an email we can use when attempting to contact the customer.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Failed Payment - Attempt 2</name>
+    <style>freeForm</style>
+    <subject>Outstanding Payment Required</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Following your recent Kingsbridge policy purchase, we have received notification from your bank that the payment has been unsuccessful.
+
+We have already tried to call you to discuss this and will again in the next few working days.
+
+Unfortunately, if we are unable to speak with you and collect payment, in accordance with the terms and conditions, your policy will be cancelled from inception. 
+
+This means the policy will be null and void and you will have no rights to any cover under this policy at any time.
+
+Alternatively, please contact us at your earliest convenience on 01242 808740 to discuss this further.
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

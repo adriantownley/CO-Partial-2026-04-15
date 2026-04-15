@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be sent to FUL Trades customers who are not in auto-renewal and opted out of marketing communications, so they are aware their policy is due to expire.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>FUL Trades_Renewal Due (out of AR)</name>
+    <style>freeForm</style>
+    <subject>Your business insurance will expire soon</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Your insurance policy [policy number] is due to expire on [expiry date].
+
+If you wish to renew your business insurance policy, you can contact us on 01242 808740 between the hours 8:00am – 5:30pm Monday-Friday and our team will complete your purchase over the phone.
+
+We will beat any like for like quote
+Our Price Promise (https://go.kingsbridge.co.uk/PL-MRR-0225) means that if you find like-for-like cover elsewhere at a lower price, we will beat the quote. Terms and conditions apply.
+
+We hope you find our policy suits all your business needs and we look forward to hearing from you.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

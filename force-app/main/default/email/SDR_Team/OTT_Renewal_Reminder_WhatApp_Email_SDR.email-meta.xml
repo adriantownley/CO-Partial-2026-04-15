@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for OTT Hot Lead that has previously been a Warm Lead (with WhatsApp).</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>OTT Renewal Reminder (WhatApp) Email_SDR</name>
+    <style>freeForm</style>
+    <subject>Your business insurance is renewing soon</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I understand from On the Tools that your business insurance is renewing soon. I’d love to provide you with a competitive, no-obligation quote that you can compare with your current provider.
+
+Here’s why our insurance schemes stand out amongst our competitors:
+
+- Real people, real support: quick access to dedicated UK-based insurance specialists.
+- UK-based claims centre: rapid, responsive claims processing managed by an in-house claims team. 
+- There when you need them: strong history of fair, fast, and hassle-free claims processing.
+- Tailored industry expertise: cover specifically built for contractors, freelancers, and small business owners.
+- No hidden fees: transparent pricing with no unexpected costs.
+
+I’d love to get you on the phone to run through quote for you. Book a call with me - https://calendly.com/d/crv2-4cb-zcj/kingsbridge-insurance-call-back-on-the-tools
+
+Not able to answer calls during the day? 
+Send me a message on WhatsApp using 07917 515428 and I’ll contact you via message instead.
+
+Alternatively, contact me on 01242 808 740. Our office is open 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you!
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

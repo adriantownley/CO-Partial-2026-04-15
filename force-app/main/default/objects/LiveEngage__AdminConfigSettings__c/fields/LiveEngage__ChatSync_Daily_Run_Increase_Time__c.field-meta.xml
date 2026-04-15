@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__ChatSync_Daily_Run_Increase_Time__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The number of minutes to increase the start time (last run time) to ensure there is overlap in the timing windows.  This will allow for the process to bring in chats which may have been unavailable in the API for some time.</description>
+    <externalId>false</externalId>
+    <label>ChatSync Daily Run Increase Time</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

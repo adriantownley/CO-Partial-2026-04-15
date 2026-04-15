@@ -1,0 +1,110 @@
+{
+    "agreementTemplate": {
+        "attributes": {
+            "type": "echosign_dev1__Agreement_Template__c",
+            "url": "/services/data/v40.0/sobjects/echosign_dev1__Agreement_Template__c/a0F5000000693kPEAQ"
+        },
+        "Name": "Test Community Agreement",
+        "echosign_dev1__Default__c": false,
+        "echosign_dev1__Name__c": "Community Partner Agreement",
+        "echosign_dev1__Message__c": "Please sign this community partner agreement.",
+        "echosign_dev1__Signature_Type__c": "e-Signature",
+        "echosign_dev1__Language__c": "English (United States)",
+        "echosign_dev1__Hosted_Signing__c": false,
+        "echosign_dev1__Sender_Signs_Only__c": false,
+        "echosign_dev1__Preview_Position__c": false,
+        "echosign_dev1__Sign_Password__c": false,
+        "echosign_dev1__View_Password__c": false,
+        "echosign_dev1__Account__c": "{!AccountId}",
+        "echosign_dev1__Sender_User__c": "00550000001NBgS",
+        "echosign_dev1__Automatic_Reminders__c": "Never",
+        "echosign_dev1__Prefer_Fax__c": false,
+        "echosign_dev1__Auto_Send__c": false,
+        "echosign_dev1__Master_Object_Type__c": "Contact",
+        "echosign_dev1__Available_Publisher_Actions__c": false,
+        "echosign_dev1__Active__c": true,
+        "echosign_dev1__Agreement_Type__c": "",
+        "Id": "",
+        "echosign_dev1__Field_Templates__r": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "echosign_dev1__Field_Template__c",
+                        "url": "/services/data/v40.0/sobjects/echosign_dev1__Field_Template__c/a0G5000000D41JmEAJ"
+                    },
+                    "echosign_dev1__Agreement_Template__c": "",
+                    "Id": "",
+                    "Name": "00002103",
+                    "echosign_dev1__Agreement_Field__c": "Recipient__c",
+                    "echosign_dev1__Field_Value__c": "Id",
+                    "echosign_dev1__Type__c": "Select Master Object Field"
+                }
+            ]
+        },
+        "echosign_dev1__Attachment_Templates__r": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "echosign_dev1__Attachment_Template__c",
+                        "url": "/services/data/v40.0/sobjects/echosign_dev1__Attachment_Template__c/a0I5000000vapdFEAQ"
+                    },
+                    "echosign_dev1__Agreement_Template__c": "",
+                    "Id": "",
+                    "Name": "0019344",
+                    "echosign_dev1__Index__c": 0,
+                    "echosign_dev1__Type__c": "Document from Library",
+                    "echosign_dev1__Related_Selection_Field__c": "Last Modified Date",
+                    "echosign_dev1__Related_Selection_Type__c": "Latest",
+                    "echosign_dev1__Attachment_Document__c": "{!documentId}",
+                    "echosign_dev1__Attachment_Document_Names__c": "Partnership Document",
+                    "echosign_dev1__Quote_Document_Selection_Type__c": "Latest Document",
+                    "echosign_dev1__Quote_Document_Selection_Field__c": "Last Modified Date",
+                    "echosign_dev1__Master_Source_Type__c": "Attachments"
+                }
+            ]
+        },
+        "echosign_dev1__Recipient_Templates__r": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "echosign_dev1__Recipient_Template__c",
+                        "url": "/services/data/v40.0/sobjects/echosign_dev1__Recipient_Template__c/a0H5000000Eq6Z3EAJ"
+                    },
+                    "echosign_dev1__Agreement_Template__c": "",
+                    "Id": "",
+                    "Name": "0018984",
+                    "echosign_dev1__Index__c": 1,
+                    "echosign_dev1__Recipient_Type__c": "Contact",
+                    "echosign_dev1__Type__c": "Look Up Based on Master Object Field",
+                    "echosign_dev1__Related_Selection_Type__c": "Latest",
+                    "echosign_dev1__Related_Selection_Field__c": "Last Modified Date",
+                    "echosign_dev1__Recipient_Field__c": "Id",
+                    "echosign_dev1__Recipient_Role__c": "Signer",
+                    "echosign_dev1__Do_Not_Create_Empty__c": false,
+                    "echosign_dev1__Signer_Verification_Method__c": "Email",
+                    "echosign_dev1__Uniform_Index__c": false,
+                    "echosign_dev1__Phone_Verification_Country_Code__c": "1"
+                }
+            ]
+        },
+        "echosign_dev1__Agreement_Type__r": {
+            "attributes": {
+                "type": "echosign_dev1__Agreement_Type__c",
+                "url": "/services/data/v40.0/sobjects/echosign_dev1__Agreement_Type__c/a0d5000000pnhFiAAI"
+            },
+            "Id": "a0d5000000pnhFiAAI",
+            "Name": "NDA"
+        },
+        "echosign_dev1__Merge_Mapping__r": null,
+        "echosign_dev1__Data_Mapping__r": null
+    },
+    "objectMappings": [],
+    "formFieldMappings": [],
+    "formFieldChildMappings": []
+}

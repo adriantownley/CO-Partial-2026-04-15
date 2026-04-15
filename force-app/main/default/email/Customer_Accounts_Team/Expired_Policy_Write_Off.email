@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="arial">Hi {!Contact.FirstName},<br></font><span style="font-family: arial;"><br>We have attempting to contact you in relation to <b>an outstanding balance for your insurance policy</b>, and unfortunately haven’t been able to get in touch with you.<br></span><span style="font-family: arial;"><br>On this occasion and given the circumstances, please note that <b>a decision has now been made to write off the balance, and there is no longer an amount outstanding</b>.<br></span><span style="font-family: arial;"><br>If you have any questions then please do not hesitate to get in touch.&nbsp; We hope you will consider Kingsbridge for your business insurance in the future.<br></span><span style="font-family: arial;"><br>Kind regards,<br></span><span style="font-family: arial;"><br>{!User.FirstName}<br></span><span style="font-family: arial;">Customer Accounts Team<br></span><span style="font-family: arial;"><br>E: customersupport@kingsbridge.co.uk<br></span><span style="font-family: arial;">T: 01242 808 740</span></p>]]></td>
+</tr>
+</table>

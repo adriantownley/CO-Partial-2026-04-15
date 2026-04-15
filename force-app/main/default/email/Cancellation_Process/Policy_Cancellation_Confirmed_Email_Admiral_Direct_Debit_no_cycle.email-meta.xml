@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation email to be used for mid-term cancellations for the main Admiral product. Where the policy has been paid for using Direct Debit and not in a payment cycle.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Policy Cancellation Confirmed Email (Admiral) (Direct Debit - no cycle)</name>
+    <style>freeForm</style>
+    <subject>Confirmation of Policy Cancellation</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting in touch with Kingsbridge.
+
+We are writing to confirm that, as per your request, we have cancelled your insurance policy (insert policy number) with Kingsbridge.
+
+To confirm, your policy was active for the period (DDMMYYYY to DDMMYYYY). 
+
+
+Cancelling your payment
+
+As you were paying for your policy via Direct Debit, we have contacted Close Brothers to ask them to cancel your direct debit as of the above date. They will write to you with confirmation of this, but please be assured that no money is owed for this policy going forward. 
+
+
+(Delete if not owed a refund) Your refund
+
+You are due a refund of £XXX. Within 5 to 10 working days this refund will be credited to the account from which you made your Direct Debit payments.
+
+
+Making a claim
+
+(Remove mention of Professional Indemnity if policy does not include PI) Any claims submitted for the Professional Indemnity and Goods and Tools Cover elements of the policy will not be met as these operate on a ‘claims made’ basis and therefore the policy must be live in order to respond. 
+
+Any claims for the (delete as appropriate) Public Liability, Employers’ Liability, Contract Works, Own Plant and Hired in Plant elements for the time your policy was active can be notified to insurers. Please refer to your policy wording for full information. 
+
+
+If you have any questions regarding the above, please do not hesitate to contact our customer service team on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

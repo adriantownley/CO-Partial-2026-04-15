@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__ChatSync_Periodic_Schedule_Offset__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A randomly chosen interval of time (in minutes) to offset the ongoing process run. This allows the spread of traffic load of LivePerson API clients calls.</description>
+    <externalId>false</externalId>
+    <label>ChatSync Periodic Schedule Offset</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

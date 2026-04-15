@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of upcoming renewal date and request for up to date details.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Renewal Invalid Contact Details</name>
+    <style>freeForm</style>
+    <subject>Renewal Contact Details Required</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I am getting in touch as your policy will expire in the next couple of days and we have been trying to reach you to discuss the renewal. It looks like we may not have the correct contact details for you.
+
+If you would like to renew your insurance, we can do so over the phone in a matter of minutes.
+
+(Remove for Admiral renewals) As specialists in business insurance for contractors and freelancers, we offer a price promise. We will beat any like for like quote*. For full details and terms and conditions*, please visit https://www.kingsbridge.co.uk/price-promise/
+
+Please let me know a good time to call and the best number to reach you on. Alternatively, you can contact us on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

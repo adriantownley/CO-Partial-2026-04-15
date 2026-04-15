@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use after ringing a new Swoop lead and making no contact by phone, with calendar invite included.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Swoop Follow Up (Calendar)</name>
+    <style>freeForm</style>
+    <subject>Requested insurance quote via Swoop</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve not been able to reach you today regarding your request for an insurance quote via our partner, Swoop.
+
+It will only take 5-10 minutes to provide you with a comprehensive quote. Book a call with me today - https://calendly.com/d/cm2p-trc-cnn/kingsbridge-insurance-call-back-swoop
+
+Here at Kingsbridge we offer several complete packages of cover that are designed specifically for UK businesses.
+
+Why buy with Kingsbridge?
+
+- Tailored solutions: Coverage is specifically designed for contractors, freelancers, and small businesses, so you get protection that meets your needs.
+- Dedicated support: Kingsbridge’s in-house claims and underwriting teams work closely with you and the insurer, providing guidance and peace of mind throughout your policy. 
+- Proven customer satisfaction: With customer ratings of 4.8/5 on Feefo and 4.6/5 on Google, Kingsbridge has a reputation for excellent service.
+
+So that I can discuss which of our schemes would be most relevant for your business, it would be good to speak over the phone. Book a call with me - https://calendly.com/d/cm2p-trc-cnn/kingsbridge-insurance-call-back-swoop
+
+Alternatively, you can reply to let me know a good time to call or contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

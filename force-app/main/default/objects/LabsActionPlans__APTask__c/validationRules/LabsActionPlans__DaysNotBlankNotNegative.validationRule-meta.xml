@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LabsActionPlans__DaysNotBlankNotNegative</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(LabsActionPlans__DaysFromStart__c) || LabsActionPlans__DaysFromStart__c  &lt; 0</errorConditionFormula>
+    <errorDisplayField>LabsActionPlans__DaysFromStart__c</errorDisplayField>
+    <errorMessage>You must enter a non-negative value</errorMessage>
+</ValidationRule>

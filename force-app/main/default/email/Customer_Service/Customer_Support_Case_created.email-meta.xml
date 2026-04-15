@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This letter is used to send a customer an email that we have received their case or ticket</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Kingsbridge_Rebrand_Email_Template</letterhead>
+    <name>Customer Support - Case created</name>
+    <style>freeForm</style>
+    <subject>We are on the case</subject>
+    <textOnly>Thank you for your email.
+
+Your reference number for this is {!Case.CaseNumber}.
+
+We will aim to respond to you as soon as possible. If you need to speak to us urgently, please call our phone line on 01242 808 740. Lines are open Monday – Friday between 8am and 5:30pm.
+
+Please do not reply to this email as it is an auto-generated response. We would like to thank you for your patience.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Kingsbridge_Rebrand_Email_Template</letterhead>
+    <name>New Cancellation Case Template</name>
+    <style>freeForm</style>
+    <subject>A Cancelled Policy has been assigned</subject>
+    <textOnly>Hi {!Case.OwnerFirstName},
+
+Partner name: {!Case.Account}
+Policy Number: {!Case.Policy__r}
+Reason: Policy cancelled</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used for customers for the main Admiral product where they have asked to be removed from renewal process because they want their policy to expire.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancel Renewal Email (Admiral)</name>
+    <style>freeForm</style>
+    <subject>Cancellation of your Policy Renewal</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting in touch with Kingsbridge. 
+
+We’re sorry to hear you do not wish to renew your policy with us this year. To honour your cancellation request, please rest assured that your policy has now been removed from our renewal process. 
+
+We understand that there can be many reasons why you may not want to continue keeping your business covered with Kingsbridge. However, we want to make sure you’re fully aware of the financial risks that can present from not holding current business insurance if any apply to you.
+
+Not currently working?
+
+If you are not currently working, we would discourage you from cancelling your policy; unless you’re stopping self-employment altogether, a break in cover could affect your business. Our automatic renewal process is in place to ensure you are continuously protected.
+
+(Use if holding PI) Your package of insurance includes Professional Indemnity cover. This element of the policy works on a ‘claims made’ basis, meaning you must have cover in place at the time of the claim and not at the time of the incident for your policy to provide cover. 
+
+(Use if holding PI) If you choose to cancel your Kingsbridge insurance policy and do not hold alternative cover elsewhere your business will not be covered against claims of negligence.
+
+Any claims for the (delete as appropriate) Public Liability, Employers’ Liability, Contract Works, Own Plant and Hired in Plant elements for the time your policy was active (DD MMM YYYY to DD MMM YYYY) can be notified to insurers. Please refer to your policy wording  for full information. 
+
+If you’ve changed your mind about cancelling your cover after having read the above information and would instead like your policy to renew, please reply to this email and our customer service team will be happy to help. 
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

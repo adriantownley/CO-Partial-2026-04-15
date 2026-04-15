@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for general Zint leads.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Zint General_SDR</name>
+    <style>freeForm</style>
+    <subject>Looking for business insurance?</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Having come across your business, I believe our business insurance may be of interest to you as we offer coverage tailored specifically to your industry. 
+
+Here at Kingsbridge, we offer a complete package of cover that is designed specifically for UK businesses. 
+
+I am confident I can provide you with a competitive quote in 5-10 minutes. Not ready for a quote yet? Book a call with me closer to your renewal date - https://calendly.com/d/cm3g-k74-js2/kingsbridge-insurance-call-back
+
+
+Plus, if you book a call with me, I can provide you with an additional welcome discount. 
+
+Alternatively, you can reply to let me know a good time to call or contact me on 01242 807223. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday.   
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

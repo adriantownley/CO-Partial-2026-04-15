@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Process_Name__c</fullName>
+    <deprecated>false</deprecated>
+    <description>name of the Apex Class / Process which has logged this message</description>
+    <label>Process Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ChatSyncJob</fullName>
+                <default>false</default>
+                <label>ChatSyncJob</label>
+            </value>
+            <value>
+                <fullName>ChatSyncController</fullName>
+                <default>false</default>
+                <label>ChatSyncController</label>
+            </value>
+            <value>
+                <fullName>ChatLinkController</fullName>
+                <default>false</default>
+                <label>ChatLinkController</label>
+            </value>
+            <value>
+                <fullName>EngagementResponse</fullName>
+                <default>false</default>
+                <label>EngagementResponse</label>
+            </value>
+            <value>
+                <fullName>EngagementRequest</fullName>
+                <default>false</default>
+                <label>EngagementRequest</label>
+            </value>
+            <value>
+                <fullName>InstallationScript</fullName>
+                <default>false</default>
+                <label>InstallationScript</label>
+            </value>
+            <value>
+                <fullName>LivePersonApiConnector</fullName>
+                <default>false</default>
+                <label>LivePersonApiConnector</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

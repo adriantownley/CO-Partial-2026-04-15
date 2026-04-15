@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response for if a referee is chasing vouchers and there are none due.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - No Vouchers Due (new process)</name>
+    <style>freeForm</style>
+    <subject>Your RAF Referral</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+We can confirm that 1 of the referrals you made has not been successful. 
+
+Due to the Data Protection Act, we are unable to supply any details relating to another customer. However, we have added below some common scenarios that can lead to a referral being unsuccessful. 
+
+Why has my referral been unsuccessful?
+
+Here are some of the common reasons, why a referral may be unsuccessful:
+- They chose not to join our RAF scheme
+- They chose not to get a quote from Kingsbridge 
+- They already had a quote open with Kingsbridge prior to your referral
+- They chose not to purchase an insurance policy from Kingsbridge
+- They already held a policy with Kingsbridge
+- They opted to cancel their Kingsbridge insurance policy during their legal cooling off period
+
+You may be able to get more information by speaking with the person you referred. We are happy to speak with them directly to explain the circumstances if required.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

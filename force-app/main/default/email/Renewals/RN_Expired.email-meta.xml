@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team have been unable to speak with a customer at the sixth attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RN Expired</name>
+    <style>freeForm</style>
+    <subject>Business insurance now expired</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Your business insurance policy has now expired. 
+
+I’m sorry to see that you decided not to stay with Kingsbridge for another year.
+
+However, it’s not too late to avoid a gap in cover. If you have changed your mind or did not mean to let your policy lapse, I can restart your policy within 30 days of your expiry date. 
+
+Please reply with the best date and time for me to call you. Alternatively, you can always give me a ring on 01242 808 740.
+
+If you don’t renew within this 30-day window and still wish to be covered by Kingsbridge, I’ll have to requote your insurance policy which may take more time and may result in a gap in your insurance coverage. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for Partner leads at the second attempt stage where the type of scheme is unknown.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Partner Lead (General)_2nd Attempt</name>
+    <style>freeForm</style>
+    <subject>Requested insurance quote follow up</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve not been able to reach you since you were referred to us by {!Lead.Partner_External_Name__c}.
+
+It would be useful to know more about your business, so I can understand what cover you might require.
+
+Some key benefits of buying from Kingsbridge are:
+
+- Packaged products from industry-leading A-rated insurers – We offer a range of products that are tailored to specific sectors and job roles.
+- Flexible payment options – We offer multiple ways to pay for your policy, including monthly payment options. 
+- Competitively priced cover - We make sure our prices remain competitive for all our customers, whether they’re new to us or not.
+- Outstanding customer service - Our experienced customer service team are here to help you with cover that suits your needs. But don’t just take it from us, why not take a look at our 10,000+ Feefo reviews, with an average customer satisfaction score of 4.8/5 - https://www.feefo.com/en-GB/reviews/kingsbridge-contractor-insurance?displayFeedbackType=SERVICE&amp;timeFrame=YEAR
+
+However, it would be good to discuss your requirements to make sure this is the best policy for you. Is there a good time for me to give you a call?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+You can also get a quote online via our website www.kingsbridge.co.uk.
+
+I look forward to hearing from you soon. 
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for OTT Hot Lead (with WhatsApp).</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>OTT Kingsbridge USPs (WhatsApp) Email_SDR</name>
+    <style>freeForm</style>
+    <subject>Why choose Kingsbridge?</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’m still struggling to reach you since you were referred to us by On the Tools.
+
+It’s likely you are looking at lots of different providers for your business insurance policy. So, here are the reasons why the team at Kingsbridge stand out from our competitors:
+
+- Real people, real support: quick access to dedicated UK-based insurance specialists.
+- UK-based claims centre: rapid, responsive claims processing managed by an in-house claims team. 
+- There when you need them: strong history of fair, fast, and hassle-free claims processing.
+- Tailored industry expertise: cover specifically built for contractors, freelancers, and small business owners.
+- No hidden fees: transparent pricing with no unexpected costs.
+
+Let’s catch up on the phone so I can make sure I provide you with the best policy for you at the best price. Book a call with me - https://calendly.com/d/crv2-4cb-zcj/kingsbridge-insurance-call-back-on-the-tools
+
+Not able to answer calls during the day? 
+Send me a message on WhatsApp using 07917 515428 and I’ll contact you via message instead.
+
+Alternatively, contact me on 01242 808 740. Our office is open 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you soon!
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

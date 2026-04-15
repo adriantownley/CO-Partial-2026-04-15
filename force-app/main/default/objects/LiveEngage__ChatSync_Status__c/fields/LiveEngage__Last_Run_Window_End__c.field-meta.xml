@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Last_Run_Window_End__c</fullName>
+    <deprecated>false</deprecated>
+    <description>When the Job last run what was the start of the chat transcript window?  (For a Manual job, this will be the &quot;Current Run Window End&apos;)</description>
+    <inlineHelpText>When the Job last run what was the start of the chat transcript window?  (For a Manual job, this will be the &quot;Current Run Window End&apos;)</inlineHelpText>
+    <label>Last Run Window End</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

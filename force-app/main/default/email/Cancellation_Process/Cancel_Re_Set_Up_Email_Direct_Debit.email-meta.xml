@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when a policy needs to be cancelled and re-set up when paying via Direct Debit.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancel Re-Set Up Email (Direct Debit)</name>
+    <style>freeForm</style>
+    <subject>Your Refund</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You recently got in touch to make a change to your policy. In order to action this change, we had to cancel your original policy and re-set this up with your requested amends.
+
+As you were paying via Direct Debit, we have contacted Close Brothers to ask them to cancel your direct debit as of the above date. They will write to you with confirmation of this, but please be assured that no money is owed for your previous policy (inset policy number) going forward. 
+
+
+(Delete if not owed a refund) Your refund
+
+(Delete if in payment cycle) You are due a refund of £XXX. This refund will be credited to the account from which you made your Direct Debit payments within 5 to 10 working days.
+
+(Delete if not in payment cycle) As a payment is currently in progress, we need to wait until this has been completed before we process your refund. This refund will be credited to the account from which you made your Direct Debit payments within 10 to 15 working days.
+
+
+If you have any further queries, please feel free to contact us on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

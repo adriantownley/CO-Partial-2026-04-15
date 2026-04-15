@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Follow up email to Professional Indemnity claim.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>FNOL to Insured – Professional Indemnity</name>
+    <style>freeForm</style>
+    <subject>Information required to support claims process</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+(Use for those who notified us)
+Thank you for your time today and for notifying us that you would like to make a potential Professional Indemnity claim.
+
+(Use for those where we received notification)
+We have received notification of a potential claim being made against you for (insert allegations and claimant here).
+
+So that we can present a claim to our insurers, please may you kindly forward the following:
+
+- Overview of events to date giving as much detail as possible
+- The dates of when the incident occurred
+- When the intimated potential claim was made against you if this is the case
+- An idea if you can of a possible reserve against the claim – attaching figures if any figures have been disclosed
+- Claimant’s name, address, and contact details
+- Statement from the Client or as much detail as you can with attachments
+- Copies of prior correspondence, email or any other correspondence received
+- Confirmation of contractor(s) and full name(s) if applicable
+- Explain if you know, their view of responsibility
+- As much information on the records / paperwork that you have kept as support
+- Confirmation of your VAT status
+
+I attached a copy of your policy schedule and wording to assist.
+
+Once I have received all your information, I can present the details to our insurers. Depending on how quickly you are able to return the information back to me will determine the timeframe for this.
+
+Once this has been passed to insurers, the insurers may be in contact directly with you. However we are here to support at any time.
+
+I look forward to hearing from you.
+
+Kind regards,
+
+{!User.FirstName}
+Claims Team
+
+E: claims@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

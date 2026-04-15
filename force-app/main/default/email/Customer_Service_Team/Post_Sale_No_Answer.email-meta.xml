@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of post purchase missed call.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Post Sale - No Answer</name>
+    <style>freeForm</style>
+    <subject>Your Recent Purchase</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for choosing Kingsbridge for your business insurance.
+
+I tried to call you today to make sure you have received all of your insurance documents and to answer any questions you may have about the policy.
+
+Your feedback is very important to us and we would like to hear about your experience when purchasing your insurance. Our independent review service, Feefo, will be in touch via email asking you to provide feedback.
+
+Please don&apos;t hesitate to get in touch on 01242 808 740 if you have any queries.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

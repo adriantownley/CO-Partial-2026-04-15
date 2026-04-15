@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of early settlement.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CBPF Early Settlement</name>
+    <style>freeForm</style>
+    <subject>Early Cancellation of Agreement</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+The letter that you have received from Close Brothers is a generic letter which they send to all customers whose agreements have been cancelled early. 
+
+We do appreciate that this is a bit confusing but, as per our previous email, please rest assured that there is nothing further owed by yourself in relation to your Kingsbridge policy.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

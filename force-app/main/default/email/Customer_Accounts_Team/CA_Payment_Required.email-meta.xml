@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email for outstanding balance on policy.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CA Payment Required</name>
+    <style>freeForm</style>
+    <subject>Please Contact Us</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We are getting in touch today as we believe that there is an outstanding balance of £0.00 owed for policy {!Policy__c.Id}.
+
+We would love to discuss this with you with a view to getting this resolved. Could you please call us on 01242 808740, or alternatively, let us know a convenient time for us to call you.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

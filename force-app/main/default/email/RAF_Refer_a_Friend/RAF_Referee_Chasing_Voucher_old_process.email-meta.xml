@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation to RAF referee that we cannot give personal details of the person they referred.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - Referee Chasing Voucher (old process)</name>
+    <style>freeForm</style>
+    <subject>Your RAF Enquiry</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+Due to data protection regulations, I am unable to supply any details relating to another customer. 
+
+Please confirm the name and email address of the person you referred and I will investigate on your behalf and get back to you with any information I can.
+
+Please be advised that once your friend has purchased, vouchers are not sent until 28 days after their policy start date.
+
+In some circumstances, we may have received your friend&apos;s details from another source before your own referral. In this case, the referral is attributed to the initial source, and therefore the refer a friend offer does not apply.
+
+If your friend would like to contact us directly, we will happily discuss the details of their policy with them.
+
+If you have any questions, please don&apos;t hesitate to get in touch.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

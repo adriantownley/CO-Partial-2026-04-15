@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation email to be used for NB COP cancellations for the main Admiral product. Payment made in a Sage or Stripe payment.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Policy Cancellation COP Email (Admiral) - Sage or Stripe Payment</name>
+    <style>freeForm</style>
+    <subject>Confirmation of Policy Cancellation</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for getting in touch with Kingsbridge.
+
+We are writing to confirm that, as per your request, we have cancelled your insurance policy (insert policy number) with Kingsbridge from the date of inception (DD MMM YYYY).
+
+It’s important to note that you are now no longer able to claim under this policy, so please disregard any previous documentation you have received from us as null and void.
+
+As you have cancelled your Kingsbridge insurance policy, if you do not hold an insurance policy elsewhere, your business will not be covered against claims.
+
+
+Cancelling your payment
+
+As you paid for your policy in a single payment, within 3 to 10 working days a refund of £XXX will appear in the account from which you originally paid.
+
+
+Whether you’re currently insured with Kingsbridge or not, our customer service team is always here to help. Please don’t hesitate to reply to this email if you need any further information on any of the above.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

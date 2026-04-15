@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Kingsbridge_Rebrand_Email_Template</letterhead>
+    <name>Claims Auto Response Template</name>
+    <style>freeForm</style>
+    <subject>Case has been created.</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+Thank you for contacting the Claims Team.
+
+
+We have received your email and one of our claims handlers will review it as soon as possible. If your message relates to a new claim, we will acknowledge it and let you know the next steps within 1–2 working days.
+
+
+For urgent matters, please contact us on ############, Monday to Friday, 9 to 5.
+
+
+If you have included any documents or claim forms, these will be actioned accordingly and will be added to your file.
+
+
+Thank you for your patience – we’ll be in touch shortly.
+
+
+Kind regards</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

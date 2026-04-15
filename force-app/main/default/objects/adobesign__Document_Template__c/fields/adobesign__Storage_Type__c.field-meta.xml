@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>adobesign__Storage_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Select Files so that the package work with the latest generation Salesforce files based system. Select Attachments to use the legacy storage object type.</description>
+    <inlineHelpText>Select Files so that the package work with the latest generation Salesforce files based system. Select Attachments to use the legacy storage object type.</inlineHelpText>
+    <label>Storage Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>adobesign__Storage_Type</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation that callback with sales team has been arranged.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Sales Team - Call Back</name>
+    <style>freeForm</style>
+    <subject>Callback Arranged</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for your email.
+
+I have asked one of our Sales Team to get in touch with you to discuss your query.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

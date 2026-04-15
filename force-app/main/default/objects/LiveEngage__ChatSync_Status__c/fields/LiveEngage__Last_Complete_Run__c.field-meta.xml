@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Last_Complete_Run__c</fullName>
+    <deprecated>false</deprecated>
+    <description>When was this job last successfully completed?</description>
+    <inlineHelpText>When was this job last successfully completed?</inlineHelpText>
+    <label>Last Complete Run</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,7 @@
+Hi all
+
+Just to let you know that the milestone ‘First Response’ has been violated for Case, {!Case.CaseNumber}, 
+
+Subject: {!Case.Subject}
+
+The case can be viewed here: {!Case.Link}

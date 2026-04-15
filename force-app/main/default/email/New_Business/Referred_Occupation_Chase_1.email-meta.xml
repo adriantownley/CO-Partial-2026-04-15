@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use after trying to contact a quote and buy referral.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Referred Occupation Chase 1</name>
+    <style>freeForm</style>
+    <subject>Business Insurance Quote Referral</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Thanks for requesting a business insurance quote from Kingsbridge.
+
+Due to your job role and industry, we require some more information in order to complete your quote.
+
+I have been calling you today, so we can get the additional details we need from you. Unfortunately, I have not been able to reach you.
+
+If you are still interested in moving forward, please give me a call on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday.
+
+I look forward to speaking with you.
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

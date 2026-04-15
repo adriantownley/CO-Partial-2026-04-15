@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Have been unsuccessful in connecting with customer to answer their query.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Task Closed (CAT)</name>
+    <style>freeForm</style>
+    <subject>Update on your query</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We have recently made numerous attempts to contact you in relation to your query.
+
+Unfortunately, we have not been successful in getting in touch, so we have closed this matter internally.
+
+If you do still wish to discuss this with us, please feel free to give us a call on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

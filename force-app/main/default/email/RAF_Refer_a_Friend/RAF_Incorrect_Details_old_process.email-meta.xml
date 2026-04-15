@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>To be sent to customers who have been referred but the email address doesn&apos;t match an account on SF.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - Incorrect Details (old process)</name>
+    <style>freeForm</style>
+    <subject>Your RAF Enquiry</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We’re delighted to hear that you were referred to Kingsbridge via our ‘refer a friend’ scheme.
+
+Unfortunately, the details you provided for the referee do not match any current or previous policy holders on our system. This means that you are not currently eligible for our offer.
+
+In order to be eligible for our RAF scheme, the email address provided for the referee would need to be associated with their Kingsbridge account. 
+
+We suggest that you check this email address with the person that referred you to Kingsbridge. Once we have this information we will be able to confirm you are eligible for this offer.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

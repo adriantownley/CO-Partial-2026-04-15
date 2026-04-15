@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team have been unable to speak with a customer and need to make them aware of the risks of not renewing.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Due to expire - Claim scenarios FUL</name>
+    <style>freeForm</style>
+    <subject>Your policy is due to expire</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I have been trying to get in contact with you regarding your business insurance renewal. 
+As your policy is not in auto renewal, it is currently due to expire on (insert expiry date).
+Once your Kingsbridge insurance policy has expired, if you don&apos;t have another insurance policy in place your business may not be covered against claims. 
+
+To help you stay protected, we recommend exploring either a renewal or alternative cover options. If you have any questions or need assistance, please don&apos;t hesitate to reach out to me on 01242 808740.
+
+Can I still make a claim once my policy expires?
+
+(Use if for FUL package) Any claims submitted for the Professional Indemnity and Directors’ and Officers’ elements of the policy will not be met as these operate on a ‘claims made’ basis and therefore the policy must be live in order to respond. 
+
+Any claims for the Personal Accident, Public Liability and Employers’ Liability elements for the time your policy was active (DD MMM YYYY to DD MMM YYYY) can still be notified to insurers. Please refer to your policy wording (https://www.kingsbridge.co.uk/policy-documents/) for full information.
+
+(Use if for IR35 Add On or Standalone) IR35 Protect operates on a ‘claims made’ basis, so the policy must be active to respond to most claims. However, for sections 10-12 (https://www.kingsbridge.co.uk/policy-documents/) on your policy there is a 4-year extended reporting period for you to notify us of a claim for an investigation during the period your policy was active (DDMMYYYY to DDMMYYYY). Any claim in these sections must be notified to insurers within 30 days of an insured event taking place and before any response to HMRC. Your appointed representation will work with you to respond and manage communications with HMRC. 
+
+(Use for Legal Expenses) Legal Expenses cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. However, for section 10 (https://www.kingsbridge.co.uk/policy-documents/) on your policy there is a 4-year extended reporting period for you to notify us of a claim for an investigation during the period your policy was active (DDMMYYYY to DDMMYYYY). Any claim in these sections must be notified to insurers within 30 days of an insured event taking place and before any response to HMRC. Your appointed representation will work with you to respond and manage communications with HMRC. 
+
+(Use for Cyber Liability) Cyber Liability cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. For some sections of the cover however, you can notify us of a claim up to 30 days following your policy expiry date (DDMMYYYY). Please see your policy wording (https://www.kingsbridge.co.uk/policy-documents/) for full details.
+
+If you are unsure whether you can make a claim on a expired policy, please contact our customer service team and they will be happy to help.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

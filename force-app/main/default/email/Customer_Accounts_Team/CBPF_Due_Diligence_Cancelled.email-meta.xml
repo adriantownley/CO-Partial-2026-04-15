@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification of Direct Debit cancellation due to Close Brothers due diligence checks.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CBPF Due Diligence (Cancelled)</name>
+    <style>freeForm</style>
+    <subject>Direct Debit Cancellation Notice</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Following my previous email and associated correspondence from Close Brothers Premium Finance, they have informed us that they have cancelled your premium finance agreement. This is due to Close Brothers being unable conduct the required due diligence checks.
+
+Your insurance remains in place. However, Close Brothers will begin debt collection proceedings in respect of the outstanding balance.
+
+Please contact us to discuss this on 01242 808740 where we can outline your options and provide information and assistance.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

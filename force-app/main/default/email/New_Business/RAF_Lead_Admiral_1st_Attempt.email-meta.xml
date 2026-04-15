@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for RAF leads for an Admiral policy at the first attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF Lead (Admiral)_1st Attempt</name>
+    <style>freeForm</style>
+    <subject>Requested insurance quote</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Your details have been passed to me by your friend {!Lead.Referred_By_Account__c} so that I can provide a quote for your required business insurance.
+
+I haven’t yet been able to speak with you to provide your business insurance quote over the phone. Is there a good time for me to try you again?
+
+Here at Kingsbridge we offer a complete package of cover that is designed specifically for UK businesses. Our comprehensive package includes Public Liability, Goods and Tools cover, and Employers’ Liability (if required). 
+
+We can also include optional benefits such as:
+
+- Hired in Plant cover - Covers you in the instance that plant equipment was damaged or stolen.
+- Own Plant cover - Covers you in the instance that plant equipment was damaged or stolen.
+Contract Works - Covers you against accidental loss, destruction or damage for materials and labour that you&apos;ve used caused by an unforeseen event in order to restore the project to its status prior to occurrence.
+- Professional Indemnity - Covers you against the cost of compensating a client for loss caused by negligent services or advice
+
+So, I can discuss with you which parts of the policy would be relevant for your business, it would be great to speak over the phone. When would be a good time for me to reach you?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

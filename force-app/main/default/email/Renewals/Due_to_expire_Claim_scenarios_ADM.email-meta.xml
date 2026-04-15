@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team have been unable to speak with a customer and need to make them aware of the risks of not renewing.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Due to expire - Claim scenarios ADM</name>
+    <style>freeForm</style>
+    <subject>Your policy is due to expire</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I have been trying to get in contact with you regarding your business insurance renewal. 
+As your policy is not in auto renewal, it is currently due to expire on (insert expiry date).
+Once your Kingsbridge insurance policy has expired, if you don&apos;t have another insurance policy in place your business may not be covered against claims. 
+
+To help you stay protected, we recommend exploring either a renewal or alternative cover options. If you have any questions or need assistance, please don&apos;t hesitate to reach out to me on 01242 808740.
+
+Can I still make a claim once my policy expires?
+
+(Use for Admiral if holding PI) Your package of insurance includes Professional Indemnity cover. This element of the policy works on a ‘claims made’ basis, meaning you must have cover in place at the time of the claim and not at the time of the incident for your policy to provide cover. 
+
+(Use if holding PI) If you choose to cancel your Kingsbridge insurance policy and do not hold alternate cover elsewhere your business will not be covered against claims of negligence.
+
+(Use for Admiral) Any claims for the (delete as appropriate) Public Liability, Employers’ Liability, Contract Works, Own Plant and Hired in Plant elements for the time your policy was active (DD MMM YYYY to DD MMM YYYY) can be notified to insurers. Please refer to your policy wording for full information.
+
+If you are unsure whether you can make a claim on a expired policy, please contact our customer service team and they will be happy to help.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

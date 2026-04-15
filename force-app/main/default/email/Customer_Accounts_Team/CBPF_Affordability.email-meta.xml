@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification that Close Brothers were unable to complete automated checks and further information is required.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CBPF Affordability</name>
+    <style>freeForm</style>
+    <subject>Cancelled Agreement</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We are getting in touch today as you recently purchased an insurance policy with us and opted to pay by Direct Debit through Close Brothers Premium Finance.
+
+As part of Close Brothers’ ongoing Anti-Money Laundering requirements, they are required to identify all of their customers. Unfortunately, they have been unable to do this through their automated process, and have therefore asked if you can please provide a copy of one of the following documents:
+
+• Passport (valid and in date)
+• Valid Full/Provisional Photocard Driving License
+• National ID Card
+
+Please could you send the copy to us via email at your earliest convenience so we can pass these to Close Brothers’ to complete their checks.  Either a photograph or scanned copy would be acceptable, please do not send originals.
+
+Unfortunately, if Close Brothers are unable to complete their checks they may cancel your loan which would leave you with an outstanding balance which, if remained unpaid, could ultimately lead to debt collection proceedings.
+
+If you have any further questions, please feel free to reply to this email, or give us a call on 01242 808740 (option 4).
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

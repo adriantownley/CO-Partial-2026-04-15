@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use when a customer already holds an IR35 Protect policy and we want to try and upsell them an insurance scheme package.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>PI Elsewhere_SDR</name>
+    <style>freeForm</style>
+    <subject>Want a cheaper rate on a combined insurance policy?</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+You currently hold an IR35 Protect policy with us.
+
+Did you know that as a current Kingsbridge customer you are entitled to a cheaper rate on a combined insurance policy?
+
+I’d love to build you a business insurance package, so you have all the business cover you need wrapped into one single neat, affordable payment.
+
+It only takes 5-10 minutes to provide you with a comprehensive no-obligation quote. Not ready for a quote yet? Book a call with me closer to your renewal date - https://calendly.com/d/cm3g-k74-js2/kingsbridge-insurance-call-back
+
+Alternatively, let me know your renewal date so I can contact you nearer the time. 
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

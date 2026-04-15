@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used for customers for the IR35 Protect Standalone product where they have asked to be removed from auto renewal because they want their policy to expire.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancel Auto Renewal Email (IR35 Protect Standalone)</name>
+    <style>freeForm</style>
+    <subject>Cancellation of your Policy Renewal</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting in touch with Kingsbridge.
+
+We’re sorry to hear you do not wish to renew your policy with us this year. To honour your cancellation request, please rest assured that your policy has now been removed from auto-renewal.
+
+The period your policy is active (DDMMYYYY to DDMMYYYY). 
+
+We understand that there can be many reasons why you may not want to continue keeping your business covered with Kingsbridge. However, there are some common situations that we see cancellation requests arise from, and we want to make sure you’re fully aware of the financial risks that can present from not holding current business insurance if any apply to you.
+
+
+Not currently working?
+
+If you are not currently working, we would discourage you from cancelling your policy; unless you’re stopping self-employment altogether, a break in cover could affect your business. Our automatic renewal process is in place to ensure you are continuously protected.
+
+IR35 Protect operates on a ‘claims made’ basis, so the policy must be active to respond to most claims. However, for sections 10-12 on your policy there is a 4-year extended reporting period for you to notify us of a claim for an investigation during the period your policy was active. Any claim in these sections must be notified to insurers within 30 days of an insured event taking place and before any response to HMRC. Your appointed representation will work with you to respond and manage communications with HMRC.
+
+
+If you’ve changed your mind about cancelling your cover after having read the above information and would instead like your policy to renew, please reply to this email and our customer service team will be happy to help. 
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

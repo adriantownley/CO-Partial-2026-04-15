@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use after ringing a new Tradeshake lead and making no contact by phone, with calendar invite included.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Tradeshake Follow Up (Calendar)</name>
+    <style>freeForm</style>
+    <subject>Requested insurance quote via Tradeshake</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve not been able to reach you today regarding your request for an insurance quote via our partner, Tradeshake.
+
+As a client of Tradeshake, you are entitled to a discount of 10% off our standard business insurance package.
+
+It will only take 5-10 minutes to provide you with a comprehensive quote. Book a call with me today - https://calendly.com/d/cqx7-zw6-htm/kingsbridge-insurance-call-back-tradeshake
+
+Here at Kingsbridge we offer a complete package of cover that is designed specifically for UK businesses. Our comprehensive package includes Public Liability, Goods and Tools cover, and Employers’ Liability (if required). 
+
+Why buy with Kingsbridge?
+
+- Nil excess* - guarantees no unexpected out-of-pocket expenses in the event of a claim.
+- Tools cover included at no extra cost - feel safe with 24-hour cover and new for old replacements for any thefts or accidents. Plus, a next business day payment after your claim is agreed.
+- Height work accepted - with specific limits subject to job role.
+- Hot Work accepted - across all trades including grinders, blow torches, hot air guns and more.
+
+So, I can discuss with you which parts of the policy would be relevant for your business, it would be great to speak over the phone. Book a call with me - https://calendly.com/d/cqx7-zw6-htm/kingsbridge-insurance-call-back-tradeshake
+
+Alternatively, you can reply to let me know a good time to call or contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday.  
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740
+
+*Nil Excess applicable to Public Liability and Goods and Tools Cover only.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

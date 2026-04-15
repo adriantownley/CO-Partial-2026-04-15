@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="1" >
+<![CDATA[<p class="MsoNormal" style=""><font face="arial">Hi {!Contact.FirstName},<br></font><span style="font-size: 12pt;"><br>Thank you for contacting Kingsbridge. Further to our conversation,</span><b style="font-size: 12pt;"> I have attached more information regarding our package of insurance</b><span style="font-size: 12pt;"> and how the different types of cover work.<br></span><span style="font-size: 12pt;"><br>If you have any questions, please do not hesitate to give me a call on </span><b style="font-size: 12pt;">01242 808 740</b><span style="font-size: 12pt;">. Our office is open between the hours of 8.00am and 6:00pm Monday to Friday.<br></span><span style="font-size: 12pt;"><br>I look forward to hearing from you.<br></span><span style="font-size: 12pt;"><br>Kind regards,<br></span><span style="font-size: 12pt;"><br>{!User.FirstName}&nbsp;<br></span><span style="font-size: 12pt;">Sales Team<br></span><span style="font-size: 12pt;"><br>E: salesteam@kingsbridge.co.uk<br></span><span style="font-size: 12pt;">T: 01242 808740</span></p>]]></td>
+</tr>
+</table>

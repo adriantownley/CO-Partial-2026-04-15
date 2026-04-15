@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used for main Admiral product cancellations when the retentions team have not been able to speak with them directly.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancellation Statement Email (Admiral)</name>
+    <style>freeForm</style>
+    <subject>Cancellation Request</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting in touch with Kingsbridge.
+
+We can see that you’ve made a request to cancel your insurance policy. Before we go ahead and cancel your policy for you, we want to make sure that you fully understand what your current cover includes and to confirm that you’re aware of the financial risks of not holding insurance.
+
+Please note that as per our terms and conditions, you still currently hold an active annual policy of insurance with Kingsbridge.
+
+Important information regarding your insurance cover
+
+(Use if holding PI) Your package of insurance includes Professional Indemnity cover. This element of the policy works on a ‘claims made’ basis, meaning you must have cover in place at the time of the claim and not at the time of the incident for your policy to provide cover.
+
+(Use if holding PI) If you choose to cancel your Kingsbridge insurance policy and do not hold alternative cover elsewhere your business will not be covered against claims of negligence.
+
+Any claims for the (delete as appropriate) Public Liability, Employers’ Liability, Contract Works, Own Plant and Hired in Plant elements for the time your policy was active (DD MMM YYYY to DD MMM YYYY) can be notified to insurers. Please refer to your policy wording  for full information.
+
+Please confirm you still wish to cancel
+
+If you are happy to proceed with your cancellation based on the information above, please confirm by replying to this email within 7 days.
+
+Whether you’re currently insured with Kingsbridge or not, our customer service team is always here to help. Please don’t hesitate to reply to this email if you need any further information on any of the above.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

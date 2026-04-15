@@ -10,7 +10,7 @@ DATEVALUE(Policy_Inception_Date__c) - TODAY() &lt;= 6,
 DATEVALUE(Policy_Inception_Date__c) &gt; TODAY()
 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <inlineHelpText>Indicates an Open Auto Renew Opportunities that hasn&apos;t been Closed 6 days before expiry and hasn&apos;t already been processed</inlineHelpText>
+    <inlineHelpText>Indicates an Open Auto Renew Opportunity that hasn&apos;t been Closed Won 6 days before expiry and hasn&apos;t already been processed</inlineHelpText>
     <label>Failed Payment</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

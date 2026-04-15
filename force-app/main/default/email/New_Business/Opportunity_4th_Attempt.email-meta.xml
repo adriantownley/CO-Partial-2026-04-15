@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for leads at the fourth attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Opportunity – 4th Attempt</name>
+    <style>freeForm</style>
+    <subject>Not ready to purchase yet?</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting an insurance quote from Kingsbridge.  
+
+So far you have not opted to move forward with your quote. We understand that there can be many reasons why you may not want to continue with your purchase, so we want to check if these apply to you. 
+
+Found cover elsewhere?
+If you let us know the cover levels and the quoted price you have received or attach your quotation documents. I can give you a call to discuss if we are able to amend our original quote.
+
+Not currently working?
+If you are not currently working, we would discourage you from not holding an active policy; unless you’re stopping self-employment altogether, a break in cover could affect your business. 
+
+If you are interested in proceeding with your purchase, reply with the best time for me to call or give me a ring on 01242 808 740 and I’ll be happy to help.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reach out after sending outstanding policy payment email (expired policy).</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CA Expired Policy</name>
+    <style>freeForm</style>
+    <subject>Please Contact Us</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We recently contacted you about an outstanding policy payment. As we haven’t heard from you yet, we just wanted to reach out again so that we can resolve this for you.
+
+Could you please give us a call on 01242 808740 to discuss this, or alternatively, let us know a convenient time for us to call you.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

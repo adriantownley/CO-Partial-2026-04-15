@@ -1,0 +1,7 @@
+Hi {!Case.OwnerFirstName},
+
+Just to let you know that the Case, {!Case.CaseNumber}, has 2 hours left in ‘First Response’ milestone.
+
+Subject: {!Case.Subject}
+
+The case can be viewed here: {!Case.Link}

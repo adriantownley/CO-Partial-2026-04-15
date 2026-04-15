@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation email to be used for RN COP cancellations for the main FUL product where it has been paid by Direct Debit or GC.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancellation Confirmation (COP - RN) Email (FUL) (Direct Debit &amp; GC)</name>
+    <style>freeForm</style>
+    <subject>Confirmation of Policy Cancellation</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for getting in touch with Kingsbridge.
+
+We are writing to confirm that, as per your request, we have cancelled your insurance policy (insert policy number) with Kingsbridge from the date of inception (DD MMM YYYY). 
+
+It’s important to note that you are now no longer able to claim under this policy, so please disregard any previous documentation you have received from us as null and void.
+
+Since your Kingsbridge insurance policy has been cancelled, we want to ensure you&apos;re aware that your business may not be covered against claims if you don&apos;t have another insurance policy in place. To help you stay protected, we recommend exploring alternative cover options. If you have any questions or need assistance, please don&apos;t hesitate to reach out to our customer service team.
+
+
+Cancelling your payment
+
+ Any payments due within 3 working days of cancellation may still be processed. We will then refund any payments taken to the account from which you originally paid within 5 to 15 working days. 
+
+
+Making a claim 
+
+Although your previous insurance policy (active between DD MMM YYYY to DD MMM YYYY) with Kingsbridge expired, you may still be able to make a claim on this policy. 
+
+Any claims submitted for the Professional Indemnity and Directors’ and Officers’ elements of the policy will not be met as these operate on a ‘claims made’ basis and therefore the policy must be live in order to respond. 
+
+Any claims for the Personal Accident, Public Liability and Employers’ Liability elements for the time your policy was active can still be notified to insurers.  Please refer to your policy wording for full information.
+
+(Use if for IR35 Add On) IR35 Protect operates on a ‘claims made’ basis, so the policy must be active to respond to most claims. However, for sections 10-12 on your policy there is a 4-year extended reporting period for you to notify us of a claim for an investigation during the period your policy was active. Any claim in these sections must be notified to insurers within 30 days of an insured event taking place and before any response to HMRC. Your appointed representation will work with you to respond and manage communications with HMRC. 
+
+(Use for Legal Expenses) Legal Expenses cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. However, for section 10 on your policy there is a 4-year extended reporting period for you to notify us of a claim for an investigation during the period your policy was active. Any claim in these sections must be notified to insurers within 30 days of an insured event taking place and before any response to HMRC. Your appointed representation will work with you to respond and manage communications with HMRC. 
+
+(Use for Cyber Liability) Cyber Liability cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. For some sections of the cover however, you can notify us of a claim up to 30 days following your policy expiry date. Please see your policy wording for full details.
+
+If you are unsure whether you can make a claim on a cancelled policy, please contact our customer service team and we will be happy to help. 
+
+
+Important information regarding your Professional Indemnity cover
+
+As mentioned above, you are now no longer able to claim on the Professional Indemnity part of your policy – we want to take the opportunity to make you aware that this may put your business at risk from claims. However, there are still ways you can proactively manage this risk for continued peace of mind. 
+
+One such way to keep your business protected is a product called Run-Off Cover that helps you to avoid any gap in cover. I’ve attached information on Kingsbridge’s Run-Off Cover for your interest, and you can simply reply to this email if you would like to learn more or to proceed with purchasing a Run-Off policy.  
+
+
+Whether you’re currently insured with Kingsbridge or not, our customer service team is always here to help. Please don’t hesitate to reply to this email if you need any further information on any of the above.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

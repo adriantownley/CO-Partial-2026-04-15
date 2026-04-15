@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Customer has not yet accepted the Close Brother commission consent. This is the first email to send in this process.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CDC Not Received 1</name>
+    <style>freeForm</style>
+    <subject>Important Direct Debit Information Outstanding</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You elected to pay for your Kingsbridge business insurance policy {!Policy__c.Name} through direct debit payments. 
+
+Our credit providers Close Brothers Premium Finance require you to consent to the commission Kingsbridge receive in order to provide the loan for your insurance policy. 
+
+Close Brothers are sending you communications via email, SMS and physical letter to notify you of this requirement. This is to provide you with the steps required to provide consent. You can learn more and consent here - https://www.closebrotherspf.com/customers/finance-application
+
+You need to provide consent within the deadline provided by Close Brothers in order for your premium finance agreement to be accepted.
+
+If Close Brothers reject your credit application the payment for your insurance policy would remain outstanding. 
+
+If you have any queries about this process, please call us on 01242 808740 to discuss further.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

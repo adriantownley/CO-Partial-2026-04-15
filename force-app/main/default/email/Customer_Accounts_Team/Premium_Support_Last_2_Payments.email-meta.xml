@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation that underwriter is covering the last 2 payments of policy.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Premium Support - Last 2 Payments</name>
+    <style>freeForm</style>
+    <subject>Premium Support Last 2 Payments</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+Please accept this email as confirmation that we have applied the discounted premium to your account.
+
+To confirm, our underwriters have agreed to cover the final 2 instalments of your policy. This means that you don&apos;t owe any premiums going forward, but your policy will not expire until DD/MM/YYYY.
+
+Please contact us on 01242 808 740 if you have any further queries.
+
+Kind Regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

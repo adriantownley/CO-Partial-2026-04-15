@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when a customer needs to provide some information for CB due diligence process.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CBPF Affordability Email</name>
+    <style>freeForm</style>
+    <subject>More Information Required</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You elected to pay for your Kingsbridge business insurance policy {!Policy__c.Name} through direct debit payments. 
+
+Our credit providers Close Brothers Premium Finance required some additional information from you as part of their ongoing Anti-Money Laundering requirements.
+
+Close Brothers are required to identify all of their customers, but have been unable to do this through their automated process and need you to provide a copy of one of the following documents:
+- Passport (valid and in date)
+- Valid Full/Provisional Photocard Driving License
+- National ID Card
+
+Please send a photograph or scanned copy to us via email so Close Brothers can complete their checks.  
+
+If Close Brothers are unable to complete their checks they may cancel your loan which would leave you with an outstanding balance which, if remained unpaid, could lead to the cancellation of your insurance policy.
+
+Please call us on 01242 808740 if you would like to discuss this matter further.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

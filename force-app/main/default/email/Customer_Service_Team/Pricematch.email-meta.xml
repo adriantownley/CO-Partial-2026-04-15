@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of price promise information.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Pricematch</name>
+    <style>freeForm</style>
+    <subject>Evidence for Price Promise</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+If you have found a cheaper quote elsewhere and wish to submit this for our Price Promise - we will beat any like for like quote* - please send us a screenshot/attachment detailing the competitor name, levels of cover and price. We will then submit this to our underwriters for approval.
+
+*For full details and terms and conditions, please visit https://www.kingsbridge.co.uk/price-promise/.
+
+If you have any questions, please do not hesitate to contact us on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

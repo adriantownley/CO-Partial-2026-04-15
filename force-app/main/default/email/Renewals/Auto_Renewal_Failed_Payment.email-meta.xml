@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of failed auto-renewal payment and request for updated payment details.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Auto Renewal – Failed Payment</name>
+    <style>freeForm</style>
+    <subject>Payment Information Required</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Your insurance policy is due to renew on {!Opportunity.Policy_Inception_Date__c}
+
+Unfortunately we have been unable to process the payment for your renewal. We used the details provided last year to take this payment. Please call our renewals team on 01242 808 740 (option 2) so we can update our records and renew your insurance.
+
+Alternatively, reply to this email with a time, date and telephone number and we will schedule a call back to process your renewal. Please note, for security reasons we cannot accept card details sent to us via email.
+
+If we are unable to proceed with the payment, you risk a lapse in cover.
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

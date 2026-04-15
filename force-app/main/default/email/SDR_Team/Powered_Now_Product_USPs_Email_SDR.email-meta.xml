@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for Powered Now Hot Lead.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Powered Now Product USPs Email_SDR</name>
+    <style>freeForm</style>
+    <subject>What makes a Kingsbridge insurance policy different?</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve not been able to reach you since you were referred to us by Powered Now.
+
+I’ll keep trying, but in the meantime I wanted to share why our insurance scheme stands out amongst our competitors:
+
+- Up to £2,500 tools and equipment cover included as standard at no extra cost (with in-van cover!)
+- Next business day payout on accepted tool theft claims, helping to get Britain&apos;s tradespeople back on the job faster.
+- Nil excess and no hidden fees on most professions covered, reducing out-of-pocket or unexpected costs.
+- UK-based in-house specialists, including easy, quick access to brokers, and rapid, responsive claims processing managed by a dedicated claims team.
+- All core covers in one place, wrapped into a single neat, affordable package attached to one easy payment. 
+
+I’d love to get you on the phone to ensure this is the best policy for you. Book a call with me - https://calendly.com/d/cnbd-zyn-qwh/kingsbridge-insurance-call-back-powered-now
+
+As a client of Powered Now, you are entitled to a discount of 10% on our standard business insurance package.
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you soon!
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

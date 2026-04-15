@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Request for confirmation of registered business address.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CBPF Due Diligence</name>
+    <style>freeForm</style>
+    <subject>Important Direct Debit Information Required</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Our credit providers, Close Brothers Premium Finance, have informed us that your business address (provided to them when you purchased your policy) does not match that of your company&apos;s registered address.
+
+The registered trading address identified by Close Brothers on Companies House for your company is {ADDRESS}. Please confirm if you are happy to proceed with the finance using this address.
+
+Alternatively, in order to proceed, if the original address is to remain unchanged, please let us know why the address provided does not match the registered or trading address of the business.   Close Brothers will then require documentation to confirm your business name and address.
+
+We can accept the following documents for your business name and address as valid confirmation to be dated within the last 3 months:
+
+• Utility bill (e.g. gas, electric, water bill, not mobile);
+• Bank or Building Society statement; or
+• Credit card statement.
+
+Please be advised without the relevant documentation, or appropriate confirmation, Close Brothers will be unable to carry out the necessary due diligence for your account and the premium finance agreement may be cancelled in the next 5 working days and you will still be liable for the outstanding premium balance.
+
+Please contact us to discuss this on 01242 808740 where we can outline your options and provide information and assistance.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

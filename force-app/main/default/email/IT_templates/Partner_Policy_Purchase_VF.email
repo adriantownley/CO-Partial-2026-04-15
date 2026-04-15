@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="Partner Policy Purchase" recipientType="Contact" relatedToType="Policy__c">
+<messaging:plainTextEmailBody >
+Congratulations!
+This is your new Visualforce Email Template.
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to GDPR request from leads or opportunities.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>GDPR Deletion (leads-opps)</name>
+    <style>freeForm</style>
+    <subject>Your GDPR Request</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+In respect of your request to exercise your rights according to the GDPR, you have the following options:
+
+Suppression - this means your contact details and preferences are retained on our systems, but you are marked as ‘do not contact’. You will not receive any further calls or marketing from us whether or not we receive your details via any other route in the future.
+
+Deletion - this means your details are deleted from our systems and we will not have a record of you or your requirements. Consequently, as we work with a number of agencies and accountants in the contracting sector, if we were to receive your details again from another firm we may contact you in the future.
+
+In addition, if you were already referred to us by one of these firms then they may re-send your details in the future as part of an audit, especially where their contractors are required to hold insurances and Kingsbridge are their insurance compliance partner. If you do not wish for your details to be re-sent to us, you will need to contact your recruiter/accountant and advise them of this.
+
+Please reply to this email stating whether you would like to be ‘suppressed’ or ‘deleted’. If we do not hear from you we will suppress your details.
+
+Please note that you may hear from us again in the next 30 days whilst we update our systems to action your wishes.
+
+Our data fair processing notice can be accessed via the following link: https://www.kingsbridge.co.uk/fair-processing-notice/
+
+Your rights under GDPR can be accessed via the following link: https://ico.org.uk/
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

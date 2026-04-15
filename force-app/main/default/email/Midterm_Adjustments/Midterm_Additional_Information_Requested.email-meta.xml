@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used as a response for mid-term adjustment requests where more information is required.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Midterm - Additional Information Requested</name>
+    <style>freeForm</style>
+    <subject>More Information Required</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You recently made a request to amend your policy.
+
+Our Underwriting Team need additional information from you in order to process this request so we would be grateful if you can provide answers to the questions below.
+
+Please return your answers at your earliest convenience and we will aim to respond with a decision as soon as possible. Please be as thorough as possible in your response, as this will help speed up the checking process.
+
+(add any questions here)
+
+If you have any questions or queries please get in touch on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName} 
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

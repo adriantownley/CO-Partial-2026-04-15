@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to RAF chase from referrer (for old RAF process).</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - Chaser (old process)</name>
+    <style>freeForm</style>
+    <subject>Your RAF Referral</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You recently referred your friend to us, but we have been unable to get in touch with them.
+
+If they are still interested in purchasing a policy with us, please can you ask them to call us on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

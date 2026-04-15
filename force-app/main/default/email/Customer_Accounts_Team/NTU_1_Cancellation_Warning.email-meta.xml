@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>To be sent to customers whose payment has failed where no communication has occurred and we wish to give 30-day cancellation.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>NTU 1 – Cancellation Warning</name>
+    <style>freeForm</style>
+    <subject>Your insurance policy is at risk of cancellation</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We have been attempting to contact you regarding the outstanding payment for your Kingsbridge business insurance policy [policy number].
+
+Your policy is now at risk of cancellation. If your insurance policy is cancelled, your business may not be covered against claims if you don&apos;t have another insurance policy in place. 
+
+If a payment has not been made before [proposed cancellation date], your policy will be cancelled from inception. 
+
+Please be aware, if the policy is cancelled from inception, you will not be able to make a claim under it as it will be considered null and void. 
+
+To help you stay protected, please call us on 01242 808740 to make a payment or discuss further.
+
+Please note, for data security reasons, do not send credit or debit card details to us via email.
+
+If you have made a payment in the past 3 working days please disregard this email.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for Facebook leads at the fourth attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Facebook Lead (Admiral)_4th Attempt</name>
+    <style>freeForm</style>
+    <subject>We still require information to complete your insurance quote</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve been unable to reach you since you provided your details via our Facebook form.
+
+This means I’ve been unable to provide you with the business insurance quote you requested.
+
+If you are interested in proceeding with your quote, just let me know the best date and time for me to call you. Alternatively you can give me a ring on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

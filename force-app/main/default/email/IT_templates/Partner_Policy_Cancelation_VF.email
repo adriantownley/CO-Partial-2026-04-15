@@ -1,0 +1,22 @@
+<messaging:emailTemplate subject="Partner Policy Cancellation" 
+    recipientType="Contact" 
+    relatedToType="Policy__c">
+
+    <messaging:plainTextEmailBody >
+        A customer {!relatedTo.Customer__c} has just Cancelled a policy {!relatedTo.Name}
+        
+        Regards,
+        Kingsbridge
+    </messaging:plainTextEmailBody>
+    
+    <messaging:htmlEmailBody >
+        <html>
+            <body>
+                <p>A customer <strong>{!relatedTo.Customer__c}</strong> has just Cancelled a policy <strong>{!relatedTo.Name}</strong></p>
+                <p>Regards,<br/>
+                Kingsbridge</p>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

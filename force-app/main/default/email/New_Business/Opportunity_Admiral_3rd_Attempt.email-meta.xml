@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for leads at the third attempt stage when the quote was for the Admiral scheme.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Opportunity (Admiral) – 3rd Attempt</name>
+    <style>freeForm</style>
+    <subject>Did you miss something off your quote?</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting an insurance quote from Kingsbridge.  
+
+Now you’ve reviewing your quotation documents, is there anything you missed?
+
+Here are the types of coverage you can add to your policy:
+
+- Hired in Plant cover - Covers you in the instance that plant equipment was damaged or stolen.
+- Own Plant cover - Covers you in the instance that plant equipment was damaged or stolen.
+- Contract Works - Covers you against accidental loss, destruction or damage for materials and labour that you&apos;ve used caused by an unforeseen event in order to restore the project to its status prior to occurrence.
+- Professional Indemnity - Covers you against the cost of compensating a client for loss caused by negligent services or advice
+
+If you need to make a change to your quote, reply with the best date and time for me to call you. Alternatively, you can give me a ring on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

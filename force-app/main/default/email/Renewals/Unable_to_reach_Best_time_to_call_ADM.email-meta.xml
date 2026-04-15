@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team have been unable to speak with a Admiral scheme customer at the second attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Unable to reach - Best time to call? ADM</name>
+    <style>freeForm</style>
+    <subject>Don’t miss out on your renewal benefits</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I’ve not yet been able to reach you to discuss your renewal quote over the phone.
+
+I don’t want you to lose out on these key benefits:
+
+- Up to £2,500 tools and equipment cover included as standard at no extra cost (with in-van cover!)
+- Next business day payout on accepted tool theft claims, helping to get Britain&apos;s tradespeople back on the job faster.
+- Nil excess and no hidden fees on most professions covered, reducing out-of-pocket or unexpected costs.
+- UK-based in-house specialists, including easy, quick access to brokers, and rapid, responsive claims processing managed by a dedicated claims team.
+- All core covers in one place, wrapped into a single neat, affordable package attached to one easy payment.
+
+It would be good to discuss your requirements to make sure your renewal quote is right for your business. Is there a good time for me to give you a call?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you soon. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

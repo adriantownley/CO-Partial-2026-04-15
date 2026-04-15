@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when a customer&apos;s first DD payment has failed and they have not attempted to make a payment.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>NTU 2 Email</name>
+    <style>freeForm</style>
+    <subject>Your business insurance has been cancelled</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You agreed to pay for your Kingsbridge business insurance policy [policy number] through direct debit payments. 
+
+As no payments have been made, we have cancelled your insurance policy from the date of inception [inception date]. 
+
+You are now no longer able to claim under this policy, so please disregard any previous documentation you have received from us as null and void.
+
+Since your insurance policy has been cancelled, we want to ensure you&apos;re aware that your business may not be covered against claims if you don&apos;t have another insurance policy in place. 
+
+It is possible to open a new business insurance policy with the sales team at Kingsbridge, however please be aware this cover cannot be back-dated, which may leave you with a gap in cover. 
+
+Please call us on 01242 808740 if you would like to discuss this matter further.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

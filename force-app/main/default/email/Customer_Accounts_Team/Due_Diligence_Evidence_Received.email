@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><font face="arial">Hi {!Contact.FirstName},<br></font><span style="font-size: 12pt;"><br>Thank you for your email.<br></span><span style="font-size: 12pt;"><br><b>I have now passed on the information you provided to Close Brothers so they can complete the checks required.<br></b></span><span style="font-size: 12pt;"><b><br></b>We will be back in touch if they require any further information.<br></span><span style="font-size: 12pt;"><br>Kind regards,<br></span><span style="font-size: 12pt;"><br>{!User.FirstName}<br></span><span style="font-size: 12pt;">Customer Accounts Team<br></span><span style="font-size: 12pt;"><br>E: customersupport@kingsbridge.co.uk<br></span><span style="font-size: 12pt;">T: 01242 808 740</span></p>]]></td>
+</tr>
+</table>

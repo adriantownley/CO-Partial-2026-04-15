@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Chaser email to claim.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>1st FNOL Chaser to Insured</name>
+    <style>freeForm</style>
+    <subject>Information still required to support claims process</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+(Use for those who notified us)
+I hope you don’t mind me contacting you regarding your potential (insert claim type) and our email sent on (insert date).
+
+Please could you let me know if you wish to make a claim and do let me know if you require any assistance in collecting the information requested in order that we may present a claim.
+
+(Use for those where we received notification)
+We have received notification from another party looking to claim against you. Please could you provide the details requested as your policy with us may be able to respond.
+
+Please note insurers are not yet aware of your claim until you forward the details below in order for me to present.
+
+(For PI do not reference to still wishing to make a claim as all PI claims need referring to insurers.)
+
+I look forward to hearing from you.
+
+Kind regards,
+
+{!User.FirstName}
+Claims Team
+
+E: claims@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

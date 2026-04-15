@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Attempt to contact customer regarding lack of payment has failed and the debt has been passed onto debt collectors.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Live Policy – Partial Payment (Send to DCA) (2)</name>
+    <style>freeForm</style>
+    <subject>Outstanding Payment Update</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We have been attempting to contact you regarding the outstanding payment for your business insurance. Unfortunately, as we have not heard from you, the outstanding balance has been referred over to debt collection.
+
+The debt collection agency (Oriel Collections) will reach out to you in the coming days to discuss the next steps with you. Please contact them on 01242 508639 with any queries.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

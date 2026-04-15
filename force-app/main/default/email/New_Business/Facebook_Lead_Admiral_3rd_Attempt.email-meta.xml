@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for Facebook leads at the third attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Facebook Lead (Admiral)_3rd Attempt</name>
+    <style>freeForm</style>
+    <subject>Information required to move forward with insurance quote</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’m still struggling to reach you since you provided your details via our Facebook form.
+
+To provide the best quote for you I need to understand your business and the level of cover you might require. Is there a good time for me to give you a call?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+You can also get a quote online via our website www.kingsbridge.co.uk.
+
+I look forward to hearing from you soon. 
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>adobesign__Treat_Empty_Field_As_Error__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>A flag indicates if data mergeing should continue with empty or null field values.</description>
+    <inlineHelpText>A flag indicates if data mergeing should continue with empty or null field values.</inlineHelpText>
+    <label>Treat Empty Field Values As Error</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

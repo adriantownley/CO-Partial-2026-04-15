@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of steps a referral contractors needs to follow so their referee receives vouchers.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - Who</name>
+    <style>freeForm</style>
+    <subject>Your New Policy Referral</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for purchasing your policy with us and welcome to Kingsbridge!
+
+When you bought your policy, you told us you were referred by a friend. If you have their permission to do so, please send us the details of the person who referred you. Be sure to include their email address, so that we can send them some vouchers as a thank you.
+
+Unfortunately, we are unable to accept an email where your friend is cc&apos;d. Instead, please make sure their details are included in the body of the email.
+
+Don&apos;t forget, you can benefit from our Refer a Friend scheme too. There&apos;s no limit to the number of people you can refer and we will send you £50 in online vouchers.
+
+For more information, or to refer a friend now, just visit this link: https://www.kingsbridge.co.uk/refer-a-friend/
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

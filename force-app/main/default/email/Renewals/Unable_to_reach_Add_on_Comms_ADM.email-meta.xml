@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team have been unable to speak with a Admiral scheme customer at the third attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Unable to reach - Add-on Comms ADM</name>
+    <style>freeForm</style>
+    <subject>Want to add more coverage to your renewal quote?</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I’ve been struggling to reach you to discuss your renewal quote.
+
+To make sure your renewal quote includes all the coverage you need, are you interested in adding more coverage to your renewal policy?
+
+- Hired in Plant cover - Covers you in the instance that plant equipment was damaged or stolen.
+- Own Plant cover - Covers you in the instance that plant equipment was damaged or stolen.
+- Contract Works - Covers you against accidental loss, destruction or damage for materials and labour that you&apos;ve used caused by an unforeseen event in order to restore the project to its status prior to occurrence.
+- Professional Indemnity - Covers you against the cost of compensating a client for loss caused by negligent services or advice
+
+Want to add any of these to your renewal quote? Let me know the best date and time for me to call you. Alternatively, you can give me a ring on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

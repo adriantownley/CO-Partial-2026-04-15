@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Value__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A static value or the typed in name of a keyword (List of acceptable keywords TBD)</description>
+    <externalId>false</externalId>
+    <label>Value</label>
+    <length>55</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

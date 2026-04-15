@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>adobesign__Document_Builder_OAuth_Scope__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Supported OAuth scope values are &apos;account&apos; and &apos;group&apos;. If left blank, the default OAuth scope value will be considered as &apos;account&apos;.</inlineHelpText>
+    <label>Document Builder OAuth Scope</label>
+    <length>16</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

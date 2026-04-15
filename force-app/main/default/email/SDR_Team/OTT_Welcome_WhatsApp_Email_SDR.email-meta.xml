@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use to welcome a new OTT Hot Lead (with WhatsApp).</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>OTT Welcome (WhatsApp) Email_SDR</name>
+    <style>freeForm</style>
+    <subject>I’ve got your call back request</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Thanks for getting in touch via On the Tools.
+
+My name is {!User.FirstName} and I’ll be giving you a call to run through your business insurance needs. 
+
+So, you know when to expect my call - our office is open between the hours of 8:00am-5:30pm, Monday-Friday. Need me to call at a specific time? Book a call slot - https://calendly.com/d/crv2-4cb-zcj/kingsbridge-insurance-call-back-on-the-tools
+
+Not able to answer calls during the day? 
+Send me a message on WhatsApp using 07917 515428 and I’ll contact you via message instead.
+
+Alternatively, contact me on 01242 808 740. Our office is open 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to catching up with you soon!
+
+Thanks,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

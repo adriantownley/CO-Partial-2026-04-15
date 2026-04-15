@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to query about auto renewal.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Why AR</name>
+    <style>freeForm</style>
+    <subject>Your Enquiry</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for contacting Kingsbridge.
+
+Page 32 of the Combined Wording of your policy states:
+
+IX. Automatic Renewal Your payment details will be securely stored to enable continuous payment authority. We may use these details to automatically renew Your Policy next year. This applies to payments by Direct Debit, Debit or Credit card. If We elect to use automatic renewals We will ensure that You are sent a renewal invitation before taking any payment. It is Your responsibility call Us if Your circumstances change or You do not wish Us to automatically renew Your Policy.
+
+Page 32 of the combined wording - https://www.kingsbridge.co.uk/admin/assets/docs/Combined%20Wording.151.pdf
+
+If you have any further questions, please do not hesitate to get in touch with us.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

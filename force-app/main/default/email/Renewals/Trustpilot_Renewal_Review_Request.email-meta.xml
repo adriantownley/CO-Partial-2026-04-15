@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when retentions team have sold a policy to signpost to Trustpilot.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Trustpilot Renewal Review Request</name>
+    <style>freeForm</style>
+    <subject>Please rate the service I provided</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for purchasing with Kingsbridge!
+
+If you have any questions at any time, please send me an email and I’ll be happy to help.
+
+We use Trustpilot, an independent review service for our reviews. If you were to rate the service I’ve provided and mention my name it would be greatly appreciated.
+
+Review via Trustpilot - https://go.kingsbridge.co.uk/tprsfe-lr
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

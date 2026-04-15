@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation of direct debit schedule.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CBPF Redemption</name>
+    <style>freeForm</style>
+    <subject>Remaining Payments</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+I can confirm that your direct debit schedule has XX payments of £00.00 remaining.
+
+These payments will continue to be taken in accordance with the agreed schedule. Alternatively, if you would prefer to pay the remaining balance in full, minus the Direct Debit interest charges, we can process a card payment over the phone.
+
+As of today, the total amount left to pay is £000.00, however, this amount will change daily as per the interest on the Direct Debit account.
+
+Please let us know how you would like to proceed.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

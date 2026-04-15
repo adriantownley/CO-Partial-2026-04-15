@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to query about what Professional Indemnity is.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>PI Explained</name>
+    <style>freeForm</style>
+    <subject>Understanding Professional Indemnity insurance</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for getting in touch with Kingsbridge.
+
+Professional Indemnity Insurance
+Professional Indemnity insurance is designed to protect businesses against claims for negligence (such as making a mistake or giving inaccurate advice).
+
+Claims made basis
+Professional Indemnity insurance operates on a &apos;claims made&apos; basis, so the policy can only respond to claims notified during the policy period. 
+
+For this reason, holding a live Professional Indemnity policy even when not working is essential to safeguard against potential claims for previous work completed. 
+
+Because Professional Indemnity insurance operates on a ‘claims made’ basis, you must notify us of a claim during the Period of Insurance (as per our Policy Wording - https://www.kingsbridge.co.uk/policy-documents/).
+
+Financial Conduct Authority 
+The Financial Conduct Authority (https://www.fca.org.uk/firms/regdata/rma-e-professional-indemnity-insurance-self) describes this as follows, “Professional Indemnity insurance policies work on a ‘claims made’ basis, which means the current Professional Indemnity insurance insurer is the one responsible for meeting any claims made on a policy, even when claims pre-date that policy.”
+
+Retroactive cover
+Kingsbridge offer full ‘retroactive cover’ on many of our package policies. This is to cover any previous claims that may arise during the period of insurance - however, once the policy expires or is cancelled, no cover is in place. So, if any claim is made against you after cancellation, it won’t be covered under this policy.
+
+Hopefully this information clearly demonstrates that we’re following FCA guidelines within our policy, but please don’t hesitate to reply to this email if you need any further information on any of the above.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

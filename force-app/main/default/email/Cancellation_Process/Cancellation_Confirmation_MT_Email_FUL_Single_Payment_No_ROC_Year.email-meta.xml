@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation email to be used for mid-term cancellations for the main FUL product. Where policy was purchased in a single payment and policy has been held for under a year.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancellation Confirmation (MT) Email (FUL) - Single Payment - No ROC (- Year)</name>
+    <style>freeForm</style>
+    <subject>Confirmation of Policy Cancellation</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for getting in touch with Kingsbridge.
+
+We are writing to confirm that, as per your request, we have cancelled your insurance policy (insert policy number) with Kingsbridge.
+
+To confirm, your policy was active for the period (DDMMYYYY to DDMMYYYY).
+
+
+Cancelling your payment
+
+Since you paid for your policy in a single payment, you will receive a pro-rata refund of £XXX in the next 3 to 10 working days. This refund will be credited to the account from which you originally paid.
+
+
+Making a claim
+
+Any claims submitted for the Professional Indemnity and Directors’ and Officers’ elements of the policy cannot be met as these operate on a ‘claims made’ basis, meaning the policy must be active to respond.
+
+However, any claims for the Personal Accident, Public Liability, and Employers’ Liability elements for the time your policy was active can still be notified to insurers. Please refer to your policy wording for full details.
+
+(Use if for IR35 Add On) IR35 Protect operates on a ‘claims made’ basis, so the policy must be active to respond to most claims. However, for sections 10-12 on your policy there is a 4-year extended reporting period for you to notify us of a claim for an investigation during the period your policy was active. Any claim in these sections must be notified to insurers within 30 days of an insured event taking place and before any response to HMRC. Your appointed representation will work with you to respond and manage communications with HMRC.
+
+(Use for Legal Expenses) Legal Expenses cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. However, for section 10 on your policy there is a 4-year extended reporting period for you to notify us of a claim for an investigation during the period your policy was active. Any claim in these sections must be notified to insurers within 30 days of an insured event taking place and before any response to HMRC. Your appointed representation will work with you to respond and manage communications with HMRC.
+
+(Use for Cyber Liability) Cyber Liability cover operates on a ‘claims made’ basis and therefore the policy must be live in order to respond in the majority of claims. For some sections of the cover however, you can notify us of a claim up to 30 days following your policy expiry date. Please see your policy wording for full details
+
+
+Whether you’re currently insured with Kingsbridge or not, our customer service team is always here to help. Please don’t hesitate to reply to this email if you need any further information on any of the above.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

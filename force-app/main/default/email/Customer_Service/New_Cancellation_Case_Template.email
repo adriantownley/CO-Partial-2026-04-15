@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div class="ql-block" data-block-id="block-e3e465a5-a5ea-4f67-a33e-a67c7e7d7e41">Hi {!Case.OwnerFirstName},</div><div class="ql-block" data-block-id="block-e3e465a5-a5ea-4f67-a33e-a67c7e7d7e41"><br></div><div class="ql-block" data-block-id="block-b8591195-19ad-487d-a156-826ab4230b20"></div><div class="ql-block" data-block-id="block-8f8c1c6d-207b-4120-b821-2094876f52f5">Partner name:&nbsp;{!Case.Account}</div><div class="ql-block" data-block-id="block-ce9c1747-ddce-4749-baba-c29e6f6ea5cb">Policy Number:&nbsp;{!Case.Policy_INSTANDA_Quote_Id__c}</div><div class="ql-block" data-block-id="block-23752bd6-d323-4769-8cf1-02a772c05995">Reason: Policy cancelled</div>]]></td>
+</tr>
+</table>

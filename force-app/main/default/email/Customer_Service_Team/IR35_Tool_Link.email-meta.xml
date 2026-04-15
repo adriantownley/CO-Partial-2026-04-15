@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to request for IR35 Tool link.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>IR35 - Tool Link</name>
+    <style>freeForm</style>
+    <subject>IR35 - Tool Link</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+Please see the below link which will prompt you to re-set your password and allow you to log into the Kingsbridge IR35 Status Review tool:
+https://kingsbridge.ir35.io/forgot-password
+
+Please ensure you log in before completing a review to avoid being prompted to make payment.
+
+If you have any further queries, please feel free to give us a call on 01242 808 740 or reply by email.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

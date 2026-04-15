@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team have been unable to speak with a customer at the fourth attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Final chase exhausted - FUL/ADM</name>
+    <style>freeForm</style>
+    <subject>Not ready to renew your policy yet?</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+So far you have not opted to move forward with your renewal. 
+
+We understand that there can be many reasons why you may not want to continue with a renewal, so we want to check if these apply to you. 
+
+Found cover elsewhere?
+If you let us know the cover levels and the quoted price you have received or attach your quotation documents. I can give you a call to discuss if we are able to amend our original quote.
+
+Not currently working?
+If you are not currently working, we would discourage you from not holding an active policy; unless you’re stopping self-employment altogether, a break in cover could affect your business. 
+
+If you are interested in proceeding with your renewal quote, give me a ring on 01242 808 740 and I’ll be happy to help.
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

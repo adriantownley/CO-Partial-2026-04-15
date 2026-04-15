@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Post purchase email for IR35 Express Contract Review.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>IR35 - Express Contract Review</name>
+    <style>freeForm</style>
+    <subject>IR35 - Express Contract Review</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for purchasing an Express IR35 Contract Review from Kingsbridge. Below we’ve added some important information relating to your contract review. Please read through this carefully and contact us directly if you have any queries.
+
+Submit your contract for review here: https://survey.zohopublic.eu/zs/6PB8Bg
+
+Turnaround Times
+
+- We aim to provide a turnaround within one working day. However, our team need to receive a copy of your contract before 5:30pm in order to provide your review by 5:30pm the next working day.
+- If your contract is submitted on a Friday, our team will provide the review the following Monday.
+
+What is the purpose of an IR35 Contract Review?
+
+To investigate the written terms of your engagement to determine whether or not it appears to be inside or outside of IR35. Our team consider whether or not the main IR35 status tests are present and accounted for in the written terms of your contract, and what their precise wordings are.
+
+The review will provide you with an opinion on the position of the contract terms – either inside of IR35 (caught), or outside of IR35 (not caught). We will also suggest alterations and inclusions that should be made to improve your outside IR35 standing, or to allow for a pass if the terms failed the first time.
+
+What does an IR35 Contract Review not consider?
+
+The review will not consider the reality of how you are operating – it will only provide an opinion on what the written terms do, or do not say. The reality of your engagement (working practices) are the more determinative factor. However, HMRC’s own guidance states that a compliant set of written terms are necessary, so the importance of a contract review cannot be overlooked.
+
+What does the IR35 Contract Review include?
+
+- An opinion on whether your contract is inside or outside of IR35
+- An indication of what the pass/failing clauses are, as well as an explanation of why they are negative (if applicable)
+- Suggested bespoke amendments to any problem clauses, to nullify the issues or turn these into positives
+- Suggested clause inclusions to strengthen the status of terms
+- Follow-up interaction with your agency/client on your behalf if a clause needs amending or explaining (after you have made the initial approach)
+- Conversation with you directly to explain rationale or answer any questions you have relating to the review
+- Re-reviewal of reviewed terms (within a month of the initial report) once amendments have been made to check if there is any change of status (i.e. from inside to outside)
+
+Please note, you must redeem your Contract Review within 90 days of purchase. After this period, if the review is not redeemed, a refund won’t be available.
+
+If you have any questions regarding the above, please don’t hesitate to contact us on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

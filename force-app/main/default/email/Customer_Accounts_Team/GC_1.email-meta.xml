@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation that payment was unsuccessful.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>GC 1</name>
+    <style>freeForm</style>
+    <subject>Policy Payment Update</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+As agreed when you purchased your policy, we attempted to take payment on [insert date here]. Unfortunately, this payment was unsuccessful.
+
+We will automatically re-attempt this payment within the next few days, please ensure that you have funds available.
+
+Please note that if we are unable to take payment for your policy then this may result in your policy being cancelled.
+
+If you wish to discuss this, please feel free to contact us on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

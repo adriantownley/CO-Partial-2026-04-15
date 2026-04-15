@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Customer has not accepted the Close Brother commission consent. This is the email to provide 30 days notice of cancellation if payment hasn&apos;t been made.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CDC Cancelled 1</name>
+    <style>freeForm</style>
+    <subject>Your insurance policy is scheduled for cancellation</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You elected to pay for your Kingsbridge business insurance policy {!Policy__c.Name} through direct debit payments. 
+
+Our credit providers Close Brothers Premium Finance required you to consent to the commission Kingsbridge receive in order to provide the loan for your insurance policy. 
+
+Close Brothers have sent you numerous communications via email, SMS and physical letter to notify you of this requirement. 
+
+You have not provided this consent/You have declined to consent and so Close Brothers have now rejected your credit application. This means the payment for your insurance policy remains outstanding. 
+
+What are your options?
+
+- Make your outstanding payment in full to Kingsbridge 
+You can make a payment by credit or debit card. We also accept cardless payments via GoCardless. To make your payment please contact our customer service team on 01242 808740 and select option 3.
+
+- Re-apply for a loan with Close Brothers
+If you are happy to provide commission consent, it may be possible to apply for a new loan with Close Brothers to cover your outstanding payment. To re-apply for a loan with Close Brothers please contact our customer service team on 01242 808740 and select option 3.
+
+What happens if I don’t make the payment?
+
+If a payment has not been made before [proposed cancellation date], your policy will be cancelled from inception. 
+
+Please be aware, if the policy is cancelled from inception, your business will not be insured and you will not be able to make a claim under it as it will be considered null and void. 
+
+To help your business stay protected, please call us on 01242 808740 to make a payment or discuss further.
+
+Please note, for data security reasons, do not send credit or debit card details to us via email.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for leads for an FUL policy at the second attempt stage when they have previously provided a renewal date.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Renewal Date Lead (FUL)_2nd Attempt</name>
+    <style>freeForm</style>
+    <subject>Requested insurance quote follow up</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve not been able to reach you to provide you with an insurance quote.
+
+It would be useful to know more about your business, so I can understand what cover you might require.
+
+Some key benefits of our package are:
+
+- Unlimited retroactive cover - protects you against claims arising from work you completed before your current insurance policy began.
+- Worldwide Jurisdiction cover - ensures that you&apos;re protected almost anywhere that your work may take you.
+- Nil excess - guarantees no unexpected out-of-pocket expenses in the event of a claim.
+- Sub-Contractors - includes cover for up to 3 business-facing sub-contractors (BFSCs), provided they hold the same levels of cover as you.
+
+However, it would be good to discuss your requirements to make sure this is the best policy for you. Is there a good time for me to give you a call?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+You can also get a quote online via our website www.kingsbridge.co.uk.
+
+I look forward to hearing from you soon. 
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Request of further details to complete Close Brothers checks for direct debit.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>CBPF UBO</name>
+    <style>freeForm</style>
+    <subject>Additional Company Information Required</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Following your recent insurance purchase, you opted to pay via monthly Direct Debit which is facilitated by Close Brothers Premium Finance. As part of Close Brothers’ Anti-Money Laundering checks, they are required to identify each of their customers.
+
+Unfortunately they have been unable to verify the ultimate beneficial owner(s) of the company and have asked if you could please complete the attached form and return it to us so that they can proceed with their checks.
+
+Please contact us on 01242 808740 if you have any further queries.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

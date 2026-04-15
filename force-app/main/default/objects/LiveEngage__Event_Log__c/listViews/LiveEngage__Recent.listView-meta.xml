@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Recent</fullName>
+    <columns>NAME</columns>
+    <columns>LiveEngage__Status__c</columns>
+    <columns>LiveEngage__Process_Name__c</columns>
+    <columns>LiveEngage__Subprocess_Name__c</columns>
+    <columns>LiveEngage__Message__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>LiveEngage__Created_DateTime_fmla__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LiveEngage__Created_DateTime_fmla__c</field>
+        <operation>greaterThan</operation>
+        <value>12/26/2018 2:45 PM</value>
+    </filters>
+    <label>Recent</label>
+</ListView>

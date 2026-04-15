@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Recent_Detailed</fullName>
+    <columns>NAME</columns>
+    <columns>LiveEngage__LivePerson_SDK_API_Type__c</columns>
+    <columns>LiveEngage__Account__c</columns>
+    <columns>LiveEngage__Case__c</columns>
+    <columns>LiveEngage__Chat_End_Time__c</columns>
+    <columns>LiveEngage__Chat_Number__c</columns>
+    <columns>LiveEngage__Chat_Start_Time__c</columns>
+    <columns>LiveEngage__Contact__c</columns>
+    <columns>LiveEngage__Interactive__c</columns>
+    <columns>LiveEngage__Lead__c</columns>
+    <columns>LiveEngage__Opportunity__c</columns>
+    <columns>LiveEngage__Status__c</columns>
+    <columns>LiveEngage__Transcript__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Recent - Detailed</label>
+</ListView>

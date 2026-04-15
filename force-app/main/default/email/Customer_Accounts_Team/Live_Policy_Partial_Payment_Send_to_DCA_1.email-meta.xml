@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Attempt to contact customer regarding lack of payment has failed and warning that the debt will be passed onto debt collector.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Live Policy – Partial Payment (Send to DCA) (1)</name>
+    <style>freeForm</style>
+    <subject>Outstanding Payment Update</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We have been attempting to contact you in relation to an outstanding balance for your insurance policy. As we haven’t been able to get in touch, the outstanding balance is due to be referred to debt collection.
+
+It’s not too late to bring your payments up to date and prevent any further action. Please call us on 01242 808740 as soon as possible to discuss your options.
+
+Regrettably, if we do not hear from you in the next 7 days, the outstanding balance will be referred to a debt collection agency, who will be in touch with you directly to explain the next steps.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

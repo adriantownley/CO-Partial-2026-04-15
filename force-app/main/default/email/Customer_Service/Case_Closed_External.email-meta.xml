@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template will be sent to customers whose cases are closed</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Kingsbridge_Rebrand_Email_Template</letterhead>
+    <name>Case Closed External</name>
+    <style>freeForm</style>
+    <subject>Your case has been closed.</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+This is courtesy email to let you know that we have closed your case with reference number {!Case.CaseNumber}.
+
+If you need to speak to us urgently, please call our phone line on 01242 808 740. Lines are open Monday – Friday between 8am and 5:30pm.
+
+We would like to thank you for your patience.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to subcontractor insurance query.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Sub-Contractors Clause</name>
+    <style>freeForm</style>
+    <subject>Subcontractor Query</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for your email.
+
+I can confirm that our insurance policies cover up to 3 bona fide subcontractors at any one time. However, they do need to have their own insurance policies in place at the same level of cover as yourself. They must also have the same job role as yourself.
+
+If you do exceed the amount of 3 subcontractors, please note you would not be covered if a claim was to be made.
+
+In respect of your question concerning policy coverage for subcontractors I would like to draw your attention to the policy wording, page 33, section XVI:
+
+Sub Contractors In respect of sections 2, 3 and 4 We shall not pay any Claim or be liable for any Loss arising directly or indirectly from any act, error or omission committed or allegedly committed by any sub contractor of the Insured unless: a. The Insured uses no more than 3 bona fide subcontractors all to be operating in the same line of work as the Insured (i.e. no multidisciplinary activity); and b. Such sub contractor has their own insurance in place maintaining the same levels of cover as the Insured for Public &amp; Products Liability and Professional Indemnity, and proof of this has been obtained by the Insured; and c. all rights of subrogation against such sub-contractor have been maintained in contract In any such event the Policy will indemnify the liabilities of the Insured and not the liabilities of such sub contractor.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for leads at the fifth attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Lead_5th Attempt</name>
+    <style>freeForm</style>
+    <subject>Still interested in receiving an insurance quote?</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+
+I’m following up on my previous attempts to provide you with a quote for your business insurance. 
+
+I understand that there can be many reasons why you may not be interested right now and I wanted to check if any of these apply to you.
+
+Current policy not due to expire?
+If you let me know your expiry date for your business insurance policy, I can give you a call nearer the time to arrange your quote.
+
+Got a quote elsewhere?
+We can often match like-for-like quotes, so if you let us know the cover levels and the quoted price you have received I can see if we can provide a better quote for you.
+
+Want no further contact?
+If you are not interested in receiving a quote, just let me know and I will ensure I don’t contact you again. 
+
+Alternatively, if you are still interested in proceeding with your quote, reply with the best date and time for me to call you. Alternatively you can give me a ring on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

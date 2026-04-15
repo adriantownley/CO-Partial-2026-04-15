@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to customer wishing to retract their cancellation decision.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Cancellation - Changed Mind</name>
+    <style>freeForm</style>
+    <subject>Cancellation of your Policy Renewal</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge and letting us know your new decision.
+
+Please be informed that your policy will not be cancelled and will stay in place until the expiry date of {!Opportunity.Renewal_Date__c}.
+
+If you have any further questions, please do not hesitate to contact us on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Accounts Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use when a customer has let their policy lapse and we want to recontact them.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Lapsed Renewal_SDR</name>
+    <style>freeForm</style>
+    <subject>It’s not too late to get a new insurance policy</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Thank you for previously holding business insurance with Kingsbridge.
+
+It’s not too late to take out a new insurance policy with us - it’s important to note that if you don&apos;t have another insurance policy in place, your business may not be covered against claims.
+
+It would only take 5-10 minutes to provide you with a comprehensive quote - book a call with me - https://calendly.com/d/cm3g-k74-js2/kingsbridge-insurance-call-back
+
+Alternatively, you can reply to let me know a good time to call or contact me on 07974533903. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday.   
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use when a lead has previously told us they had ensured elsewhere.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Insured Elsewhere_SDR</name>
+    <style>freeForm</style>
+    <subject>Want a competitive business insurance quote?</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Thank you for getting a quote with us last year. 
+
+As your insurance may be due for renewal shortly, I wanted to re-quote you this year to see if I can save you money compared to your current provider.
+
+It only takes 5-10 minutes to provide you with a comprehensive no-obligation quote. Not ready for a quote yet? Book a call with me closer to your renewal date - https://calendly.com/d/cm3g-k74-js2/kingsbridge-insurance-call-back
+
+Alternatively, let me know your renewal date so I can contact you nearer the time. 
+
+I look forward to hearing from you. 
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

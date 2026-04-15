@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to GDPR request from previous policy holders.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>GDPR Deletion (customers-prev policy holders)</name>
+    <style>freeForm</style>
+    <subject>Your GDPR Request</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+In respect of your request to exercise your rights according to the GDPR, we are unable to delete your details from our systems. However, we have suppressed you from receiving marketing communications.
+
+We are unable to delete your details at this time as these are required to enable us to act as an insurance broker/agent in the placement of your insurance policy. We have regulatory and contractual requirements to hold data in relation to insurance policies we have placed.
+
+This confirms that policies are and were in fact in place and enables us to respond to any current and future claims you may submit or may be submitted against you by a third party. Employers’ Liability and Public Liability claims can be submitted many years after an event and consequently this data will be held on file for a period of one hundred years following expiry of policies in accordance with our data retention policy.
+
+Please note that you may hear from us again in the next 30 days whilst we update your details.
+
+Our data fair processing notice can be accessed via the following link: https://www.kingsbridge.co.uk/fair-processing-notice/
+
+Your rights under GDPR can be accessed via the following link: https://ico.org.uk/
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

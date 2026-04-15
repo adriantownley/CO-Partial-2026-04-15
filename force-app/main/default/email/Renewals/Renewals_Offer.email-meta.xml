@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when renewals team want to provide an offer.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Renewals Offer</name>
+    <style>freeForm</style>
+    <subject>Renew your policy and get rewarded</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Still interested in a Kingsbridge insurance policy?
+
+Renew within the next 7 days and we&apos;ll send you £40 in online vouchers.
+
+Call 01242 808740 to purchase over the phone. Alternatively, buy your business insurance policy online - https://www.kingsbridge.co.uk/buy?journey=1
+
+Kind regards,
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740
+
+
+Offer Terms and Conditions:
+1. This offer is valid only to Kingsbridge customers who renew a Professional Indemnity or Public Liability package and excludes the purchase of Legal Expenses and IR35 Protect policies purchased on their own.
+2. The policy must be purchased within 7 days of the offer being communicated by Kingsbridge.
+3. This offer cannot be used in conjunction with any other Kingsbridge voucher offer.
+4. Online vouchers will be sent 28 days after the policy start date and a 6-month validity period will apply. Vouchers may take between 7-10 days to reach customers. Online vouchers can be redeemed for a gift card of the customer’s choice at Voucher Express from a range of Vendors. Full range for the VEX Multi-Choice voucher can be viewed by visiting https://www.voucherexpress.co.uk/full-range.aspx
+5. Rewards are subject to availability.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

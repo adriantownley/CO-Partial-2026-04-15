@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>adobesign__UploadUri__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The URL used to download the Resource directly from the cloud provider.</description>
+    <inlineHelpText>The URL used to download the Resource directly from the cloud provider.</inlineHelpText>
+    <label>Upload Uri</label>
+    <length>4096</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

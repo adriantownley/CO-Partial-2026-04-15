@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for RAF leads for an Admiral policy at the second attempt stage.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF Lead (Admiral)_2nd Attempt</name>
+    <style>freeForm</style>
+    <subject>Requested insurance quote follow up</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve not been able to reach you since you were referred to us by your friend {!Lead.Referred_By_Account__c}.
+
+It would be useful to know more about your business, so I can understand what cover you might require.
+
+Some key benefits of our package are:
+
+- Up to £2,500 tools and equipment cover included as standard at no extra cost (with in-van cover!)
+- 24-hour payout on accepted tool theft claims, helping to get Britian’s tradespeople back on the job faster.
+- Nil excess and no hidden fees on most professions covered, reducing out-of-pocket or unexpected costs.
+- UK-based in-house specialists, including easy, quick access to brokers, and rapid, responsive claims processing managed by a dedicated claims team.
+- All core covers in one place, wrapped into a single neat, affordable package attached to one easy payment. 
+
+However, it would be good to discuss your requirements to make sure this is the best policy for you. Is there a good time for me to give you a call?
+
+Alternatively, you can contact me on 01242 808 740. Our office is open between the hours of 8:00am-5:30pm, Monday-Friday. 
+
+I look forward to hearing from you soon. 
+
+Kind regards,
+
+{!User.FirstName}
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

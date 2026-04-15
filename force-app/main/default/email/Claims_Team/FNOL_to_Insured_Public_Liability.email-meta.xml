@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Follow up email to Public Liability claim.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>FNOL to Insured – Public Liability</name>
+    <style>freeForm</style>
+    <subject>Information required to support claims process</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+(Use for those who notified us)
+Thank you for your speaking with me today and for notifying us of a new potential Public Liability claim.
+
+(Use for those where we received notification)
+We have received notification of a potential claim being made against you for (insert allegations and claimant here).
+
+In order that we can present a claim to insurers, please could you forward me the following:
+
+- Overview of events to date leading up to the claim
+- Description of the damage done and cost expected as far as you know
+- Description of how the damage was caused
+- The date of when the incident occurred and when the claim was made against you
+- Statement from the claimant or as much detail as you can
+- Explain if you know, their view of responsibility
+- Confirmation of any involvement of a further party such as client
+- Copies of any quote to do the work/agreement 
+- Photographs to support the damage caused if you have any
+- Copies of any prior correspondence
+- Any other correspondence received - if applicable that you feel would support your potential claim
+- Confirmation of your VAT status
+
+I attach your policy schedule and wording to assist.
+
+Upon receipt of the above, I will send to our insurers for review. Depending on how quickly you return the information will determine the timeframe for this.
+
+Please note should you make a Public Liability claim and this is accepted there will be a policy excess of (insert Excess/delete it not applicable) as per your schedule.
+
+I look forward to hearing from you.
+
+Kind regards,
+
+{!User.FirstName}
+Claims Team
+
+E: claims@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

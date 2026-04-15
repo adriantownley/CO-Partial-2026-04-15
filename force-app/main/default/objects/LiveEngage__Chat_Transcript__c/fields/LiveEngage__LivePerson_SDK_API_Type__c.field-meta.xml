@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__LivePerson_SDK_API_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Describes which channel the Chat was initiated on</description>
+    <label>LivePerson SDK API Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Messaging</fullName>
+                <default>false</default>
+                <label>Messaging</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be used when a customer elects to start the shortfall process rather than have their policy cancelled.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Shortfall 3 Email</name>
+    <style>freeForm</style>
+    <subject>Policy Payment Update</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You elected to pay for your business insurance policy [policy number] through direct debit payments. 
+
+As recent payments have not been made, in our latest communications with you, you decided to enter the shortfall process with our credit providers Close Brothers Premium Finance. 
+
+Close Brothers will be in touch with you directly about this process and the retrieval of the outstanding funds. However, if you wish to contact them directly or make a payment, please call them directly on 0333 321 8566.
+
+Please rest assured that because of this step, your policy remains in place and your cover is still valid. However, if you have any queries in relation to your policy, please feel free to give us a call on 01242 808740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

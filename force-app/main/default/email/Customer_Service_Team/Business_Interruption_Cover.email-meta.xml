@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation that policy does not include business interruption cover.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Business Interruption Cover</name>
+    <style>freeForm</style>
+    <subject>Business Interruption Cover</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+Our contractor insurance package product is built to protect you against claims as a result of any errors, omissions and negligence made during the course of your work. The cover you have does not include Business Interruption insurance and this is not something that Kingsbridge Contractor Insurance currently offers.
+
+To summarise, your package policy provides cover for the following:
+
+Professional Indemnity
+This particular cover will protect you against claims for negligence (making a mistake, for example, or giving bad advice.)
+
+Public Liability
+This part of the policy provides cover for damage to third party property, as well as injury to third party persons. It&apos;ll also cover any legal fees that come about as a result of claims you have to defend.
+
+Occupational Personal Accident
+This cover provides for payments to be made in the event that Actual Bodily Injury is sustained. Actual Bodily Injury, by definition, excludes sickness, disease or any other naturally occurring condition, such as COVID-19.
+
+Employers’ and Public Liability
+Liability cover provides protection for the policyholder against their legal liabilities to their employees or to the public. In order to mitigate your risk as an organisation/employer, you should avoid any potential breach of your duty of care to the public, your clients or any employees.
+
+Directors’ and Officers’ Liability
+If your business is accused of financial mismanagement, a legislative breach, a health and safety failure, or of breaching company law, then your contractor insurance policy with Kingsbridge steps in.
+
+Meanwhile, Business Interruption insurance, which is not included as part of your policy, can provide cover for financial losses your business may sustain in an interruption to trading because of, for example fire, flood or denial of access.
+
+This means that, unfortunately, there is no option to make a business interruption claim under your package of cover.
+
+For any other queries, please do not hesitate to get in touch on 01242 808 740 and we’d be happy to help.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__Use_Case_Assignment_Rules__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Sets if the newly created case should be assigned using defined assignment rules (can that be toggled on the fly?)</description>
+    <label>Use Case Assignment Rules</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

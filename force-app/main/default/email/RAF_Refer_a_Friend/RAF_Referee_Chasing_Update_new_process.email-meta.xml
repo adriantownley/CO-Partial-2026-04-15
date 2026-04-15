@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response for if a referee is chasing an update on their referral.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>RAF - Referee Chasing Update (new process)</name>
+    <style>freeForm</style>
+    <subject>Your RAF Enquiry</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge. I have added some information below about how our RAF scheme works to help answer your query.
+
+Can I see the status of my referrals?
+
+You will automatically receive email notifications when –
+- Any one you refer joins our RAF scheme
+- Any one you refer qualifies (this is the step when vouchers are sent)
+
+Both of these emails provide a link where you can view your total referrals and qualified referrals. 
+
+Please note, due to data protections regulations all data is anonymised. 
+
+Why hasn’t my referral qualified yet?
+
+There can be a delay between a referral joining the scheme and qualifying, this can be due to –
+- A gap between a referral receiving a quote and making a decision to purchase
+- A gap between the purchase and start date of a referral’s policy
+- The legal cooling-off period following the start date of an insurance policy 
+
+Hopefully, the above will help to answer your query. But if you have any further questions, please don&apos;t hesitate to get in touch.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

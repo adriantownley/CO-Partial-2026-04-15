@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to use for Kanda Hot Lead.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>Kanda Final Chance Email_SDR</name>
+    <style>freeForm</style>
+    <subject>Final quote follow-up</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+I’ve been trying to contact you to provide a business insurance quote but unfortunately, I’ve not heard from you.
+
+We know you&apos;re busy, so we want to take one last opportunity to remind you of your exclusive 10% discount as a Kanda customer. 
+
+Given we&apos;ve not been able to contact you, we&apos;ll now be closing your file. However, if you want to move forward with a quote at any time - https://calendly.com/d/cnzd-wxk-j9m/kingsbridge-insurance-call-back-kanda
+
+Alternatively, let me know the best date and time for me to call you or give me a ring on 01242 808 740.
+
+All the best!
+
+{!User.FirstName} 
+Sales Team
+
+E: salesteam@kingsbridge.co.uk
+T: 01242 808740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

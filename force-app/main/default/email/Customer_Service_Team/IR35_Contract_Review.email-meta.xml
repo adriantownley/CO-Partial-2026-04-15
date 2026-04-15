@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Post purchase email for IR35 Contract Review.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Kingsbridge_Letterhead</letterhead>
+    <name>IR35 - Contract Review</name>
+    <style>freeForm</style>
+    <subject>IR35 - Contract Review</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for contacting Kingsbridge.
+
+Thank you for purchasing a contract review with Kingsbridge. Please read below for some important information relating to your contract review.
+
+You can submit your contract for review here:
+https://survey.zohopublic.eu/zs/6PB8Bg
+
+It will be reviewed within 5 working days.
+
+
+What does an IR35 contract review look at?
+
+An IR35 contract review takes a look at the written terms of your engagement and determines whether or not the engagement looks to be inside or outside of IR35. The review considers whether or not the main status tests are present and accounted for in the written terms, and what their precise wordings are.
+
+The review will provide you with an opinion on the position of the terms – either inside of IR35 (caught), or outside of IR35 (not caught). The review will also suggest alterations and inclusions that should be made to improve your outside IR35 standing, or to allow for a pass if the terms failed the first time.
+
+
+What does an IR35 Contract review not consider?
+
+The review will not consider the reality of how you are operating – it will only provide an opinion on what the written terms do, or do not say. The reality of your engagement (working practices) is the more determinative factor. However, HMRC’s own guidance states that a compliant set of written terms are necessary, so the importance of a contract review cannot be overlooked.
+
+
+What does the contract review include?
+
+- Inside/outside opinion
+- Indication of where pass/failing clauses are and an explanation of why they are negative (if applicable)
+- Bespoke amendments to problem clauses, to nullify the issue or make them positive
+- Suggested clause inclusions to strengthen status of terms
+- Interaction with agency/client on contractor’s behalf if a clause needs tweaking/explaining (after the contractor has made initial approach)
+- Conversation with contractor to explain rationale, answer any questions relating to the review
+- Re-reviewal of reviewed terms (within a month of the initial report) once amendments have been made to see if there is any change of status (i.e from inside to outside)
+
+
+Please note, you must redeem your Contract Review within 90 days of purchase. After this period, if the review is not redeemed, there will be no refund available.
+
+If you have any questions regarding the above, then please do not hesitate to contact us on 01242 808 740.
+
+Kind regards,
+
+{!User.FirstName}
+Customer Service Team
+
+E: customersupport@kingsbridge.co.uk
+T: 01242 808 740</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

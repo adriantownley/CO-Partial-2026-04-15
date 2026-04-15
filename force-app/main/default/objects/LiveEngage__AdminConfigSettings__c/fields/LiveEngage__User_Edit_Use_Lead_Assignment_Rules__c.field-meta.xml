@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LiveEngage__User_Edit_Use_Lead_Assignment_Rules__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Allows user to check / uncheck the Use Assignment Rules checkbox</description>
+    <label>User Edit Use Lead Assignment Rules</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
